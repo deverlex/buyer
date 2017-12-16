@@ -80,8 +80,7 @@ def appendVersionNameVersionCode(variant) {
                 variant.buildType.name ==
                 android.buildTypes.staging.name) {
             if (output.zipAlign) {
-                outputFileName = new File("${project.projectDir}/build/outputs/apks/" + variant.name,
-                        "${variant.buildType.name}_${applicationId}_v${variant.versionName}-${variant.versionCode}.apk")
+                outputFileName = new File("", "${variant.buildType.name}_${applicationId}_v${variant.versionName}-${variant.versionCode}.apk")
             }
         }
     }

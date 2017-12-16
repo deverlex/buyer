@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<tabs>
+
+    <tab
+        id="@+id/price_now"
+        title="gia truoc"/>
+
+    <tab
+        id="@+id/price_later"
+        title="gia sau" />
+
+    <tab
+        id="@+id/notification"
+
+        title="thong bao" />
+    <!--icon="@drawable/ic_bell_24dp"-->
+    <tab
+        id="@+id/personal"
+        title="ca nhan" />
+</tabs>
