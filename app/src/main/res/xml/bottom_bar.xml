@@ -3,18 +3,21 @@
 
     <tab
         id="@+id/price_now"
+        icon="@drawable/ic_price_24dp"
         title="gia truoc"/>
 
     <tab
         id="@+id/price_later"
+        icon="@drawable/ic_invoice_24dp"
         title="gia sau" />
 
     <tab
         id="@+id/notification"
-
+        icon="@drawable/ic_bell_24dp"
         title="thong bao" />
-    <!--icon="@drawable/ic_bell_24dp"-->
+
     <tab
         id="@+id/personal"
+        icon="@drawable/ic_account_24dp"
         title="ca nhan" />
 </tabs>
