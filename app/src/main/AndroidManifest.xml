@@ -37,6 +37,31 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
+
+        <activity android:name=".screen.login.LoginActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden"
+            />
+
+        <activity android:name=".screen.main.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden"
+            />
+
+        <activity android:name=".screen.register.RegisterActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden"
+            />
+
+        <activity android:name=".screen.forgotPassWd.ForgotPassWdActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden"
+            />
     </application>
 
 </manifest>

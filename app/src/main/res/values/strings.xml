@@ -10,4 +10,39 @@
     <string name="OK">Đồng ý</string>
     <string name="please_wait">Vui lòng chờ..</string>
     <string name="done">Hoàn tất</string>
+
+    <!--For activity_login-->
+    <string name="phone_number">Số điện thoại</string>
+    <string name="password">Mật khẩu</string>
+    <string name="forgot_password"><u>Quên mật khẩu?</u></string>
+    <string name="login">Đăng nhập</string>
+    <string name="register_account"><u>Đăng ký</u></string>
+    <string name="error_service">Lỗi kết nối dịch vụ</string>
+    <string name="error_credential">Số điện thoại hoặc mật khẩu không chính xác</string>
+
+    <string name="validate_phone">XÁC MINH SỐ ĐIỆN THOẠI</string>
+    <string name="intro_validate_phone">Vui lòng nhập vào số điện thoại và mật khẩu.</string>
+    <string name="intro_validate_opt">Vui lòng nhập vào mã xác minh và nhấn <b>hoàn tất</b></string>
+    <string name="otp_code">Mã xác minh</string>
+    <string name="otp_code_invalid">Mã xác minh không đúng</string>
+    <string name="otp_code_empty">Mã xác minh trống</string>
+    <string name="resend_over_limit">Vượt quá số lần yêu cầu, xin chờ.</string>
+    <string name="validation_error">Có lỗi xảy ra, thử lại.</string>
+    <string name="waiting_otp">Chờ %1$s giây để yêu cầu gửi lại mã xác minh.</string>
+    <string name="error_connection">Vui lòng bật kết nối internet để đăng ký</string>
+    <string name="phone_number_empty">Số điện thoại rỗng</string>
+    <string name="is_not_phone_number">Không đúng định dạng</string>
+    <string name="password_empty">Mật khẩu rỗng</string>
+    <string name="password_over_limit">Tối đa 32 ký tự</string>
+    <string name="password_miss_length">Mật khẩu cần ít nhất 8 ký tự</string>
+
+    <!--For activity_register_user -->
+    <string name="get_new_otp"><u>Cấp lại mã xác minh</u></string>
+    <string name="get_new_password">LẤY MẬT KHẨU MỚI</string>
+    <string name="new_password">Mật khẩu mới</string>
+    <string name="not_have_account">Chưa đăng ký tài khoản?</string>
+    <string name="reset_password">Đặt lại mật khẩu</string>
+    <string name="intro_get_new_password">Vui lòng nhập số điện thoại đã đăng ký để thiết lập mật khẩu mới</string>
+    <string name="intro_reset_password">Vui lòng nhập mật khẩu mới và nhấn nút hoàn tất</string>
+    <string name="find_user_exist_error">Số điện thoại chưa đăng ký</string>
 </resources>
