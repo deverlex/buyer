@@ -45,4 +45,9 @@
     <string name="intro_get_new_password">Vui lòng nhập số điện thoại đã đăng ký để thiết lập mật khẩu mới</string>
     <string name="intro_reset_password">Vui lòng nhập mật khẩu mới và nhấn nút hoàn tất</string>
     <string name="find_user_exist_error">Số điện thoại chưa đăng ký</string>
+
+    <string name="price_now">Giá trước</string>
+    <string name="price_later">Giá sau</string>
+    <string name="notification">Thông báo</string>
+    <string name="personal">Tôi</string>
 </resources>

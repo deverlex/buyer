@@ -65,9 +65,9 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
 //                if (TextUtils.isEmpty(token)) {
-                loginPage();
+//                loginPage();
 //                } else {
-//                    gateway();
+                    gateway();
 //                }
 //                new Navigator(SplashActivity.this).startActivity(mIntent);
             }

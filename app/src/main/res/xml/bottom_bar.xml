@@ -4,20 +4,21 @@
     <tab
         id="@+id/price_now"
         icon="@drawable/ic_price_24dp"
-        title="gia truoc"/>
+        title="@string/price_now"/>
 
     <tab
         id="@+id/price_later"
         icon="@drawable/ic_invoice_24dp"
-        title="gia sau" />
+        title="@string/price_later" />
 
     <tab
         id="@+id/notification"
         icon="@drawable/ic_bell_24dp"
-        title="thong bao" />
+        title="@string/notification" />
 
     <tab
         id="@+id/personal"
         icon="@drawable/ic_account_24dp"
-        title="ca nhan" />
+        title="@string/personal" />
+
 </tabs>
