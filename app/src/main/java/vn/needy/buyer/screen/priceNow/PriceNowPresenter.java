@@ -41,12 +41,12 @@ public class PriceNowPresenter implements PriceNowContract.Presenter{
     }
 
     @Override
-    public void getProductPn() {
+    public void getStores() {
         List<Store> stores = new ArrayList<>();
         for (int i = 1 ; i <= 20; i++) {
             stores.add(new Store());
         }
 
-        mViewModel.setProduct(stores);
+        mViewModel.setStores(stores);
     }
 }

@@ -14,12 +14,12 @@ import vn.needy.buyer.screen.BaseViewModel;
 interface PriceNowContract {
     interface ViewModel extends BaseViewModel<Presenter> {
         void setCategories(List<Category> categories);
-        void setProduct(List<Store> stores);
+        void setStores(List<Store> stores);
     }
 
     interface Presenter extends BasePresenter {
         void getCategories();
 
-        void getProductPn();
+        void getStores();
     }
 }

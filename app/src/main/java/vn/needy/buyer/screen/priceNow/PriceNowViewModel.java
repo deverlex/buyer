@@ -34,7 +34,7 @@ public class PriceNowViewModel extends BaseObservable implements PriceNowContrac
     @Override
     public void onStart() {
         mPresenter.getCategories();
-        mPresenter.getProductPn();
+        mPresenter.getStores();
     }
 
     @Override
@@ -68,7 +68,7 @@ public class PriceNowViewModel extends BaseObservable implements PriceNowContrac
     }
 
     @Override
-    public void setProduct(List<Store> stores) {
+    public void setStores(List<Store> stores) {
         mStoreAdapter.setData(stores);
     }
 }
