@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="vn.needy.buyer.screen.priceLater.ItemCategoryPlViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <FrameLayout
+        android:foreground="?android:attr/selectableItemBackground"
+        android:onClick="@{() -> viewModel.onItemClick()}"
+        android:padding="@dimen/dp_4"
+        android:layout_width="@dimen/dp_150"
+        android:layout_height="@dimen/dp_60">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            android:src="@drawable/background_login" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@{viewModel.title}"
+            android:textColor="@color/color_white"
+            android:textSize="@dimen/sp_14"
+            android:textStyle="bold" />
+    </FrameLayout>
+</layout>
