@@ -8,6 +8,8 @@ import com.roughike.bottombar.OnTabSelectListener;
 
 import vn.needy.buyer.R;
 import vn.needy.buyer.screen.BaseActivity;
+import vn.needy.buyer.screen.priceLater.PriceLaterFragment;
+import vn.needy.buyer.screen.priceLater.PriceLaterViewModel;
 import vn.needy.buyer.screen.priceNow.PriceNowFragment;
 import vn.needy.buyer.utils.ViewUtil;
 
@@ -36,7 +38,7 @@ public class MainActivity extends BaseActivity {
                         initFragment(R.id.contentContainer, PriceNowFragment.newInstance());
                         break;
                     case R.id.price_later:
-
+                        initFragment(R.id.contentContainer, PriceLaterFragment.newInstance());
                         break;
                     case R.id.notification:
 
