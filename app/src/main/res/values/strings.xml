@@ -50,4 +50,6 @@
     <string name="price_later">Giá sau</string>
     <string name="notification">Thông báo</string>
     <string name="personal">Tôi</string>
+
+    <string name="account">Tài khoản</string>
 </resources>
