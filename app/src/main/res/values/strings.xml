@@ -50,4 +50,7 @@
     <string name="price_later">Giá sau</string>
     <string name="notification">Thông báo</string>
     <string name="personal">Tôi</string>
+
+    <string name="update_order">Cập nhật đơn hàng</string>
+    <string name="read_all">Đọc tất cả</string>
 </resources>
