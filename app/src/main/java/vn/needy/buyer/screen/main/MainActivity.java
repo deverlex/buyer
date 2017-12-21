@@ -11,7 +11,6 @@ import vn.needy.buyer.screen.BaseActivity;
 import vn.needy.buyer.screen.notification.NotificationFragment;
 import vn.needy.buyer.screen.personal.PersonalFragment;
 import vn.needy.buyer.screen.priceLater.PriceLaterFragment;
-import vn.needy.buyer.screen.priceLater.PriceLaterViewModel;
 import vn.needy.buyer.screen.priceNow.PriceNowFragment;
 import vn.needy.buyer.utils.ViewUtil;
 
