@@ -41,9 +41,9 @@ public class PriceNowFragment extends Fragment{
         CategoryAdapter categoryAdapter = new CategoryAdapter(getActivity(), categories);
 
         List<Store> stores = new ArrayList<>();
-        StoreAdapter productPnAdapter = new StoreAdapter(getActivity(), stores);
+        StoreAdapter storeAdapter = new StoreAdapter(getActivity(), stores);
 
-        mViewModel = new PriceNowViewModel(getActivity(), categoryAdapter, productPnAdapter);
+        mViewModel = new PriceNowViewModel(getActivity(), categoryAdapter, storeAdapter);
         PriceNowContract.Presenter presenter = new PriceNowPresenter(mViewModel);
         mViewModel.setPresenter(presenter);
         mViewModel.onStart();
