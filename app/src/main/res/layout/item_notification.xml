@@ -19,7 +19,7 @@
         app:cardPreventCornerOverlap="true">
 
         <RelativeLayout
-            android:background="@{viewModel.readed ?  @color/color_gray_white: @color/color_white}"
+            android:background="@{viewModel.read ?  @color/color_gray_white: @color/color_white}"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
 
