@@ -53,4 +53,6 @@
 
     <string name="update_order">Cập nhật đơn hàng</string>
     <string name="read_all">Đọc tất cả</string>
+
+    <string name="account">Tài khoản</string>
 </resources>

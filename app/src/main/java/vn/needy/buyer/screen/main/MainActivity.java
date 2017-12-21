@@ -9,6 +9,7 @@ import com.roughike.bottombar.OnTabSelectListener;
 import vn.needy.buyer.R;
 import vn.needy.buyer.screen.BaseActivity;
 import vn.needy.buyer.screen.notification.NotificationFragment;
+import vn.needy.buyer.screen.personal.PersonalFragment;
 import vn.needy.buyer.screen.priceNow.PriceNowFragment;
 import vn.needy.buyer.utils.ViewUtil;
 
@@ -43,7 +44,7 @@ public class MainActivity extends BaseActivity {
                         initFragment(R.id.contentContainer, NotificationFragment.newInstance());
                         break;
                     case R.id.personal:
-
+                        initFragment(R.id.contentContainer, PersonalFragment.newInstance());
                         break;
                     default:
                 }
