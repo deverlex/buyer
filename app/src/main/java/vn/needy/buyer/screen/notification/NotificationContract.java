@@ -2,7 +2,7 @@ package vn.needy.buyer.screen.notification;
 
 import java.util.List;
 
-import vn.needy.buyer.model.Notification;
+import vn.needy.buyer.domain.Notification;
 import vn.needy.buyer.screen.BasePresenter;
 import vn.needy.buyer.screen.BaseViewModel;
 

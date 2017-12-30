@@ -1,7 +1,7 @@
 package vn.needy.buyer.repository;
 
 import io.reactivex.Observable;
-import vn.needy.buyer.model.User;
+import vn.needy.buyer.domain.User;
 import vn.needy.buyer.port.message.ResponseWrapper;
 import vn.needy.buyer.repository.remote.user.request.LoginReq;
 import vn.needy.buyer.repository.remote.user.request.RegisterReq;

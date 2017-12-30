@@ -10,7 +10,7 @@ import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 import vn.needy.buyer.R;
 import vn.needy.buyer.database.sharedprf.SharedPrefsImpl;
-import vn.needy.buyer.model.User;
+import vn.needy.buyer.domain.User;
 import vn.needy.buyer.port.error.BaseException;
 import vn.needy.buyer.port.error.SafetyError;
 import vn.needy.buyer.port.message.BaseStatus;

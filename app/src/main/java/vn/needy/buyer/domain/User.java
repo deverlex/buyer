@@ -1,8 +1,8 @@
-package vn.needy.buyer.model;
+package vn.needy.buyer.domain;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
-import vn.needy.buyer.model.wrapper.UserWrapper;
+import vn.needy.buyer.port.wrapper.UserWrapper;
 
 /**
  * Created by lion on 16/12/2017.

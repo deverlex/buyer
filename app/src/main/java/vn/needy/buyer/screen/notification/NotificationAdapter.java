@@ -11,7 +11,7 @@ import java.util.List;
 
 import vn.needy.buyer.R;
 import vn.needy.buyer.databinding.ItemNotificationBinding;
-import vn.needy.buyer.model.Notification;
+import vn.needy.buyer.domain.Notification;
 import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 
 /**

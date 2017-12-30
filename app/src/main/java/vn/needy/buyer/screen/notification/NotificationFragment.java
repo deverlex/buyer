@@ -13,7 +13,7 @@ import java.util.List;
 
 import vn.needy.buyer.R;
 import vn.needy.buyer.databinding.FragmentNotificationBinding;
-import vn.needy.buyer.model.Notification;
+import vn.needy.buyer.domain.Notification;
 
 /**
  * Created by lion on 16/12/2017.

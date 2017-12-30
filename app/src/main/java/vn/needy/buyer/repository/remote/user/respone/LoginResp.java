@@ -3,7 +3,7 @@ package vn.needy.buyer.repository.remote.user.respone;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import vn.needy.buyer.model.wrapper.UserWrapper;
+import vn.needy.buyer.port.wrapper.UserWrapper;
 
 
 /**

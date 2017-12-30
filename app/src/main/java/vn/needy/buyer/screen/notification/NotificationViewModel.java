@@ -9,7 +9,7 @@ import android.databinding.Bindable;
 import java.util.List;
 
 import vn.needy.buyer.BR;
-import vn.needy.buyer.model.Notification;
+import vn.needy.buyer.domain.Notification;
 import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 
 /**
