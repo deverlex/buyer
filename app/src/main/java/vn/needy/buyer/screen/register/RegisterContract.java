@@ -1,6 +1,6 @@
 package vn.needy.buyer.screen.register;
 
-import vn.needy.buyer.repository.remote.user.request.RegisterReq;
+import vn.needy.buyer.repository.remote.user.request.RegisterRequest;
 import vn.needy.buyer.screen.BasePresenter;
 import vn.needy.buyer.screen.BaseViewModel;
 
@@ -69,7 +69,7 @@ interface Presenter extends BasePresenter {
     // validate OptCode
     void validateVerification(String otpCode);
 
-    void register(RegisterReq request);
+    void register(RegisterRequest request);
 
     boolean validateDataInput(String phoneNumber, String password);
 }

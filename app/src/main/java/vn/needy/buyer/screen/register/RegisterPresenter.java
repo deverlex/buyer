@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.os.AsyncTask;
 import android.support.annotation.NonNull;
 import android.text.TextUtils;
-import android.util.Log;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -34,7 +33,7 @@ import vn.needy.buyer.port.message.ResponseWrapper;
 import vn.needy.buyer.repository.UserRepository;
 import vn.needy.buyer.repository.local.UserDataLocal;
 import vn.needy.buyer.repository.remote.user.UserDataRemote;
-import vn.needy.buyer.repository.remote.user.request.RegisterReq;
+import vn.needy.buyer.repository.remote.user.request.RegisterRequest;
 import vn.needy.buyer.repository.remote.user.respone.TokenResponse;
 import vn.needy.buyer.utils.Utils;
 
@@ -142,7 +141,7 @@ public class RegisterPresenter implements RegisterContract.Presenter{
     }
 
     @Override
-    public void register(RegisterReq request) {
+    public void register(RegisterRequest request) {
         mUserRepository.registerUser(request)
                 .subscribeOn(Schedulers.io())
                 .doOnSubscribe(new Consumer<Disposable>() {

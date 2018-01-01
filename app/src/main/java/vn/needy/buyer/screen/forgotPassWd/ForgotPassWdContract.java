@@ -1,6 +1,6 @@
 package vn.needy.buyer.screen.forgotPassWd;
 
-import vn.needy.buyer.repository.remote.user.request.ResetAccountReq;
+import vn.needy.buyer.repository.remote.user.request.ResetAccountRequest;
 import vn.needy.buyer.screen.BasePresenter;
 import vn.needy.buyer.screen.BaseViewModel;
 
@@ -76,7 +76,7 @@ public class ForgotPassWdContract {
 
         void validateOtpCode(String otpCode);
 
-        void resetPassword(String phoneNumber, ResetAccountReq request);
+        void resetPassword(String phoneNumber, ResetAccountRequest request);
 
         boolean validateDataInput(String phoneNumber, String password);
     }

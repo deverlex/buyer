@@ -10,7 +10,7 @@ import vn.needy.buyer.port.wrapper.UserWrapper;
  * Created by lion on 11/12/2017.
  */
 
-public class LoginResp {
+public class LoginResponse {
 
     @Expose
     @SerializedName("user")
