@@ -111,7 +111,7 @@
                             android:visibility="@{viewModel.Notification == true ? View.VISIBLE : View.GONE}">
 
                             <RelativeLayout
-                                android:onClick="@{() ->viewModel.onGetUpdateOrderClick()}"
+                                android:onClick="@{() ->viewModel.onReceiveUpdateOrderClick()}"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
@@ -132,12 +132,12 @@
                                     android:layout_alignParentRight="true"
                                     android:layout_gravity="center_horizontal"
                                     android:background="@color/transparent"
-                                    android:checked="@{viewModel.notificationUpdateProduct}"
+                                    android:checked="@{viewModel.isReceiveUpdateOrder}"
                                     android:padding="@dimen/dp_10" />
                             </RelativeLayout>
 
                             <RelativeLayout
-                                android:onClick="@{()->viewModel.onNotificationChatClick()}"
+                                android:onClick="@{()->viewModel.onReceiveChatNotifyClick()}"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
@@ -158,12 +158,12 @@
                                     android:layout_alignParentRight="true"
                                     android:layout_gravity="center_horizontal"
                                     android:background="@color/transparent"
-                                    android:checked="@{viewModel.notificationChat}"
+                                    android:checked="@{viewModel.isChatNotify}"
                                     android:padding="@dimen/dp_10" />
                             </RelativeLayout>
 
                             <RelativeLayout
-                                android:onClick="@{()->viewModel.onNotificationProductPromotionClick()}"
+                                android:onClick="@{()->viewModel.onReceiveNewPromotionClick()}"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
@@ -184,12 +184,12 @@
                                     android:layout_alignParentRight="true"
                                     android:layout_gravity="center_horizontal"
                                     android:background="@color/transparent"
-                                    android:checked="@{viewModel.notificationPromotion}"
+                                    android:checked="@{viewModel.isReceiveNewPromotion}"
                                     android:padding="@dimen/dp_10" />
                             </RelativeLayout>
 
                             <RelativeLayout
-                                android:onClick="@{() -> viewModel.onNotificationFollowCLick()}"
+                                android:onClick="@{() -> viewModel.onReceiveNewFollowOrCommentClick()}"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
@@ -210,12 +210,12 @@
                                     android:layout_alignParentRight="true"
                                     android:layout_gravity="center_horizontal"
                                     android:background="@color/transparent"
-                                    android:checked="@{viewModel.notificationFollow}"
+                                    android:checked="@{viewModel.isReceiveNewFollowOrComment}"
                                     android:padding="@dimen/dp_10" />
                             </RelativeLayout>
 
                             <RelativeLayout
-                                android:onClick="@{() ->viewModel.onNotificationUpdateAppClick()}"
+                                android:onClick="@{() ->viewModel.onReceiveAppUpdateClick()}"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
@@ -231,13 +231,13 @@
                                     android:textSize="@dimen/sp_13" />
 
                                 <android.support.v7.widget.SwitchCompat
+                                    android:clickable="false"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentRight="true"
                                     android:layout_gravity="center_horizontal"
                                     android:background="@color/transparent"
-                                    android:checked="@{viewModel.notificationUpdateApp}"
-                                    android:onClick="@{() ->viewModel.onNotificationUpdateAppClick()}"
+                                    android:checked="@{viewModel.isReceiveAppUpdate}"
                                     android:padding="@dimen/dp_10" />
                             </RelativeLayout>
                         </LinearLayout>
@@ -305,7 +305,7 @@
                             android:visibility="@{viewModel.notificationEmail == true ? View.VISIBLE : View.GONE}">
 
                             <LinearLayout
-                                android:onClick="@{()->viewModel.onNotificationProductClick()}"
+                                android:onClick="@{()->viewModel.onReceiveUpdateOrderAndPaymentClick()}"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
@@ -345,12 +345,12 @@
                                     android:layout_gravity="center_horizontal"
                                     android:layout_weight="2"
                                     android:background="@color/transparent"
-                                    android:checked="@{viewModel.notificationProduct}"
+                                    android:checked="@{viewModel.isReceiveUpdateOrderAndPayment}"
                                     android:padding="@dimen/dp_10" />
                             </LinearLayout>
 
                             <LinearLayout
-                                android:onClick="@{()->viewModel.notificationNewClick()}"
+                                android:onClick="@{()->viewModel.onReceiveNewsClick()}"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
@@ -390,7 +390,7 @@
                                     android:layout_gravity="center_horizontal"
                                     android:layout_weight="2"
                                     android:background="@color/transparent"
-                                    android:checked="@{viewModel.notificationNew}"
+                                    android:checked="@{viewModel.isReceiveNews}"
                                     android:padding="@dimen/dp_10" />
                             </LinearLayout>
 

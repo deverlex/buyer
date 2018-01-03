@@ -24,17 +24,13 @@ public class NotificationSettingViewModel extends BaseObservable implements Noti
     private int mIconExpand = R.drawable.ic_expand;
     private boolean mNotificationEmail;
     private boolean mNotification;
-    private boolean notificationGroup;
-    private boolean mNotificationUpdateProduct;
-    private boolean notificationChat;
-    private boolean notificationPromotion;
-    private boolean notificationFollow;
-    private boolean notificationProducEnd;
-    private boolean notificationUpdateApp;
-    private boolean notificationProduct;
-    private boolean notificationApp;
-    private boolean notificationNew;
-    private boolean notificationPersonal;
+    private boolean mReceiveUpdateOrder;
+    private boolean mChatNotify;
+    private boolean mReceiveNewPromotion;
+    private boolean mReceiveNewFollowOrComment;
+    private boolean mReceiveAppUpdate;
+    private boolean mReceiveUpdateOrderAndPayment;
+    private boolean mReceiveNews;
 
     public NotificationSettingViewModel(Context mContext) {
         this.mContext = mContext;
@@ -42,10 +38,8 @@ public class NotificationSettingViewModel extends BaseObservable implements Noti
         mIconNotification = R.drawable.ic_next_right;
         mNotificationEmail = false;
         mNotification = false;
-        notificationProduct = true;
+        mReceiveUpdateOrderAndPayment = true;
     }
-
-
 
     @Override
     public void onStart() {
@@ -88,12 +82,6 @@ public class NotificationSettingViewModel extends BaseObservable implements Noti
     }
 
     @Override
-    public void onNotification() {
-
-    }
-
-
-    @Override
     public void onNotificationSettingEmail() {
         mNotificationEmail = !mNotificationEmail;
         notifyPropertyChanged(BR.notificationEmail);
@@ -106,74 +94,45 @@ public class NotificationSettingViewModel extends BaseObservable implements Noti
     }
 
     @Override
-    public void onGetUpdateOrderClick() {
-        mNotificationUpdateProduct = !mNotificationUpdateProduct;
-        notifyPropertyChanged(BR.notificationUpdateProduct);
+    public void onReceiveUpdateOrderClick() {
+        mReceiveUpdateOrder = !mReceiveUpdateOrder;
+        notifyPropertyChanged(BR.receiveUpdateOrder);
     }
 
     @Override
-    public void onNotificationChatClick() {
-        notificationChat =!notificationChat;
-        notifyPropertyChanged(BR.notificationChat);
+    public void onReceiveChatNotifyClick() {
+        mChatNotify =!mChatNotify;
+        notifyPropertyChanged(BR.chatNotify);
     }
 
     @Override
-    public void onNotificationProductPromotionClick() {
-        notificationPromotion = !notificationPromotion;
-        notifyPropertyChanged(BR.notificationPromotion);
+    public void onReceiveNewPromotionClick() {
+        mReceiveNewPromotion = !mReceiveNewPromotion;
+        notifyPropertyChanged(BR.receiveNewPromotion);
     }
 
     @Override
-    public void onNotificationFollowCLick() {
-        notificationFollow = !notificationFollow;
-        notifyPropertyChanged(BR.notificationFollow);
+    public void onReceiveNewFollowOrCommentClick() {
+        mReceiveNewFollowOrComment = !mReceiveNewFollowOrComment;
+        notifyPropertyChanged(BR.receiveNewFollowOrComment);
     }
 
     @Override
-    public void onNotificationProductEndCLick() {
-        notificationProducEnd = !notificationProducEnd;
-        notifyPropertyChanged(BR.notificationProducEnd);
+    public void onReceiveAppUpdateClick() {
+        mReceiveAppUpdate = !mReceiveAppUpdate;
+        notifyPropertyChanged(BR.receiveAppUpdate);
     }
 
     @Override
-    public void onNotificationUpdateAppClick() {
-        notificationUpdateApp = !notificationUpdateApp;
-        notifyPropertyChanged(BR.notificationUpdateApp);
+    public void onReceiveUpdateOrderAndPaymentClick() {
+        mReceiveUpdateOrderAndPayment = !mReceiveUpdateOrderAndPayment;
+        notifyPropertyChanged(BR.receiveUpdateOrderAndPayment);
     }
 
     @Override
-    public void onNotificationProductClick() {
-        notificationProduct = !notificationProduct;
-        notifyPropertyChanged(BR.notificationProduct);
-    }
-
-    @Override
-    public void notificationEmailApp() {
-        notificationApp = !notificationApp;
-        notifyPropertyChanged(BR.notificationApp);
-    }
-
-    @Override
-    public void notificationNewClick() {
-        notificationNew = !notificationNew;
-        notifyPropertyChanged(BR.notificationNew);
-    }
-
-    @Override
-    public void onNotificationPersonalClick() {
-        notificationPersonal = !notificationPersonal;
-        notifyPropertyChanged(BR.notificationPersonal);
-    }
-
-    @Override
-    public void onNotificationGroupClick() {
-        notificationGroup = !notificationGroup;
-        notifyPropertyChanged(BR.notificationGroup);
-    }
-
-    @Override
-    public void onNotificationSave() {
-
+    public void onReceiveNewsClick() {
+        mReceiveNews = !mReceiveNews;
+        notifyPropertyChanged(BR.receiveNews);
     }
 
     @Bindable
@@ -205,54 +164,36 @@ public class NotificationSettingViewModel extends BaseObservable implements Noti
     }
 
     @Bindable
-    public boolean isNotificationGroup() {
-        return notificationGroup;
+    public boolean isReceiveUpdateOrder() {
+        return mReceiveUpdateOrder;
     }
     @Bindable
-    public boolean isNotificationUpdateProduct() {
-        return mNotificationUpdateProduct;
-    }
-    @Bindable
-    public boolean isNotificationChat() {
-        return notificationChat;
+    public boolean isChatNotify() {
+        return mChatNotify;
     }
 
     @Bindable
-    public boolean isNotificationPromotion() {
-        return notificationPromotion;
+    public boolean isReceiveNewPromotion() {
+        return mReceiveNewPromotion;
     }
     @Bindable
-    public boolean isNotificationFollow() {
-        return notificationFollow;
+    public boolean isReceiveNewFollowOrComment() {
+        return mReceiveNewFollowOrComment;
     }
 
     @Bindable
-    public boolean isNotificationProducEnd() {
-        return notificationProducEnd;
+    public boolean isReceiveAppUpdate() {
+        return mReceiveAppUpdate;
     }
 
     @Bindable
-    public boolean isNotificationUpdateApp() {
-        return notificationUpdateApp;
+    public boolean isReceiveUpdateOrderAndPayment() {
+        return mReceiveUpdateOrderAndPayment;
     }
 
     @Bindable
-    public boolean isNotificationProduct() {
-        return notificationProduct;
+    public boolean isReceiveNews() {
+        return mReceiveNews;
     }
 
-    @Bindable
-    public boolean isNotificationApp() {
-        return notificationApp;
-    }
-
-    @Bindable
-    public boolean isNotificationNew() {
-        return notificationNew;
-    }
-
-    @Bindable
-    public boolean isNotificationPersonal() {
-        return notificationPersonal;
-    }
 }

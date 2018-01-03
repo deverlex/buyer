@@ -17,35 +17,24 @@ interface NotificationSettingContract {
 
         void onBackPressed();
 
-        void onNotification();
-
         void onNotificationSettingEmail();
 
         void onNotificationSetting();
 
-        void onGetUpdateOrderClick();
+        void onReceiveUpdateOrderClick();
 
-        void onNotificationChatClick();
+        void onReceiveChatNotifyClick();
 
-        void onNotificationProductPromotionClick();
+        void onReceiveNewPromotionClick();
 
-        void onNotificationFollowCLick();
+        void onReceiveNewFollowOrCommentClick();
 
-        void onNotificationProductEndCLick();
+        void onReceiveAppUpdateClick();
 
-        void onNotificationUpdateAppClick();
+        void onReceiveUpdateOrderAndPaymentClick();
 
-        void onNotificationProductClick();
+        void onReceiveNewsClick();
 
-        void notificationEmailApp();
-
-        void notificationNewClick();
-
-        void onNotificationPersonalClick();
-
-        void onNotificationGroupClick();
-
-        void onNotificationSave();
     }
 
     interface Presenter extends BasePresenter {
