@@ -1,0 +1,96 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="vn.needy.buyer.screen.listProduct.priceNow.ListProductPnViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageButton
+                    android:onClick="@{() -> viewModel.onBackPressed()}"
+                    android:id="@+id/back"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/transparent"
+                    app:srcCompat="@drawable/ic_back_left" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/back"
+                    android:text="Store name"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/sp_18" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+            android:id="@+id/top_product"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/toggle"
+            android:orientation="horizontal"
+            >
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:drawableLeft="@{@drawable/ic_label}"
+                android:drawablePadding="@dimen/dp_10"
+                android:drawableStart="@{@drawable/ic_label}"
+                android:fontFamily="@string/font_serif"
+                android:padding="@dimen/dp_10"
+                android:gravity="start|center_vertical"
+                android:text="@string/all_category"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp_16"
+                tools:ignore="UnusedAttribute" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableRight="@{@drawable/ic_next_right}"
+                android:drawablePadding="@dimen/dp_10"
+                android:drawableEnd="@{@drawable/ic_next_right}"
+                android:fontFamily="@string/font_serif"
+                android:gravity="end|center_vertical"
+                android:padding="@dimen/dp_10"
+                android:text="Bán chạy nhất"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/sp_16"
+                tools:ignore="UnusedAttribute"
+                />
+        </LinearLayout>
+
+        <android.support.v7.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/color_white"
+            android:orientation="vertical"
+            app:layoutManager="GridLayoutManager"
+            app:spanCount="2"
+            app:recyclerAdapter="@{viewModel.productPnAdapter}" />
+    </LinearLayout>
+</layout>
