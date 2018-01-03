@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sheet_add_to_cart"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/color_white"
+    android:orientation="vertical"
+    app:behavior_hideable="true"
+    app:behavior_peekHeight="0dp"
+    app:layout_behavior="android.support.design.widget.BottomSheetBehavior">
+
+    <LinearLayout
+        android:padding="@dimen/dp_18"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <vn.needy.buyer.widget.CircleImageView
+            android:id="@+id/avatar"
+            android:layout_width="@dimen/dp_65"
+            android:layout_height="@dimen/dp_65"
+            android:layout_gravity="center_vertical"
+            android:src="@drawable/ic_placeholder" />
+
+        <LinearLayout
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:textSize="@dimen/sp_16"
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/avatar"
+                android:text="đ200.000"
+                android:textColor="@color/color_orange_mos" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/price"
+                android:layout_toRightOf="@+id/avatar"
+                android:text="Kho: 30"
+                android:textSize="@dimen/sp_16" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/color_gray_white"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/dp_18">
+
+        <TextView
+            android:textSize="@dimen/dp_18"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Số lượng:"
+            android:textColor="@color/color_black" />
+
+        <RelativeLayout
+            android:layout_marginLeft="@dimen/dp_8"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/minus"
+                android:layout_centerVertical="true"
+                android:padding="@dimen/dp_8"
+                app:srcCompat="@drawable/ic_minus"
+                android:layout_width="@dimen/dp_36"
+                android:layout_height="@dimen/dp_36" />
+
+            <EditText
+                android:textSize="@dimen/sp_24"
+                android:layout_toLeftOf="@+id/plus"
+                android:layout_toRightOf="@+id/minus"
+                android:layout_centerVertical="true"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:background="@null"
+                android:gravity="center"
+                android:inputType="numberSigned"
+                android:text="1"
+                android:textColor="@color/color_black" />
+
+            <ImageView
+                android:id="@+id/plus"
+                android:layout_centerVertical="true"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/dp_8"
+                app:srcCompat="@drawable/ic_plus"
+                android:layout_width="@dimen/dp_36"
+                android:layout_height="@dimen/dp_36" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_1"
+        android:background="@color/color_gray_white"/>
+
+    <Button
+        android:textSize="@dimen/sp_16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/dp_8"
+        android:background="@color/color_orange_mos"
+        android:text="Mua ngay"
+        android:textColor="@color/color_white" />
+</LinearLayout>

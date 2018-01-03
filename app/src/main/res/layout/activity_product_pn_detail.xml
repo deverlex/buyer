@@ -1,0 +1,406 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="viewModel"
+            type="vn.needy.buyer.screen.productPnDetail.ProductPnDetailViewModel" />
+
+        <import type="android.view.View" />
+    </data>
+
+    <android.support.design.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:background="@color/colorPrimary"
+                app:contentInsetLeft="0dp"
+                app:contentInsetStart="0dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageButton
+                        android:id="@+id/back"
+                        android:layout_width="?attr/actionBarSize"
+                        android:layout_height="?attr/actionBarSize"
+                        android:background="@color/transparent"
+                        android:onClick="@{() -> viewModel.onBackPressed()}"
+                        app:srcCompat="@drawable/ic_back_left" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_toRightOf="@+id/back"
+                        android:text="Product name"
+                        android:textColor="@color/color_white"
+                        android:textSize="@dimen/sp_18" />
+                </RelativeLayout>
+            </android.support.v7.widget.Toolbar>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/color_gray_white">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_above="@+id/bottom_bar">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ss.com.bannerslider.views.BannerSlider
+                            android:id="@+id/banner_slider"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/dp_250"
+                            app:bannersrc="@{viewModel.banners}"
+                            app:defaultIndicators="circle" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/color_white"
+                            android:paddingLeft="@dimen/dp_8"
+                            android:paddingRight="@dimen/dp_8"
+                            android:paddingTop="@dimen/dp_8"
+                            android:text="Product name"
+                            android:textColor="@color/color_black"
+                            android:textSize="@dimen/sp_18" />
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/color_white"
+                            android:paddingLeft="@dimen/dp_8"
+                            android:paddingRight="@dimen/dp_8"
+                            android:paddingTop="@dimen/dp_4"
+                            android:text="đ200.000"
+                            android:textColor="@color/color_orange_mos"
+                            android:textSize="@dimen/sp_18" />
+
+                        <RelativeLayout
+                            android:id="@+id/extras_info"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/color_white"
+                            android:paddingLeft="@dimen/dp_8"
+                            android:paddingRight="@dimen/dp_8"
+                            android:paddingTop="@dimen/dp_4">
+
+                            <RatingBar
+                                android:id="@+id/rating"
+                                style="@style/RatingBar"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:isIndicator="true"
+                                android:numStars="5"
+                                android:rating="4.5"
+                                android:stepSize="0.5" />
+
+                            <TextView
+                                android:id="@+id/point"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/rating"
+                                android:maxLines="1"
+                                android:padding="@dimen/dp_5"
+                                android:text="4.8/5"
+                                android:textColor="@color/color_orange_mos"
+                                android:textSize="@dimen/sp_12" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_toRightOf="@+id/point"
+                                android:maxLines="1"
+                                android:padding="@dimen/dp_5"
+                                android:text="(200)"
+                                android:textColor="@color/gray70"
+                                android:textSize="@dimen/sp_12" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:drawableRight="@drawable/ic_next_right"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:padding="@dimen/dp_5"
+                                android:text="Xem tất cả"
+                                android:textColor="@color/color_orange_mos"
+                                android:textSize="@dimen/sp_12" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_1"
+                            android:background="@color/color_white"
+                            android:paddingBottom="@dimen/dp_8"
+                            android:paddingLeft="@dimen/dp_8"
+                            android:paddingRight="@dimen/dp_8"
+                            android:paddingTop="@dimen/dp_8">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:maxLines="1"
+                                android:text="Needy Xu"
+                                android:textColor="@color/gray70" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:drawableLeft="@drawable/ic_coin"
+                                android:drawablePadding="@dimen/dp_5"
+                                android:drawableRight="@drawable/ic_next_right"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:text="Nhận 5"
+                                android:textColor="@color/gray70" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_1"
+                            android:background="@color/color_white"
+                            android:drawableLeft="@drawable/ic_trunk_mini"
+                            android:drawablePadding="@dimen/dp_8"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:paddingBottom="@dimen/dp_4"
+                            android:paddingLeft="@dimen/dp_8"
+                            android:paddingRight="@dimen/dp_8"
+                            android:paddingTop="@dimen/dp_4"
+                            android:text="Miễn phí vận chuyển với đơn hàng từ đ200.000"
+                            android:textColor="@color/gray70" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/color_white"
+                            android:orientation="horizontal"
+                            android:paddingBottom="@dimen/dp_4"
+                            android:paddingLeft="@dimen/dp_8"
+                            android:paddingRight="@dimen/dp_8"
+                            android:paddingTop="@dimen/dp_4">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:drawableLeft="@drawable/ic_trunk_mini"
+                                android:drawablePadding="@dimen/dp_8"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:text="Vận chuyển đến:"
+                                android:textColor="@color/gray70" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_4"
+                                android:drawablePadding="@dimen/dp_8"
+                                android:drawableRight="@drawable/ic_location"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:text="Cầu Giấy, Hà Nội"
+                                android:textColor="@color/color_black" />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@color/color_white"
+                            android:orientation="horizontal"
+                            android:paddingBottom="@dimen/dp_4"
+                            android:paddingLeft="@dimen/dp_8"
+                            android:paddingRight="@dimen/dp_8"
+                            android:paddingTop="@dimen/dp_4">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_24"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:text="Chi phí:"
+                                android:textColor="@color/gray70" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="@dimen/dp_4"
+                                android:drawablePadding="@dimen/dp_8"
+                                android:gravity="center_vertical"
+                                android:maxLines="1"
+                                android:text="đ15.000"
+                                android:textColor="@color/color_black" />
+                        </LinearLayout>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_1"
+                            android:background="@color/color_white"
+                            android:drawableRight="@drawable/ic_next_right"
+                            android:gravity="center_vertical"
+                            android:maxLines="1"
+                            android:paddingBottom="@dimen/dp_8"
+                            android:paddingLeft="@dimen/dp_8"
+                            android:paddingRight="@dimen/dp_8"
+                            android:paddingTop="@dimen/dp_8"
+                            android:text="Chọn thuộc tính"
+                            android:textColor="@color/color_black" />
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_1"
+                            android:background="@color/color_white"
+                            android:paddingBottom="@dimen/dp_8"
+                            android:paddingLeft="@dimen/dp_8"
+                            android:paddingRight="@dimen/dp_8"
+                            android:paddingTop="@dimen/dp_8">
+
+                            <vn.needy.buyer.widget.CircleImageView
+                                android:id="@+id/store_avatar"
+                                android:layout_width="@dimen/dp_36"
+                                android:layout_height="@dimen/dp_36"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/ic_placeholder" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="@dimen/dp_8"
+                                android:layout_toRightOf="@+id/store_avatar"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:text="Hồng Hà Gas"
+                                android:textColor="@color/color_black" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
+                                android:drawablePadding="@dimen/dp_5"
+                                android:drawableRight="@drawable/ic_next_right"
+                                android:gravity="center"
+                                android:maxLines="1"
+                                android:text="Xem cửa hàng"
+                                android:textColor="@color/color_orange_mos" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/dp_4"
+                            android:background="@color/color_white"
+                            android:orientation="vertical"
+                            android:paddingBottom="@dimen/dp_8"
+                            android:paddingLeft="@dimen/dp_8"
+                            android:paddingRight="@dimen/dp_8"
+                            android:paddingTop="@dimen/dp_8">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:paddingBottom="@dimen/dp_4"
+                                android:text="Chi tiết sản phẩm"
+                                android:textColor="@color/color_black" />
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:text="Sản phẩm được nhập khẩu trực tiếp từ Ý và Thái Lan, chất lượng đạt tiêu chuẩn ISO 9001/2000\nHồng Hà Gas chuyên cung cấp các sản phẩm Gas cao cấp với mức giá cạnh tran."
+                                android:textColor="@color/gray70" />
+                        </LinearLayout>
+                    </LinearLayout>
+                </ScrollView>
+
+                <LinearLayout
+                    android:id="@+id/bottom_bar"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_50"
+                    android:layout_alignParentBottom="true"
+                    android:orientation="horizontal">
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="#00BCA4"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_white_message"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center"
+                            android:padding="@dimen/dp_8"
+                            android:text="Chat ngay"
+                            android:textColor="@color/color_white"
+                            android:textSize="8sp" />
+
+                        <View
+                            android:layout_width="@dimen/dp_1"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginBottom="@dimen/dp_8"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:background="@color/gray50" />
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:drawableTop="@drawable/ic_white_cart"
+                            android:foreground="?android:attr/selectableItemBackground"
+                            android:gravity="center"
+                            android:onClick="@{() -> viewModel.addToCart()}"
+                            android:padding="@dimen/dp_8"
+                            android:text="Thêm vào giỏ hàng"
+                            android:textColor="@color/color_white"
+                            android:textSize="8sp" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:onClick="@{() -> viewModel.buyNow()}"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:background="@color/color_orange_mos"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:gravity="center"
+                        android:padding="@dimen/dp_10"
+                        android:text="Mua ngay"
+                        android:textColor="@color/color_white" />
+                </LinearLayout>
+            </RelativeLayout>
+        </LinearLayout>
+    </android.support.design.widget.CoordinatorLayout>
+</layout>
