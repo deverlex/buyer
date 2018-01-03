@@ -55,4 +55,20 @@
     <string name="read_all">Đọc tất cả</string>
 
     <string name="account">Tài khoản</string>
+    
+    <string name="personal_budget">Needy xu</string>
+    <string name="personal_coin">Needy Xu hết hạn vào ngày 30-03-2018</string>
+    <string name="personal_note_coin">Xu đang có</string>
+
+    <string name="personal_history_all">Tất cả lịch sử</string>
+    <string name="personal_heard">Đã nhận</string>
+    <string name="personal_used">Đã dùng</string>
+    
+    <string name="personal_buy">Set 10 đôi tất Uni cổ thấp loại đẹp</string>
+    <string name="personal_complete">Đã hoàn thành</string>
+    <string name="personal_date_buy">30-12-2018 14:02</string>
+    <string name="personal_number_buy">+11</string>
+    <string name="personal_earned">Làm sao để săn Deedy Xu</string>
+    <string name="personal_not_coin">Bạn chưa có Needy Xu. Bạn chỉ nhận được \n Needy Xu khi đơn hàng đã hoàn thành (sau khi \nbạn ấn Đã nhận được hàng).</string>
+
 </resources>

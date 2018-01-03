@@ -62,6 +62,12 @@
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden"
             />
+
+        <activity android:name=".screen.wallet.WalletActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden"
+            />
     </application>
 
 </manifest>

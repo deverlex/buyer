@@ -5,6 +5,9 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.support.annotation.DrawableRes;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
 import android.text.InputType;
@@ -25,6 +28,8 @@ import ss.com.bannerslider.banners.Banner;
 import ss.com.bannerslider.views.BannerSlider;
 import vn.needy.buyer.database.sharedprf.SharedPrefsImpl;
 import vn.needy.buyer.database.sharedprf.SharedPrefsKey;
+import vn.needy.buyer.screen.main.MainActivity;
+import vn.needy.buyer.screen.wallet.WalletActivity;
 import vn.needy.buyer.utils.ViewUtil;
 import vn.needy.buyer.utils.image.CompressImage;
 
@@ -131,4 +136,15 @@ public class BindingAdapters {
 //            editText.setInputType(InputType.TYPE_CLASS_TEXT);
 //        }
 //    }
+
+    @BindingAdapter({"viewPagerAdater"})
+    public static void setAdapterForViewPager(final ViewPager view, FragmentPagerAdapter pagerAdapter) {
+       // final Wallet adapter = new MainActionsAdapter(view.getContext(), activity.getSupportFragmentManager());
+        view.setAdapter(pagerAdapter);
+    }
+
+    @BindingAdapter("viewPager")
+    public static void setViewPagerForTablayout(TabLayout tablayout , ViewPager viewPager){
+        tablayout.setupWithViewPager(viewPager);
+    }
 }
