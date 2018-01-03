@@ -12,6 +12,7 @@ import vn.needy.buyer.utils.navigator.Navigator;
  */
 
 public class PersonalViewModel implements PersonalContract.ViewModel{
+
     private Navigator mNavigator;
     private Context mContext;
 
@@ -35,34 +36,10 @@ public class PersonalViewModel implements PersonalContract.ViewModel{
 
     }
 
-
-    @Override
-    public void onClickViewOrderHistory() {
-
-    }
-
     @Override
     public void onClickViewBudget() {
         mNavigator.startActivity(WalletActivity.class);
     }
 
-    @Override
-    public void onClickViewCompany() {
 
-    }
-
-    @Override
-    public void onClickViewStore() {
-
-    }
-
-    @Override
-    public void onClickViewSupport() {
-
-    }
-
-    @Override
-    public void onClickHeader() {
-
-    }
 }
