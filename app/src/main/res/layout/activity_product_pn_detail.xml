@@ -115,6 +115,7 @@
                                 android:stepSize="0.5" />
 
                             <TextView
+                                android:layout_centerVertical="true"
                                 android:id="@+id/point"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
@@ -126,6 +127,7 @@
                                 android:textSize="@dimen/sp_12" />
 
                             <TextView
+                                android:layout_centerVertical="true"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_toRightOf="@+id/point"
@@ -136,6 +138,7 @@
                                 android:textSize="@dimen/sp_12" />
 
                             <TextView
+                                android:layout_centerVertical="true"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
