@@ -43,7 +43,7 @@ public class LanguageSettingPresenter implements LanguageSettingContract.Present
         String[] keys = mContext.getResources().getStringArray(R.array.language_entries);
         String[] values = mContext.getResources().getStringArray(R.array.language_values);
         mLanguageList = new ArrayList<>();
-        for(int i=0; i<keys.length; ++i){
+        for(int i = 0; i < keys.length; ++i){
             Language language = new Language(keys[i] , values[i]);
             if (values[i].equals("en"))
                 mPositionEnglish = i;
@@ -58,13 +58,14 @@ public class LanguageSettingPresenter implements LanguageSettingContract.Present
         Language mLanguage = null;
         String mLanguageCodeDefault = Locale.getDefault().getLanguage();
 
-        for (int i=0; i<mLanguageList.size() ; ++i)
+        for (int i = 0; i < mLanguageList.size() ; ++i)
             if (mLanguageList.get(i).getLanguageCode().equals(mLanguageCodeDefault)) {
                 mLanguage = new Language(mLanguageList.get(i).getLanguageName(), mLanguageCodeDefault);
                 break;
             }
         if (mLanguage == null){
-            mLanguage = new Language(mLanguageList.get(mPositionEnglish).getLanguageName(), mLanguageList.get(mPositionEnglish).getLanguageCode());
+            mLanguage = new Language(mLanguageList.get(mPositionEnglish).getLanguageName(),
+                    mLanguageList.get(mPositionEnglish).getLanguageCode());
         }
         mViewModel.setDefaultLanguage(mLanguage);
     }

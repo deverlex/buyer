@@ -5,9 +5,9 @@ package vn.needy.buyer.model;
  */
 
 public class Language {
+
     private String mLanguageName;
     private String mLanguageCode;
-
 
     public Language() {
     }
@@ -31,16 +31,5 @@ public class Language {
 
     public void setLanguageCode(String mLanguageCode) {
         this.mLanguageCode = mLanguageCode;
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj instanceof Language)
-        {
-            if(((Language) obj).mLanguageCode.equals(mLanguageCode))
-                return true;
-            return false;
-        }
-        return false;
     }
 }

@@ -38,14 +38,6 @@
                 android:text="@string/notification_tab"
                 android:textColor="@color/color_white"
                 android:textSize="@dimen/sp_18" />
-
-            <ImageButton
-
-                android:layout_width="?attr/actionBarSize"
-                android:layout_height="?attr/actionBarSize"
-                android:layout_alignParentRight="true"
-                android:background="@color/transparent"
-                app:srcCompat="@drawable/ic_check" />
         </RelativeLayout>
 
         <ScrollView
@@ -102,7 +94,7 @@
                                 android:textSize="@dimen/sp_13" />
 
                             <android.support.v7.widget.SwitchCompat
-                                android:onClick="@{()->viewModel.onNotificationSetting()}"
+                                android:clickable="false"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
@@ -118,56 +110,8 @@
                             android:orientation="vertical"
                             android:visibility="@{viewModel.Notification == true ? View.VISIBLE : View.GONE}">
 
-
-                            <LinearLayout
-                                android:onClick="@{() -> viewModel.onNotificationGroupClick()}"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:weightSum="8">
-
-                                <LinearLayout
-
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="6"
-                                    android:orientation="vertical">
-
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@string/font_serif"
-                                        android:paddingLeft="@dimen/dp_10"
-                                        android:paddingTop="@dimen/dp_10"
-                                        android:text="@string/notification_setting_group_name"
-                                        android:textAllCaps="false"
-                                        android:textColor="@color/color_black"
-                                        android:textSize="@dimen/sp_13" />
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:paddingBottom="@dimen/dp_10"
-                                        android:paddingLeft="@dimen/dp_10"
-                                        android:paddingRight="@dimen/dp_8"
-                                        android:text="@string/notification_setting_group"
-                                        android:textAllCaps="false"
-                                        android:textSize="@dimen/sp_13" />
-                                </LinearLayout>
-
-                                <android.support.v7.widget.SwitchCompat
-                                    android:onClick="@{() -> viewModel.onNotificationGroupClick()}"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center_horizontal"
-                                    android:layout_weight="2"
-                                    android:background="@color/transparent"
-                                    android:checked="@{viewModel.notificationGroup}"
-                                    android:padding="@dimen/dp_10" />
-                            </LinearLayout>
-
                             <RelativeLayout
-                                android:onClick="@{() ->viewModel.onNotificationUpdateProductClick()}"
+                                android:onClick="@{() ->viewModel.onGetUpdateOrderClick()}"
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content">
 
@@ -183,7 +127,6 @@
                                     android:textSize="@dimen/sp_13" />
 
                                 <android.support.v7.widget.SwitchCompat
-                                    android:onClick="@{() ->viewModel.onNotificationUpdateProductClick()}"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentRight="true"
@@ -210,7 +153,6 @@
                                     android:textSize="@dimen/sp_13" />
 
                                 <android.support.v7.widget.SwitchCompat
-                                    android:onClick="@{()->viewModel.onNotificationChatClick()}"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentRight="true"
@@ -237,7 +179,6 @@
                                     android:textSize="@dimen/sp_13" />
 
                                 <android.support.v7.widget.SwitchCompat
-                                    android:onClick="@{()->viewModel.onNotificationProductPromotionClick()}"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentRight="true"
@@ -264,40 +205,12 @@
                                     android:textSize="@dimen/sp_13" />
 
                                 <android.support.v7.widget.SwitchCompat
-                                    android:onClick="@{() -> viewModel.onNotificationFollowCLick()}"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentRight="true"
                                     android:layout_gravity="center_horizontal"
                                     android:background="@color/transparent"
                                     android:checked="@{viewModel.notificationFollow}"
-                                    android:padding="@dimen/dp_10" />
-                            </RelativeLayout>
-
-                            <RelativeLayout
-                                android:onClick="@{() -> viewModel.onNotificationProductEndCLick()}"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@string/font_serif"
-                                    android:paddingLeft="@dimen/dp_10"
-                                    android:paddingTop="@dimen/dp_10"
-                                    android:text="@string/notification_setting_product_end"
-                                    android:textAllCaps="false"
-                                    android:textColor="@color/color_black"
-                                    android:textSize="@dimen/sp_13" />
-
-                                <android.support.v7.widget.SwitchCompat
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignParentRight="true"
-                                    android:layout_gravity="center_horizontal"
-                                    android:background="@color/transparent"
-                                    android:checked="@{viewModel.notificationProducEnd}"
-                                    android:onClick="@{() -> viewModel.onNotificationProductEndCLick()}"
                                     android:padding="@dimen/dp_10" />
                             </RelativeLayout>
 
@@ -375,7 +288,7 @@
                                 android:textSize="@dimen/sp_13" />
 
                             <android.support.v7.widget.SwitchCompat
-                                android:onClick="@{() -> viewModel.onNotificationSettingEmail()}"
+                                android:clickable="false"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
@@ -427,59 +340,12 @@
                                 </LinearLayout>
 
                                 <android.support.v7.widget.SwitchCompat
-                                    android:onClick="@{()->viewModel.onNotificationProductClick()}"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center_horizontal"
                                     android:layout_weight="2"
                                     android:background="@color/transparent"
                                     android:checked="@{viewModel.notificationProduct}"
-                                    android:padding="@dimen/dp_10" />
-                            </LinearLayout>
-
-                            <LinearLayout
-                                android:onClick="@{() -> viewModel.notificationEmailApp()}"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:weightSum="8">
-
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="6"
-                                    android:orientation="vertical">
-
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@string/font_serif"
-                                        android:paddingLeft="@dimen/dp_10"
-                                        android:paddingTop="@dimen/dp_10"
-                                        android:text="@string/notification_email_app"
-                                        android:textAllCaps="false"
-                                        android:textColor="@color/color_black"
-                                        android:textSize="@dimen/sp_13" />
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:paddingBottom="@dimen/dp_10"
-                                        android:paddingLeft="@dimen/dp_10"
-                                        android:paddingRight="@dimen/dp_8"
-                                        android:text="@string/notification_email_app_detail"
-                                        android:textAllCaps="false"
-                                        android:textSize="@dimen/sp_13" />
-                                </LinearLayout>
-
-                                <android.support.v7.widget.SwitchCompat
-                                    android:onClick="@{() -> viewModel.notificationEmailApp()}"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center_horizontal"
-                                    android:layout_weight="2"
-                                    android:background="@color/transparent"
-                                    android:checked="@{viewModel.notificationApp}"
                                     android:padding="@dimen/dp_10" />
                             </LinearLayout>
 
@@ -519,7 +385,6 @@
                                 </LinearLayout>
 
                                 <android.support.v7.widget.SwitchCompat
-                                    android:onClick="@{()->viewModel.notificationNewClick()}"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center_horizontal"
@@ -529,51 +394,6 @@
                                     android:padding="@dimen/dp_10" />
                             </LinearLayout>
 
-                            <LinearLayout
-                                android:onClick="@{() -> viewModel.onNotificationPersonalClick()}"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content"
-                                android:orientation="horizontal"
-                                android:weightSum="8">
-
-                                <LinearLayout
-                                    android:layout_width="0dp"
-                                    android:layout_height="wrap_content"
-                                    android:layout_weight="6"
-                                    android:orientation="vertical">
-
-                                    <TextView
-                                        android:layout_width="match_parent"
-                                        android:layout_height="wrap_content"
-                                        android:fontFamily="@string/font_serif"
-                                        android:paddingLeft="@dimen/dp_10"
-                                        android:paddingTop="@dimen/dp_10"
-                                        android:text="@string/notification_email_personal"
-                                        android:textAllCaps="false"
-                                        android:textColor="@color/color_black"
-                                        android:textSize="@dimen/sp_13" />
-
-                                    <TextView
-                                        android:layout_width="wrap_content"
-                                        android:layout_height="wrap_content"
-                                        android:paddingBottom="@dimen/dp_10"
-                                        android:paddingLeft="@dimen/dp_10"
-                                        android:paddingRight="@dimen/dp_8"
-                                        android:text="@string/notification_email_personal_detail"
-                                        android:textAllCaps="false"
-                                        android:textSize="@dimen/sp_13" />
-                                </LinearLayout>
-
-                                <android.support.v7.widget.SwitchCompat
-                                    android:onClick="@{() -> viewModel.onNotificationPersonalClick()}"
-                                    android:layout_width="0dp"
-                                    android:layout_height="match_parent"
-                                    android:layout_gravity="center_horizontal"
-                                    android:layout_weight="2"
-                                    android:background="@color/transparent"
-                                    android:checked="@{viewModel.notificationPersonal}"
-                                    android:padding="@dimen/dp_10" />
-                            </LinearLayout>
                         </LinearLayout>
                     </LinearLayout>
                 </LinearLayout>

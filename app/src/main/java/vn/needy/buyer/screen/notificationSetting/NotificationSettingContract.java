@@ -23,7 +23,7 @@ interface NotificationSettingContract {
 
         void onNotificationSetting();
 
-        void onNotificationUpdateProductClick();
+        void onGetUpdateOrderClick();
 
         void onNotificationChatClick();
 

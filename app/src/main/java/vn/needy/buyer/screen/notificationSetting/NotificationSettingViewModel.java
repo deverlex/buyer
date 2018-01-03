@@ -106,7 +106,7 @@ public class NotificationSettingViewModel extends BaseObservable implements Noti
     }
 
     @Override
-    public void onNotificationUpdateProductClick() {
+    public void onGetUpdateOrderClick() {
         mNotificationUpdateProduct = !mNotificationUpdateProduct;
         notifyPropertyChanged(BR.notificationUpdateProduct);
     }
