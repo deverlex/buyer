@@ -1,12 +1,12 @@
 package vn.needy.buyer.repository;
 
 import io.reactivex.Observable;
-import vn.needy.buyer.model.User;
+import vn.needy.buyer.domain.User;
 import vn.needy.buyer.port.message.ResponseWrapper;
-import vn.needy.buyer.repository.remote.user.request.LoginReq;
-import vn.needy.buyer.repository.remote.user.request.RegisterReq;
-import vn.needy.buyer.repository.remote.user.request.ResetAccountReq;
-import vn.needy.buyer.repository.remote.user.respone.LoginResp;
+import vn.needy.buyer.repository.remote.user.request.LoginRequest;
+import vn.needy.buyer.repository.remote.user.request.RegisterRequest;
+import vn.needy.buyer.repository.remote.user.request.ResetAccountRequest;
+import vn.needy.buyer.repository.remote.user.respone.LoginResponse;
 import vn.needy.buyer.repository.remote.user.respone.TokenResponse;
 
 /**
@@ -15,13 +15,13 @@ import vn.needy.buyer.repository.remote.user.respone.TokenResponse;
 
 public interface UserData {
     interface Remote {
-        Observable<ResponseWrapper<LoginResp>> login(LoginReq request);
+        Observable<ResponseWrapper<LoginResponse>> login(LoginRequest request);
 
-        Observable<ResponseWrapper<TokenResponse>> register(RegisterReq request);
+        Observable<ResponseWrapper<TokenResponse>> register(RegisterRequest request);
 
         Observable<ResponseWrapper> findUserExist(String phoneNumber);
 
-        Observable<ResponseWrapper<TokenResponse>> resetPassword(String phoneNumber, ResetAccountReq request);
+        Observable<ResponseWrapper<TokenResponse>> resetPassword(String phoneNumber, ResetAccountRequest request);
     }
 
     interface Local {

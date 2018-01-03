@@ -10,7 +10,7 @@ import io.reactivex.functions.Function;
 import io.reactivex.schedulers.Schedulers;
 import vn.needy.buyer.R;
 import vn.needy.buyer.database.sharedprf.SharedPrefsImpl;
-import vn.needy.buyer.model.User;
+import vn.needy.buyer.domain.User;
 import vn.needy.buyer.port.error.BaseException;
 import vn.needy.buyer.port.error.SafetyError;
 import vn.needy.buyer.port.message.BaseStatus;
@@ -19,8 +19,8 @@ import vn.needy.buyer.port.service.BuyerServiceClient;
 import vn.needy.buyer.repository.UserRepository;
 import vn.needy.buyer.repository.local.UserDataLocal;
 import vn.needy.buyer.repository.remote.user.UserDataRemote;
-import vn.needy.buyer.repository.remote.user.request.LoginReq;
-import vn.needy.buyer.repository.remote.user.respone.LoginResp;
+import vn.needy.buyer.repository.remote.user.request.LoginRequest;
+import vn.needy.buyer.repository.remote.user.respone.LoginResponse;
 import vn.needy.buyer.utils.Utils;
 import vn.needy.buyer.utils.navigator.Navigator;
 
@@ -62,7 +62,7 @@ public class LoginPresenter implements LoginContract.Presenter {
         if (!validateDataInput(phoneNumber, passWord)) {
             return;
         }
-        final LoginReq request = new LoginReq(phoneNumber, passWord);
+        final LoginRequest request = new LoginRequest(phoneNumber, passWord);
         mUserRepository.login(request)
             .subscribeOn(Schedulers.io())
             .doOnSubscribe(new Consumer<Disposable>() {
@@ -77,10 +77,10 @@ public class LoginPresenter implements LoginContract.Presenter {
                     mNavigator.showToastCenterText(error.getMessage());
                 }
             }).observeOn(Schedulers.computation())
-            .map(new Function<ResponseWrapper<LoginResp>, ResponseWrapper<LoginResp>>() {
+            .map(new Function<ResponseWrapper<LoginResponse>, ResponseWrapper<LoginResponse>>() {
                 @Override
-                public ResponseWrapper<LoginResp> apply(ResponseWrapper<LoginResp> resp) throws Exception {
-                    LoginResp data = resp.getData();
+                public ResponseWrapper<LoginResponse> apply(ResponseWrapper<LoginResponse> resp) throws Exception {
+                    LoginResponse data = resp.getData();
                     if (data != null && data.getToken() != null) {
                         // save user info & token to database
                         User user = new User(data.getUser());
@@ -91,9 +91,9 @@ public class LoginPresenter implements LoginContract.Presenter {
                     return resp;
                 }
             })
-            .observeOn(AndroidSchedulers.mainThread()).subscribe(new Consumer<ResponseWrapper<LoginResp>>() {
+            .observeOn(AndroidSchedulers.mainThread()).subscribe(new Consumer<ResponseWrapper<LoginResponse>>() {
                 @Override
-                public void accept(ResponseWrapper<LoginResp> resp) throws Exception {
+                public void accept(ResponseWrapper<LoginResponse> resp) throws Exception {
                     mViewModel.onHideProgressBar();
                     Log.d(TAG, resp.getStatus());
                     if (resp.getStatus().equals(BaseStatus.ERROR)) {

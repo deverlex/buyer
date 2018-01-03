@@ -13,7 +13,7 @@ import com.android.databinding.library.baseAdapters.BR;
 
 import vn.needy.buyer.R;
 import vn.needy.buyer.port.service.BuyerServiceClient;
-import vn.needy.buyer.repository.remote.user.request.RegisterReq;
+import vn.needy.buyer.repository.remote.user.request.RegisterRequest;
 import vn.needy.buyer.screen.main.MainActivity;
 import vn.needy.buyer.utils.Utils;
 import vn.needy.buyer.utils.dialog.DialogManager;
@@ -99,7 +99,7 @@ public class RegisterViewModel  extends BaseObservable implements RegisterContra
     @Override
     public void onVerificationSuccess(String firebaseUid, String firebaseToken) {
         mDialogManager.dismissProgressDialog();
-        RegisterReq request = new RegisterReq();
+        RegisterRequest request = new RegisterRequest();
         request.setPhoneNumber(Utils.PhoneNumberUtils.formatPhoneNumber(mPhoneNumber));
         request.setPassword(mPassword);
         request.setFirebaseUid(firebaseUid);

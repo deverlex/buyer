@@ -13,7 +13,7 @@ import com.android.databinding.library.baseAdapters.BR;
 
 import vn.needy.buyer.R;
 import vn.needy.buyer.port.service.BuyerServiceClient;
-import vn.needy.buyer.repository.remote.user.request.ResetAccountReq;
+import vn.needy.buyer.repository.remote.user.request.ResetAccountRequest;
 import vn.needy.buyer.screen.main.MainActivity;
 import vn.needy.buyer.utils.dialog.DialogManager;
 import vn.needy.buyer.utils.navigator.Navigator;
@@ -179,7 +179,7 @@ public class ForgotPassWdViewModel extends BaseObservable implements ForgotPassW
     @Override
     public void onResetPasswordClick() {
         Log.d(TAG, "TOKEN? " + mFirebaseToken);
-        ResetAccountReq request = new ResetAccountReq();
+        ResetAccountRequest request = new ResetAccountRequest();
         request.setFirebaseToken(mFirebaseToken);
         request.setPassword(mPassword);
         mPresenter.resetPassword(mPhoneNumber, request);

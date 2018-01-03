@@ -8,7 +8,7 @@ import io.realm.Realm;
 import vn.needy.buyer.database.realm.RealmApi;
 import vn.needy.buyer.database.sharedprf.SharedPrefsApi;
 import vn.needy.buyer.database.sharedprf.SharedPrefsKey;
-import vn.needy.buyer.model.User;
+import vn.needy.buyer.domain.User;
 import vn.needy.buyer.repository.UserData;
 
 /**

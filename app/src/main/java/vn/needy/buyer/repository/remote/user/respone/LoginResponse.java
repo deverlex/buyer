@@ -3,14 +3,14 @@ package vn.needy.buyer.repository.remote.user.respone;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import vn.needy.buyer.model.wrapper.UserWrapper;
+import vn.needy.buyer.port.wrapper.UserWrapper;
 
 
 /**
  * Created by lion on 11/12/2017.
  */
 
-public class LoginResp {
+public class LoginResponse {
 
     @Expose
     @SerializedName("user")

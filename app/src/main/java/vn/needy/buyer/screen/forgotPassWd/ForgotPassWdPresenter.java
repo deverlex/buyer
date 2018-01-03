@@ -32,7 +32,7 @@ import vn.needy.buyer.port.service.BuyerServiceClient;
 import vn.needy.buyer.repository.UserRepository;
 import vn.needy.buyer.repository.local.UserDataLocal;
 import vn.needy.buyer.repository.remote.user.UserDataRemote;
-import vn.needy.buyer.repository.remote.user.request.ResetAccountReq;
+import vn.needy.buyer.repository.remote.user.request.ResetAccountRequest;
 import vn.needy.buyer.repository.remote.user.respone.TokenResponse;
 import vn.needy.buyer.utils.Utils;
 
@@ -195,7 +195,7 @@ public class ForgotPassWdPresenter implements ForgotPassWdContract.Presenter{
     }
 
     @Override
-    public void resetPassword(String phoneNumber, ResetAccountReq request) {
+    public void resetPassword(String phoneNumber, ResetAccountRequest request) {
         if (!validateDataInput(phoneNumber, request.getPassword())) return;
 
         phoneNumber = Utils.PhoneNumberUtils.formatPhoneNumber(phoneNumber);
