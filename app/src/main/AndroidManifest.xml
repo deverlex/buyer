@@ -68,6 +68,12 @@
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden"
             />
+
+        <activity android:name=".screen.listProduct.priceLater.ListProductPlActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden"
+            />
     </application>
 
 </manifest>
