@@ -31,37 +31,27 @@ public class PersonalViewModel extends BaseObservable implements PersonalContrac
     }
 
     @Override
-    public void setPresenter(PersonalContract.Persenter presenter) {
+    public void setPresenter(PersonalContract.Presenter presenter) {
 
     }
 
     @Override
-    public void onAccountActivityClick() {
+    public void onViewAccountClicked() {
         mNavigator.startActivity(AccountActivity.class);
     }
 
     @Override
-    public void onClickViewOrderHistory() {
+    public void onViewOrderHistoryClicked() {
 
     }
 
     @Override
-    public void onClickViewBudget() {
+    public void onViewBudgetClicked() {
 
     }
 
     @Override
-    public void onClickViewCompany() {
-
-    }
-
-    @Override
-    public void onClickViewStore() {
-
-    }
-
-    @Override
-    public void onClickViewSupport() {
+    public void onViewSupportClicked() {
 
     }
 

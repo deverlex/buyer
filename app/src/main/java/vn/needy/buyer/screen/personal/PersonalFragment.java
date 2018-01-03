@@ -26,7 +26,7 @@ public class PersonalFragment extends Fragment{
         return fragment;
     }
 
-    private PersonalContract.Persenter mPersenter;
+    private PersonalContract.Presenter mPersenter;
     private PersonalContract.ViewModel mViewModel;
     private Navigator mNavigator;
 

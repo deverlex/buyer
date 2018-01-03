@@ -9,25 +9,21 @@ import vn.needy.buyer.screen.BaseViewModel;
 
 public class PersonalContract {
 
-    interface ViewModel extends BaseViewModel<Persenter>{
+    interface ViewModel extends BaseViewModel<Presenter>{
 
-        void onAccountActivityClick();
+        void onViewAccountClicked();
 
-        void onClickViewOrderHistory();
+        void onViewOrderHistoryClicked();
 
-        void onClickViewBudget();
+        void onViewBudgetClicked();
 
-        void onClickViewCompany();
-
-        void onClickViewStore();
-
-        void onClickViewSupport();
+        void onViewSupportClicked();
 
         void onClickHeader();
 
     }
 
-    interface Persenter extends BasePresenter{
+    interface Presenter extends BasePresenter{
 
     }
 }
