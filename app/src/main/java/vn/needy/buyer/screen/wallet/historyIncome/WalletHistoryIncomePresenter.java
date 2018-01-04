@@ -11,12 +11,12 @@ import vn.needy.buyer.screen.wallet.WalletActivity;
  * Created by minh_dai on 02/01/2018.
  */
 
-public class WalletHistorycomePresenter implements WalletHistoryIncomeContract.Presenter {
+public class WalletHistoryIncomePresenter implements WalletHistoryIncomeContract.Presenter {
 
     private Context mContext;
     private WalletHistoryIncomeContract.ViewModel mViewModel;
 
-    public WalletHistorycomePresenter(Context mContext, WalletHistoryIncomeContract.ViewModel mViewModel) {
+    public WalletHistoryIncomePresenter(Context mContext, WalletHistoryIncomeContract.ViewModel mViewModel) {
         this.mContext = mContext;
         this.mViewModel = mViewModel;
     }
@@ -33,7 +33,7 @@ public class WalletHistorycomePresenter implements WalletHistoryIncomeContract.P
 
     @Override
     public void getListProduct(){
-        
+
         List<WalletActivity.Cargo> mList;
         WalletActivity.Cargo cargo = new WalletActivity.Cargo("Set 10 đôi tất Uni cổ thấp loại đẹp"
                 , "Đã hoàn thành" ,"30-12-2018 14:02"

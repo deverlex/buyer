@@ -52,13 +52,13 @@ public class WalletHistoryPurchaseViewModel extends BaseObservable implements Wa
     }
 
     @Override
-    public void getProductList(List<WalletActivity.Product> products) {
-        mAdapter.updateData(products);
-        mVisibilityRecyclerView = products.size() == 0 ? false : true;
+    public void getCargoList(List<WalletActivity.Cargo> cargos) {
+        mAdapter.updateData(cargos);
+        mVisibilityRecyclerView = cargos.size() == 0 ? false : true;
     }
 
     @Override
-    public void onPersonalEarnedCoinClick() {
+    public void onPersonalEarnsCoinClick() {
 
     }
 
