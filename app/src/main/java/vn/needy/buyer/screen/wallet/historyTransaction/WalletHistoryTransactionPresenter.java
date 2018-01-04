@@ -5,9 +5,7 @@ import android.content.Context;
 import java.util.ArrayList;
 import java.util.List;
 
-import vn.needy.buyer.R;
 import vn.needy.buyer.screen.wallet.WalletActivity;
-import vn.needy.buyer.screen.wallet.historyIncome.WalletHistoryIncomeContract;
 
 /**
  * Created by minh_dai on 02/01/2018.
@@ -35,19 +33,19 @@ public class WalletHistoryTransactionPresenter implements WalletHistoryTransacti
 
     @Override
     public void getListProduct(){
-        List<WalletActivity.Product> mList;
-        WalletActivity.Product product = new WalletActivity.Product(mContext.getString(R.string.personal_buy)
-                , mContext.getString(R.string.personal_complete) ,mContext.getString(R.string.personal_date_buy)
-                ,  mContext.getString(R.string.personal_number_buy));
+        List<WalletActivity.Cargo> mList;
+        WalletActivity.Cargo cargo = new WalletActivity.Cargo("Set 10 đôi tất Uni cổ thấp loại đẹp"
+                , "Đã hoàn thành" ,"30-12-2018 14:02"
+                ,  "+11");
 
         mList = new ArrayList<>();
-       /* mList.add(product);
-        mList.add(product);
-        mList.add(product);
-        mList.add(product);
-        mList.add(product);
-        mList.add(product);*/
+       /* mList.add(cargo);
+        mList.add(cargo);
+        mList.add(cargo);
+        mList.add(cargo);
+        mList.add(cargo);
+        mList.add(cargo);*/
 
-        mViewModel.getProductList(mList);
+        mViewModel.getCargoList(mList);
     }
 }

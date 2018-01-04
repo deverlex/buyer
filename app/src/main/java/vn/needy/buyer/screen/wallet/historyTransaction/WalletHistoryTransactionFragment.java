@@ -15,7 +15,6 @@ import vn.needy.buyer.R;
 import vn.needy.buyer.databinding.FragmentWalletHistoryTransactionBinding;
 import vn.needy.buyer.screen.wallet.WalletActivity;
 import vn.needy.buyer.screen.wallet.WalletRecyclerViewAdapter;
-import vn.needy.buyer.screen.wallet.historyIncome.WalletHistoryIncomeViewModel;
 
 /**
  * Created by lion on 02/01/2018.
@@ -32,7 +31,7 @@ public class WalletHistoryTransactionFragment extends Fragment {
     private WalletHistoryTransactionContract.ViewModel mViewModel;
     private WalletHistoryTransactionContract.Presenter mPresenter;
     private WalletRecyclerViewAdapter mAdapter;
-    private List<WalletActivity.Product> mList;
+    private List<WalletActivity.Cargo> mList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
