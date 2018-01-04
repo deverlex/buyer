@@ -30,7 +30,7 @@ public class WalletHistoryIncomeFragment extends Fragment {
     private WalletHistoryIncomeContract.Presenter mPresenter;
     private WalletHistoryIncomeContract.ViewModel mViewModel;
     private WalletRecyclerViewAdapter mAdapter;
-    private List<WalletActivity.Product> mList;
+    private List<WalletActivity.Cargo> mList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
@@ -39,7 +39,7 @@ public class WalletHistoryIncomeFragment extends Fragment {
         mList = new ArrayList<>();
         mAdapter = new WalletRecyclerViewAdapter(getActivity() , mList);
         mViewModel = new WalletHistoryIncomeViewModel(getActivity() , mAdapter);
-        mPresenter = new WalletHistorycomePresenter(getActivity() , mViewModel);
+        mPresenter = new WalletHistoryIncomePresenter(getActivity() , mViewModel);
 
         mViewModel.setPresenter(mPresenter);
         mViewModel.onStart();

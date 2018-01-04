@@ -13,14 +13,10 @@ public class WalletContract {
 
         void onBackPressed();
 
-        void onPersonalEarnedCoinClick();
 
-        void getProductList(WalletActivity.Cargo cargo);
     }
 
     interface Presenter extends BasePresenter{
-
-        void loadWalletList();
 
     }
 }

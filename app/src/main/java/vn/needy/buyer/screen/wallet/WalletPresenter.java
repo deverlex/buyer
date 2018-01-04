@@ -29,8 +29,4 @@ public class WalletPresenter implements WalletContract.Presenter{
 
     }
 
-    @Override
-    public void loadWalletList() {
-
-    }
 }

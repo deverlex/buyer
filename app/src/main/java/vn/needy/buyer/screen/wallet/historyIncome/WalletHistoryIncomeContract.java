@@ -14,8 +14,10 @@ public interface WalletHistoryIncomeContract {
 
     interface ViewModel extends BaseViewModel<Presenter> {
 
-        void getProductList(List<WalletActivity.Product> products);
-        void onPersonalEarnedCoinClick();
+        void getProductList(List<WalletActivity.Cargo> cargos);
+
+        void onPersonalEarnsCoinClick();
+
     }
 
     interface Presenter extends BasePresenter{

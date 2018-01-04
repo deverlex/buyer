@@ -9,7 +9,6 @@ import java.util.List;
 import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 import vn.needy.buyer.screen.wallet.WalletActivity;
 import vn.needy.buyer.screen.wallet.WalletRecyclerViewAdapter;
-import vn.needy.buyer.screen.wallet.WalletViewModel;
 
 /**
  * Created by minh_dai on 02/01/2018.
@@ -58,13 +57,13 @@ public class WalletHistoryIncomeViewModel extends BaseObservable implements Wall
     }
 
     @Override
-    public void getProductList(List<WalletActivity.Product> products) {
-        mAdapter.updateData(products);
-        mVisibilityRecyclerView = products.size() == 0 ? false : true;
+    public void getProductList(List<WalletActivity.Cargo> cargos) {
+        mAdapter.updateData(cargos);
+        mVisibilityRecyclerView = cargos.size() == 0 ? false : true;
     }
 
     @Override
-    public void onPersonalEarnedCoinClick() {
+    public void onPersonalEarnsCoinClick() {
 
     }
 

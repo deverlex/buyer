@@ -21,8 +21,6 @@ import vn.needy.buyer.screen.BaseActivity;
 
 public class WalletActivity extends BaseActivity{
 
-    private TabLayout mTabLayout;
-    private ViewPager mViewPager;
     private WalletContract.ViewModel mViewModel;
     private WalletContract.Presenter mPresenter;
     private WalletSectionsAdapter mWalletSectionAdapter;

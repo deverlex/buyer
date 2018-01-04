@@ -24,9 +24,6 @@ public class WalletViewModel extends BaseObservable implements WalletContract.Vi
         mCoin = "0";
     }
 
-    public WalletViewModel() {
-    }
-
     @Override
     public void onStart() {
 
@@ -47,15 +44,6 @@ public class WalletViewModel extends BaseObservable implements WalletContract.Vi
         ((Activity) mContext).onBackPressed();
     }
 
-    @Override
-    public void onPersonalEarnedCoinClick() {
-
-    }
-
-    @Override
-    public void getProductList(WalletActivity.Cargo cargo) {
-        mListCargo = cargo;
-    }
 
     @Bindable
     public WalletSectionsAdapter getWalletSectionsAdapter() {
