@@ -47,6 +47,7 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
+                android:background="@color/color_gray_white"
                 android:orientation="vertical">
 
 
@@ -57,7 +58,7 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/dp_50"
                         android:layout_marginTop="@dimen/dp_0_mid"
                         android:background="@color/color_white"
                         android:drawablePadding="@dimen/dp_10"
@@ -68,6 +69,7 @@
                         android:textAllCaps="false"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/sp_16"
+                        android:gravity="center|left"
                         app:srcDrawableRight="@{viewModel.iconNotification}"
                         tools:ignore="UnusedAttribute" />
 
@@ -79,27 +81,29 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="@dimen/dp_50"
+                            android:background="@color/color_white"
+                            android:layout_marginTop="@dimen/dp_0_mid"
                             android:onClick="@{()->viewModel.onTurnOnReceiveNotify()}">
 
                             <TextView
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
                                 android:fontFamily="@string/font_serif"
                                 android:paddingLeft="@dimen/dp_10"
-                                android:paddingTop="@dimen/dp_10"
                                 android:text="@string/notification_tab"
                                 android:textAllCaps="false"
                                 android:textColor="@color/color_black"
-                                android:textSize="@dimen/sp_13" />
+                                android:textSize="@dimen/sp_14" />
 
                             <android.support.v7.widget.SwitchCompat
                                 android:clickable="false"
+                                android:layout_centerVertical="true"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
                                 android:layout_gravity="center_horizontal"
-                                android:background="@color/transparent"
                                 android:checked="@{viewModel.Notification}"
                                 android:padding="@dimen/dp_10" />
                         </RelativeLayout>
@@ -113,25 +117,27 @@
                             <RelativeLayout
                                 android:onClick="@{() ->viewModel.onReceiveUpdateOrderClick()}"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="@dimen/dp_50"
+                                android:layout_marginTop="@dimen/dp_0_mid"
+                                android:background="@color/color_white">
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@string/font_serif"
                                     android:paddingLeft="@dimen/dp_10"
-                                    android:paddingTop="@dimen/dp_10"
                                     android:text="@string/update_order"
                                     android:textAllCaps="false"
+                                    android:layout_centerVertical="true"
                                     android:textColor="@color/color_black"
-                                    android:textSize="@dimen/sp_13" />
+                                    android:textSize="@dimen/sp_14" />
 
                                 <android.support.v7.widget.SwitchCompat
+                                    android:clickable="false"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentRight="true"
-                                    android:layout_gravity="center_horizontal"
-                                    android:background="@color/transparent"
+                                    android:layout_centerVertical="true"
                                     android:checked="@{viewModel.isReceiveUpdateOrder}"
                                     android:padding="@dimen/dp_10" />
                             </RelativeLayout>
@@ -139,25 +145,27 @@
                             <RelativeLayout
                                 android:onClick="@{()->viewModel.onReceiveChatNotifyClick()}"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="@dimen/dp_50"
+                                android:layout_marginTop="@dimen/dp_0_mid"
+                                android:background="@color/color_white">
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@string/font_serif"
                                     android:paddingLeft="@dimen/dp_10"
-                                    android:paddingTop="@dimen/dp_10"
                                     android:text="@string/notification_setting_chat"
+                                    android:layout_centerVertical="true"
                                     android:textAllCaps="false"
                                     android:textColor="@color/color_black"
-                                    android:textSize="@dimen/sp_13" />
+                                    android:textSize="@dimen/sp_14" />
 
                                 <android.support.v7.widget.SwitchCompat
+                                    android:clickable="false"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentRight="true"
-                                    android:layout_gravity="center_horizontal"
-                                    android:background="@color/transparent"
+                                    android:layout_centerVertical="true"
                                     android:checked="@{viewModel.isChatNotify}"
                                     android:padding="@dimen/dp_10" />
                             </RelativeLayout>
@@ -165,25 +173,26 @@
                             <RelativeLayout
                                 android:onClick="@{()->viewModel.onReceiveNewPromotionClick()}"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="@dimen/dp_50"
+                                android:layout_marginTop="@dimen/dp_0_mid"
+                                android:background="@color/color_white">
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@string/font_serif"
                                     android:paddingLeft="@dimen/dp_10"
-                                    android:paddingTop="@dimen/dp_10"
                                     android:text="@string/product_promotion"
-                                    android:textAllCaps="false"
+                                    android:layout_centerVertical="true"
                                     android:textColor="@color/color_black"
-                                    android:textSize="@dimen/sp_13" />
+                                    android:textSize="@dimen/sp_14" />
 
                                 <android.support.v7.widget.SwitchCompat
+                                    android:clickable="false"
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentRight="true"
-                                    android:layout_gravity="center_horizontal"
-                                    android:background="@color/transparent"
+                                    android:layout_centerVertical="true"
                                     android:checked="@{viewModel.isReceiveNewPromotion}"
                                     android:padding="@dimen/dp_10" />
                             </RelativeLayout>
@@ -191,41 +200,17 @@
                             <RelativeLayout
                                 android:onClick="@{() -> viewModel.onReceiveNewFollowOrCommentClick()}"
                                 android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
+                                android:layout_height="@dimen/dp_50"
+                                android:background="@color/color_white"
+                                android:layout_marginTop="@dimen/dp_0_mid">
 
                                 <TextView
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:fontFamily="@string/font_serif"
                                     android:paddingLeft="@dimen/dp_10"
-                                    android:paddingTop="@dimen/dp_10"
+                                    android:layout_centerVertical="true"
                                     android:text="@string/notification_setting_follow"
-                                    android:textAllCaps="false"
-                                    android:textColor="@color/color_black"
-                                    android:textSize="@dimen/sp_13" />
-
-                                <android.support.v7.widget.SwitchCompat
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:layout_alignParentRight="true"
-                                    android:layout_gravity="center_horizontal"
-                                    android:background="@color/transparent"
-                                    android:checked="@{viewModel.isReceiveNewFollowOrComment}"
-                                    android:padding="@dimen/dp_10" />
-                            </RelativeLayout>
-
-                            <RelativeLayout
-                                android:onClick="@{() ->viewModel.onReceiveAppUpdateClick()}"
-                                android:layout_width="match_parent"
-                                android:layout_height="wrap_content">
-
-                                <TextView
-                                    android:layout_width="wrap_content"
-                                    android:layout_height="wrap_content"
-                                    android:fontFamily="@string/font_serif"
-                                    android:paddingLeft="@dimen/dp_10"
-                                    android:paddingTop="@dimen/dp_10"
-                                    android:text="@string/notification_setting_update"
                                     android:textAllCaps="false"
                                     android:textColor="@color/color_black"
                                     android:textSize="@dimen/sp_13" />
@@ -235,8 +220,35 @@
                                     android:layout_width="wrap_content"
                                     android:layout_height="wrap_content"
                                     android:layout_alignParentRight="true"
-                                    android:layout_gravity="center_horizontal"
-                                    android:background="@color/transparent"
+                                    android:layout_centerVertical="true"
+                                    android:checked="@{viewModel.isReceiveNewFollowOrComment}"
+                                    android:padding="@dimen/dp_10" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:onClick="@{() ->viewModel.onReceiveAppUpdateClick()}"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_50"
+                                android:background="@color/color_white"
+                                android:layout_marginTop="@dimen/dp_0_mid">
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:fontFamily="@string/font_serif"
+                                    android:paddingLeft="@dimen/dp_10"
+                                    android:paddingTop="@dimen/dp_10"
+                                    android:text="@string/notification_setting_update"
+                                    android:layout_centerVertical="true"
+                                    android:textColor="@color/color_black"
+                                    android:textSize="@dimen/sp_14" />
+
+                                <android.support.v7.widget.SwitchCompat
+                                    android:clickable="false"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentRight="true"
+                                    android:layout_centerVertical="true"
                                     android:checked="@{viewModel.isReceiveAppUpdate}"
                                     android:padding="@dimen/dp_10" />
                             </RelativeLayout>
@@ -251,15 +263,16 @@
 
                     <TextView
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="@dimen/dp_50"
                         android:layout_marginTop="@dimen/dp_0_mid"
                         android:background="@color/color_white"
                         android:drawablePadding="@dimen/dp_10"
                         android:fontFamily="@string/font_serif"
                         android:onClick="@{() -> viewModel.onReceiveEmailCLick()}"
-                        android:padding="@dimen/dp_10"
+                        android:paddingLeft="@dimen/dp_10"
+                        android:paddingRight="@dimen/dp_10"
+                        android:gravity="center|left"
                         android:text="@string/notification_email"
-                        android:textAllCaps="false"
                         android:textColor="@color/color_black"
                         android:textSize="@dimen/sp_16"
                         app:srcDrawableRight="@{viewModel.iconNotificationEmail}"
@@ -273,7 +286,9 @@
 
                         <RelativeLayout
                             android:layout_width="match_parent"
-                            android:layout_height="wrap_content"
+                            android:layout_height="@dimen/dp_50"
+                            android:background="@color/color_white"
+                            android:layout_marginTop="@dimen/dp_0_mid"
                             android:onClick="@{() -> viewModel.onTurnOnReceiveEmail()}">
 
                             <TextView
@@ -281,19 +296,17 @@
                                 android:layout_height="wrap_content"
                                 android:fontFamily="@string/font_serif"
                                 android:paddingLeft="@dimen/dp_10"
-                                android:paddingTop="@dimen/dp_10"
                                 android:text="@string/notification_email_order"
-                                android:textAllCaps="false"
+                                android:layout_centerVertical="true"
                                 android:textColor="@color/color_black"
-                                android:textSize="@dimen/sp_13" />
+                                android:textSize="@dimen/sp_14" />
 
                             <android.support.v7.widget.SwitchCompat
                                 android:clickable="false"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
-                                android:layout_gravity="center_horizontal"
-                                android:background="@color/transparent"
+                                android:layout_centerVertical="true"
                                 android:checked="@{viewModel.receiveEmail}"
                                 android:padding="@dimen/dp_10" />
                         </RelativeLayout>
@@ -309,6 +322,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
+                                android:background="@color/color_white"
+                                android:layout_marginTop="@dimen/dp_0_mid"
                                 android:weightSum="8">
 
                                 <LinearLayout
@@ -340,6 +355,7 @@
                                 </LinearLayout>
 
                                 <android.support.v7.widget.SwitchCompat
+                                    android:clickable="false"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center_horizontal"
@@ -354,6 +370,8 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:orientation="horizontal"
+                                android:layout_marginTop="@dimen/dp_0_mid"
+                                android:background="@color/color_white"
                                 android:weightSum="8">
 
                                 <LinearLayout
@@ -379,12 +397,13 @@
                                         android:paddingBottom="@dimen/dp_10"
                                         android:paddingLeft="@dimen/dp_10"
                                         android:paddingRight="@dimen/dp_8"
-                                        android:text="@string/notificatino_email_news_detail"
+                                        android:text="@string/notification_email_news_detail"
                                         android:textAllCaps="false"
                                         android:textSize="@dimen/sp_13" />
                                 </LinearLayout>
 
                                 <android.support.v7.widget.SwitchCompat
+                                    android:clickable="false"
                                     android:layout_width="0dp"
                                     android:layout_height="match_parent"
                                     android:layout_gravity="center_horizontal"

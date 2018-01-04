@@ -104,7 +104,7 @@
     <string name="notification_email_app">Thông tin công ty/cửa hàng</string>
     <string name="notification_email_app_detail">Thông tin của công ty hoặc cửa hàng</string>
     <string name="notification_email_news">Bản tin</string>
-    <string name="notificatino_email_news_detail">Gửi cho tôi cập nhật về những thông báo, xu hướng và giảm giá mới nhất</string>
+    <string name="notification_email_news_detail">Gửi cho tôi cập nhật về những thông báo, xu hướng và giảm giá mới nhất</string>
     <string name="notification_email_personal">Nội dung Cá nhân</string>
     <string name="notification_email_personal_detail">Gửi thông báo cá nhân cho tôi(VD: quá sinh nhật)</string>
 
