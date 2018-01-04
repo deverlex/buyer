@@ -18,11 +18,11 @@ public class NotificationSettingViewModel extends BaseObservable implements Noti
     private Context mContext;
     private NotificationSettingContract.Presenter mPresenter;
     private boolean mShowNotificationSetting;
-    private boolean mShowNotificationEmailSetting;
+    private boolean mShowReceiveEmailSetting;
     private int mIconNotificationEmail ;
     private int mIconNotification ;
     private int mIconExpand = R.drawable.ic_expand;
-    private boolean mNotificationEmail;
+    private boolean mReceiveEmail;
     private boolean mNotification;
     private boolean mReceiveUpdateOrder;
     private boolean mChatNotify;
@@ -36,7 +36,7 @@ public class NotificationSettingViewModel extends BaseObservable implements Noti
         this.mContext = mContext;
         mIconNotificationEmail = R.drawable.ic_next_right;
         mIconNotification = R.drawable.ic_next_right;
-        mNotificationEmail = false;
+        mReceiveEmail = false;
         mNotification = false;
         mReceiveUpdateOrderAndPayment = true;
     }
@@ -67,9 +67,9 @@ public class NotificationSettingViewModel extends BaseObservable implements Noti
     }
 
     @Override
-    public void onNotificationEmailCLick() {
-        mShowNotificationEmailSetting = !mShowNotificationEmailSetting;
-        notifyPropertyChanged(BR.showNotificationEmailSetting);
+    public void onReceiveEmailCLick() {
+        mShowReceiveEmailSetting = !mShowReceiveEmailSetting;
+        notifyPropertyChanged(BR.showReceiveEmailSetting);
 
         mIconNotificationEmail = (mIconNotificationEmail == mIconExpand ? R.drawable.ic_next_right: mIconExpand);
 
@@ -82,13 +82,13 @@ public class NotificationSettingViewModel extends BaseObservable implements Noti
     }
 
     @Override
-    public void onNotificationSettingEmail() {
-        mNotificationEmail = !mNotificationEmail;
-        notifyPropertyChanged(BR.notificationEmail);
+    public void onTurnOnReceiveEmail() {
+        mReceiveEmail = !mReceiveEmail;
+        notifyPropertyChanged(BR.receiveEmail);
     }
 
     @Override
-    public void onNotificationSetting() {
+    public void onTurnOnReceiveNotify() {
         mNotification = !mNotification;
         notifyPropertyChanged(BR.notification);
     }
@@ -144,18 +144,18 @@ public class NotificationSettingViewModel extends BaseObservable implements Noti
         return mIconNotification;
     }
     @Bindable
-    public boolean getShowNotificationSetting() {
+    public boolean isShowNotificationSetting() {
         return mShowNotificationSetting;
     }
 
     @Bindable
-    public boolean getShowNotificationEmailSetting() {
-        return mShowNotificationEmailSetting;
+    public boolean isShowReceiveEmailSetting() {
+        return mShowReceiveEmailSetting;
     }
 
     @Bindable
-    public boolean isNotificationEmail() {
-        return mNotificationEmail;
+    public boolean isReceiveEmail() {
+        return mReceiveEmail;
     }
 
     @Bindable

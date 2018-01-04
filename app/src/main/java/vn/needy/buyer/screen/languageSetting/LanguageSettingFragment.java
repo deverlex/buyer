@@ -46,7 +46,6 @@ public class LanguageSettingFragment extends Fragment {
         FragmentLanguageSettingBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_language_setting, container
                 , false);
         binding.setViewModel((LanguageSettingViewModel) mViewModel);
-//        binding.setMainPage(this);
         return binding.getRoot();
     }
 }

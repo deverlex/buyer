@@ -13,13 +13,13 @@ interface NotificationSettingContract {
 
         void onNotificationCLick();
 
-        void onNotificationEmailCLick();
+        void onReceiveEmailCLick();
 
         void onBackPressed();
 
-        void onNotificationSettingEmail();
+        void onTurnOnReceiveEmail();
 
-        void onNotificationSetting();
+        void onTurnOnReceiveNotify();
 
         void onReceiveUpdateOrderClick();
 
