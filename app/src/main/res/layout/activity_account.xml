@@ -75,7 +75,7 @@
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dp_50"
                     android:background="@color/color_white"
                     android:drawableEnd="@{@drawable/ic_next_right}"
                     android:drawablePadding="@dimen/dp_10"
@@ -86,12 +86,13 @@
                     android:textAllCaps="false"
                     android:textColor="@color/color_black"
                     android:textSize="@dimen/sp_14"
+                    android:gravity="center|left"
                     android:onClick="@{() -> viewModel.onUserProfileClicked()}"
                     tools:ignore="UnusedAttribute" />
 
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dp_50"
                     android:layout_marginTop="@dimen/dp_0_mid"
                     android:background="@color/color_white"
                     android:drawableEnd="@{@drawable/ic_next_right}"
@@ -103,6 +104,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/color_black"
                     android:textSize="@dimen/sp_14"
+                    android:gravity="center|left"
                     tools:ignore="UnusedAttribute" />
 
                 <TextView
@@ -119,7 +121,7 @@
                     tools:ignore="UnusedAttribute" />
                 <TextView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dp_50"
                     android:background="@color/color_white"
                     android:drawableEnd="@{@drawable/ic_next_right}"
                     android:drawablePadding="@dimen/dp_10"
@@ -130,6 +132,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/color_black"
                     android:textSize="@dimen/sp_14"
+                    android:gravity="center|left"
                     tools:ignore="UnusedAttribute"
                     android:onClick="@{()->viewModel.onNotificationSettingClicked()}"/>
 
@@ -137,7 +140,7 @@
                 <TextView
                     android:layout_marginTop="@dimen/dp_0_mid"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dp_50"
                     android:background="@color/color_white"
                     android:drawableEnd="@{@drawable/ic_next_right}"
                     android:drawablePadding="@dimen/dp_10"
@@ -148,6 +151,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/color_black"
                     android:textSize="@dimen/sp_14"
+                    android:gravity="center|left"
                     tools:ignore="UnusedAttribute"
                     android:onClick="@{() -> viewModel.onPersonalSettingClicked()}"/>
 
@@ -155,7 +159,7 @@
                 <TextView
                     android:onClick="@{()->viewModel.onLanguageSettingClicked()}"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dp_50"
                     android:layout_marginTop="@dimen/dp_0_mid"
                     android:background="@color/color_white"
                     android:drawableEnd="@{@drawable/ic_next_right}"
@@ -167,6 +171,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/color_black"
                     android:textSize="@dimen/sp_14"
+                    android:gravity="center|left"
                     tools:ignore="UnusedAttribute" />
 
                 <TextView
@@ -185,7 +190,7 @@
                 <TextView
                     android:onClick="@{() -> viewModel.onSupportClicked()}"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dp_50"
                     android:layout_marginTop="@dimen/dp_0_mid"
                     android:background="@color/color_white"
                     android:drawableEnd="@{@drawable/ic_next_right}"
@@ -197,12 +202,13 @@
                     android:textAllCaps="false"
                     android:textColor="@color/color_black"
                     android:textSize="@dimen/sp_14"
+                    android:gravity="center|left"
                     tools:ignore="UnusedAttribute" />
 
                 <TextView
                     android:onClick="@{() -> viewModel.onTipAndTrickClicked()}"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dp_50"
                     android:layout_marginTop="@dimen/dp_0_mid"
                     android:background="@color/color_white"
                     android:drawableEnd="@{@drawable/ic_next_right}"
@@ -214,12 +220,13 @@
                     android:textAllCaps="false"
                     android:textColor="@color/color_black"
                     android:textSize="@dimen/sp_14"
+                    android:gravity="center|left"
                     tools:ignore="UnusedAttribute" />
 
                 <TextView
                     android:onClick="@{()-> viewModel.onCommunityRulesClicked()}"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dp_50"
                     android:layout_marginTop="@dimen/dp_0_mid"
                     android:background="@color/color_white"
                     android:drawableEnd="@{@drawable/ic_next_right}"
@@ -231,12 +238,13 @@
                     android:textAllCaps="false"
                     android:textColor="@color/color_black"
                     android:textSize="@dimen/sp_14"
+                    android:gravity="center|left"
                     tools:ignore="UnusedAttribute" />
 
                 <TextView
                     android:onClick="@{()->viewModel.onNeedRulesClicked()}"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dp_50"
                     android:layout_marginTop="@dimen/dp_0_mid"
                     android:background="@color/color_white"
                     android:drawableEnd="@{@drawable/ic_next_right}"
@@ -248,12 +256,13 @@
                     android:textAllCaps="false"
                     android:textColor="@color/color_black"
                     android:textSize="@dimen/sp_14"
+                    android:gravity="center|left"
                     tools:ignore="UnusedAttribute" />
 
                 <TextView
                     android:onClick="@{() -> viewModel.onReviewApplicationClicked()}"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dp_50"
                     android:layout_marginTop="@dimen/dp_0_mid"
                     android:background="@color/color_white"
                     android:drawableEnd="@{@drawable/ic_next_right}"
@@ -265,12 +274,13 @@
                     android:textAllCaps="false"
                     android:textColor="@color/color_black"
                     android:textSize="@dimen/sp_14"
+                    android:gravity="center|left"
                     tools:ignore="UnusedAttribute" />
 
                 <TextView
                     android:onClick="@{() -> viewModel.onClearCacheClicked()}"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dp_50"
                     android:layout_marginTop="@dimen/dp_0_mid"
                     android:background="@color/color_white"
                     android:drawableEnd="@{@drawable/ic_next_right}"
@@ -282,12 +292,13 @@
                     android:textAllCaps="false"
                     android:textColor="@color/color_black"
                     android:textSize="@dimen/sp_14"
+                    android:gravity="center|left"
                     tools:ignore="UnusedAttribute" />
 
                 <TextView
                     android:onClick="@{() -> viewModel.onDeleteAccountClicked()}"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/dp_50"
                     android:layout_marginTop="@dimen/dp_0_mid"
                     android:background="@color/color_white"
                     android:drawableEnd="@{@drawable/ic_next_right}"
@@ -299,6 +310,7 @@
                     android:textAllCaps="false"
                     android:textColor="@color/color_black"
                     android:textSize="@dimen/sp_14"
+                    android:gravity="center|left"
                     tools:ignore="UnusedAttribute" />
 
                 <TextView
