@@ -15,7 +15,7 @@ public class WalletContract {
 
         void onPersonalEarnedCoinClick();
 
-        void getProductList(WalletActivity.Product product);
+        void getProductList(WalletActivity.Cargo cargo);
     }
 
     interface Presenter extends BasePresenter{

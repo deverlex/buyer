@@ -6,7 +6,6 @@ import android.databinding.Bindable;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.design.widget.TabLayout;
-import android.support.v4.app.Fragment;
 import android.support.v4.view.ViewPager;
 
 import java.util.ArrayList;
@@ -32,7 +31,7 @@ public class WalletActivity extends BaseActivity{
     @Override
     protected void onCreateActivity(Bundle savedInstanceState) {
 
-        List<Product> mList = new ArrayList<>();
+        List<Cargo> mList = new ArrayList<>();
 
         mWalletSectionAdapter = new WalletSectionsAdapter(this , getSupportFragmentManager());
         mViewModel = new WalletViewModel(this , mWalletSectionAdapter);
@@ -57,38 +56,38 @@ public class WalletActivity extends BaseActivity{
         }
     }
 
-    public static class Product extends BaseObservable{
+    public static class Cargo extends BaseObservable{
 
-        private String productName;
-        private String productStatus;
-        private String productDate;
-        private String productNumber;
+        private String cargoName;
+        private String cargoStatus;
+        private String cargoDate;
+        private String cargoNumber;
 
-        public Product(String productName, String productStatus, String productDate, String productNumber) {
-            this.productName = productName;
-            this.productStatus = productStatus;
-            this.productDate = productDate;
-            this.productNumber = productNumber;
+        public Cargo(String cargoName, String cargoStatus, String cargoDate, String cargoNumber) {
+            this.cargoName = cargoName;
+            this.cargoStatus = cargoStatus;
+            this.cargoDate = cargoDate;
+            this.cargoNumber = cargoNumber;
         }
 
         @Bindable
-        public String getProductName() {
-            return productName;
+        public String getCargoName() {
+            return cargoName;
         }
 
         @Bindable
-        public String getProductStatus() {
-            return productStatus;
+        public String getCargoStatus() {
+            return cargoStatus;
         }
 
         @Bindable
-        public String getProductDate() {
-            return productDate;
+        public String getCargoDate() {
+            return cargoDate;
         }
 
         @Bindable
-        public String getProductNumber() {
-            return productNumber;
+        public String getCargoNumber() {
+            return cargoNumber;
         }
     }
 

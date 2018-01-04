@@ -2,7 +2,6 @@ package vn.needy.buyer.screen.wallet;
 
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
-import android.widget.Toast;
 
 import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 
@@ -12,11 +11,11 @@ import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 
 public class ItemWalletRecyclerView extends BaseObservable {
     private BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> mItemClickListener;
-    private WalletActivity.Product mProduct;
+    private WalletActivity.Cargo mCargo;
 
-    public ItemWalletRecyclerView(WalletActivity.Product mProduct , BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> mItemClickListener) {
+    public ItemWalletRecyclerView(WalletActivity.Cargo mCargo, BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> mItemClickListener) {
         this.mItemClickListener = mItemClickListener;
-        this.mProduct = mProduct;
+        this.mCargo = mCargo;
     }
 
     public void onProductCLick(){
@@ -24,7 +23,7 @@ public class ItemWalletRecyclerView extends BaseObservable {
     }
 
     @Bindable
-    public WalletActivity.Product getProduct() {
-        return mProduct;
+    public WalletActivity.Cargo getCargo() {
+        return mCargo;
     }
 }

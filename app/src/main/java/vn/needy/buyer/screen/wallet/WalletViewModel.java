@@ -4,9 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
-import android.databinding.BindingAdapter;
-
-import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 
 /**
  * Created by lion on 16/12/2017.
@@ -14,7 +11,7 @@ import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 
 public class WalletViewModel extends BaseObservable implements WalletContract.ViewModel {
 
-    private WalletActivity.Product mListProduct;
+    private WalletActivity.Cargo mListCargo;
     private WalletContract.Presenter mPresenter;
     private WalletSectionsAdapter mWalletSectionsAdapter;
     private String mCoin;
@@ -56,8 +53,8 @@ public class WalletViewModel extends BaseObservable implements WalletContract.Vi
     }
 
     @Override
-    public void getProductList(WalletActivity.Product product) {
-        mListProduct = product;
+    public void getProductList(WalletActivity.Cargo cargo) {
+        mListCargo = cargo;
     }
 
     @Bindable

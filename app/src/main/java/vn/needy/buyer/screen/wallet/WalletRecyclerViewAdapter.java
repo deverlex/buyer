@@ -5,7 +5,6 @@ import android.databinding.DataBindingUtil;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
-import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.List;
@@ -20,12 +19,11 @@ import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 
 public class WalletRecyclerViewAdapter extends BaseRecyclerViewAdapter<WalletRecyclerViewAdapter.ItemViewHolder> {
 
-    private List<WalletActivity.Product> mList;
+    private List<WalletActivity.Cargo> mList;
     private Context mContext;
     private BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> mItemClickListener;
 
-
-    public WalletRecyclerViewAdapter(@NonNull Context context, List<WalletActivity.Product> mList) {
+    public WalletRecyclerViewAdapter(@NonNull Context context, List<WalletActivity.Cargo> mList) {
         super(context);
         this.mList = mList;
     }
@@ -47,7 +45,7 @@ public class WalletRecyclerViewAdapter extends BaseRecyclerViewAdapter<WalletRec
         mItemClickListener = itemClickListener;
     }
 
-    public void updateData(List<WalletActivity.Product> list) {
+    public void updateData(List<WalletActivity.Cargo> list) {
         if (list == null) {
             return;
         }
@@ -56,7 +54,7 @@ public class WalletRecyclerViewAdapter extends BaseRecyclerViewAdapter<WalletRec
         notifyDataSetChanged();
     }
 
-    public int getPosition(WalletActivity.Product list){
+    public int getPosition(WalletActivity.Cargo list){
         return mList.indexOf(list);
     }
 
@@ -79,8 +77,8 @@ public class WalletRecyclerViewAdapter extends BaseRecyclerViewAdapter<WalletRec
             this.mItemClickListener = mItemClickListener;
         }
 
-        void bind(WalletActivity.Product product) {
-            mBinding.setViewModel(new ItemWalletRecyclerView(product , mItemClickListener));
+        void bind(WalletActivity.Cargo cargo) {
+            mBinding.setViewModel(new ItemWalletRecyclerView(cargo, mItemClickListener));
             mBinding.executePendingBindings();
         }
 
