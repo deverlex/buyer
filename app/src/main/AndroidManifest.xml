@@ -68,6 +68,18 @@
             android:theme="@style/AppTheme"
             android:windowSoftInputMode="stateHidden"
             />
+
+        <activity android:name=".screen.review.ReviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden"
+            />
+
+        <activity android:name=".screen.replyReview.ReplyReviewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden"
+            />
     </application>
 
 </manifest>

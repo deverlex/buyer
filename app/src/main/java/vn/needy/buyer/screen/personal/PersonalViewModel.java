@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
 
+import vn.needy.buyer.screen.review.ReviewActivity;
 import vn.needy.buyer.screen.wallet.WalletActivity;
 import vn.needy.buyer.utils.navigator.Navigator;
 
@@ -39,6 +40,11 @@ public class PersonalViewModel implements PersonalContract.ViewModel{
     @Override
     public void onClickViewBudget() {
         mNavigator.startActivity(WalletActivity.class);
+    }
+
+    @Override
+    public void onReviewActivityClick() {
+        mNavigator.startActivity(ReviewActivity.class);
     }
 
 
