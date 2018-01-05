@@ -47,6 +47,28 @@
                         android:text="Product name"
                         android:textColor="@color/color_white"
                         android:textSize="@dimen/sp_18" />
+
+                    <ImageView
+                        android:id="@+id/cart"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:paddingRight="@dimen/dp_24"
+                        app:srcCompat="@drawable/ic_white_cart" />
+
+                    <TextView
+                        android:id="@+id/badge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@id/cart"
+                        android:layout_marginRight="-10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_toLeftOf="@id/cart"
+                        android:background="@drawable/badge_bg"
+                        android:gravity="center"
+                        android:text="6"
+                        android:textColor="@color/color_orange_mos" />
                 </RelativeLayout>
             </android.support.v7.widget.Toolbar>
 
@@ -115,10 +137,10 @@
                                 android:stepSize="0.5" />
 
                             <TextView
-                                android:layout_centerVertical="true"
                                 android:id="@+id/point"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
                                 android:layout_toRightOf="@+id/rating"
                                 android:maxLines="1"
                                 android:padding="@dimen/dp_5"
@@ -127,9 +149,9 @@
                                 android:textSize="@dimen/sp_12" />
 
                             <TextView
-                                android:layout_centerVertical="true"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
                                 android:layout_toRightOf="@+id/point"
                                 android:maxLines="1"
                                 android:padding="@dimen/dp_5"
@@ -138,10 +160,10 @@
                                 android:textSize="@dimen/sp_12" />
 
                             <TextView
-                                android:layout_centerVertical="true"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentRight="true"
+                                android:layout_centerVertical="true"
                                 android:drawableRight="@{@drawable/ic_next_right}"
                                 android:gravity="center"
                                 android:maxLines="1"
@@ -384,7 +406,7 @@
                             android:drawableTop="@drawable/ic_white_cart"
                             android:foreground="?android:attr/selectableItemBackground"
                             android:gravity="center"
-                            android:onClick="@{() -> viewModel.addToCart()}"
+                            android:onClick="@{() -> viewModel.addToCart(badge)}"
                             android:padding="@dimen/dp_8"
                             android:text="Thêm vào giỏ hàng"
                             android:textColor="@color/color_white"
@@ -392,13 +414,13 @@
                     </LinearLayout>
 
                     <TextView
-                        android:onClick="@{() -> viewModel.buyNow()}"
                         android:layout_width="0dp"
                         android:layout_height="match_parent"
                         android:layout_weight="1"
                         android:background="@color/color_orange_mos"
                         android:foreground="?android:attr/selectableItemBackground"
                         android:gravity="center"
+                        android:onClick="@{() -> viewModel.buyNow()}"
                         android:padding="@dimen/dp_10"
                         android:text="Mua ngay"
                         android:textColor="@color/color_white" />

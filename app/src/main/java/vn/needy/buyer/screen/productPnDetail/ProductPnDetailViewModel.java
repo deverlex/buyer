@@ -6,6 +6,10 @@ import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 import android.support.design.widget.BottomSheetBehavior;
 import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.view.animation.Animation;
+import android.view.animation.ScaleAnimation;
+import android.widget.TextView;
 
 import java.util.List;
 
@@ -54,9 +58,11 @@ public class ProductPnDetailViewModel extends BaseObservable implements ProductP
     }
 
     @Override
-    public void addToCart() {
-        BottomSheetAddToCart addToCart = BottomSheetAddToCart.newInstance();
-        addToCart.show(((AppCompatActivity)mContext).getSupportFragmentManager(), BottomSheetAddToCart.class.getName());
+    public void addToCart(TextView view) {
+//        BottomSheetAddToCart addToCart = BottomSheetAddToCart.newInstance();
+//        addToCart.show(((AppCompatActivity)mContext).getSupportFragmentManager(), BottomSheetAddToCart.class.getName());
+        view.setText("7");
+        scaleView(view);
     }
 
     @Override
@@ -68,5 +74,14 @@ public class ProductPnDetailViewModel extends BaseObservable implements ProductP
     @Bindable
     public List<Banner> getBanners() {
         return mBanners;
+    }
+
+    public void scaleView(View v) {
+        Animation anim = new ScaleAnimation(
+                1.3f, 1f,
+                1.3f, 1f);
+        anim.setFillAfter(false);
+        anim.setDuration(500);
+        v.startAnimation(anim);
     }
 }

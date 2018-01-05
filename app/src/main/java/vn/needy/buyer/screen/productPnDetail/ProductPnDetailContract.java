@@ -1,5 +1,8 @@
 package vn.needy.buyer.screen.productPnDetail;
 
+import android.view.View;
+import android.widget.TextView;
+
 import java.util.List;
 
 import ss.com.bannerslider.banners.Banner;
@@ -16,7 +19,7 @@ interface ProductPnDetailContract {
 
         void setBanners(List<Banner> banners);
 
-        void addToCart();
+        void addToCart(TextView view);
 
         void buyNow();
     }
