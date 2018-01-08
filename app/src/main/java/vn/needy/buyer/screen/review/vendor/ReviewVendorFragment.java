@@ -30,6 +30,7 @@ public class ReviewVendorFragment extends Fragment{
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+
         mPresenter = new ReviewVendorPresenter();
         mNavigator = new Navigator(this);
 
@@ -37,7 +38,8 @@ public class ReviewVendorFragment extends Fragment{
 
         mViewModel.setPresenter(mPresenter);
         mViewModel.onStart();
-        FragmentReviewVendorBinding binding = DataBindingUtil.inflate(inflater , R.layout.fragment_review_vendor , container , false);
+        FragmentReviewVendorBinding binding = DataBindingUtil.inflate(inflater , R.layout.fragment_review_vendor
+                , container , false);
 
         binding.setViewModel((ReviewVendorViewModel) mViewModel);
         return binding.getRoot();

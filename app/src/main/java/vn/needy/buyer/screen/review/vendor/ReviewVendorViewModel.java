@@ -64,7 +64,7 @@ public class ReviewVendorViewModel extends BaseObservable implements ReviewVendo
 
     @Override
     public void setPresenter(ReviewVendorContract.Presenter presenter) {
-
+        mPresenter = presenter;
     }
 
     @Bindable

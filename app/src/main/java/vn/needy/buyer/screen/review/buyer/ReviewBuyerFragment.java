@@ -34,7 +34,8 @@ public class ReviewBuyerFragment extends Fragment{
         mViewModel.setPresenter(mPresenter);
         mViewModel.onStart();
 
-        FragmentReviewBuyerBinding binding = DataBindingUtil.inflate(inflater , R.layout.fragment_review_buyer , container , false);
+        FragmentReviewBuyerBinding binding = DataBindingUtil.inflate(inflater , R.layout.fragment_review_buyer
+                , container , false);
 
         binding.setViewModel((ReviewBuyerViewModel) mViewModel);
 
