@@ -8,7 +8,8 @@ import vn.needy.buyer.screen.BaseViewModel;
  */
 
 public class PersonalContract {
-    interface ViewModel extends BaseViewModel<Persenter>{
+
+    interface ViewModel extends BaseViewModel<Presenter>{
 
         void onClickViewBudget();
 
@@ -16,7 +17,7 @@ public class PersonalContract {
         
     }
 
-    interface Persenter extends BasePresenter{
+    interface Presenter extends BasePresenter{
 
     }
 }

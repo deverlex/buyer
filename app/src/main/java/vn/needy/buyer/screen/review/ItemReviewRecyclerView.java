@@ -18,8 +18,7 @@ public class ItemReviewRecyclerView extends BaseObservable {
     private String personalReply;
     private String cargoDate;
     private Context mContext;
-    private BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object>
-            mItemClickListener;
+    private BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> mItemClickListener;
 
     public ItemReviewRecyclerView(Context mContext, BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> mItemClickListener) {
         this.mContext = mContext;

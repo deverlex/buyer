@@ -58,10 +58,11 @@ public class WalletHistoryPurchaseViewModel extends BaseObservable implements Wa
     }
 
     @Override
-    public void onPersonalEarnsCoinClick() {
+    public void onViewAboutReceiveCoinClick() {
 
     }
 
+    @Bindable
     public WalletRecyclerViewAdapter getAdapter() {
         return mAdapter;
     }

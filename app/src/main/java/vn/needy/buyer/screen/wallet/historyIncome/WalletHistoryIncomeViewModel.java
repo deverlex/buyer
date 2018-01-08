@@ -63,7 +63,7 @@ public class WalletHistoryIncomeViewModel extends BaseObservable implements Wall
     }
 
     @Override
-    public void onPersonalEarnsCoinClick() {
+    public void onViewAboutReceiveCoinClick() {
 
     }
 

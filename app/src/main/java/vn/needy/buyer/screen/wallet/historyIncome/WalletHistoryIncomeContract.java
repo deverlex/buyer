@@ -16,7 +16,7 @@ public interface WalletHistoryIncomeContract {
 
         void getProductList(List<WalletActivity.Cargo> cargos);
 
-        void onPersonalEarnsCoinClick();
+        void onViewAboutReceiveCoinClick();
 
     }
 

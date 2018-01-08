@@ -15,8 +15,7 @@ public interface ReviewVendorContract {
 
         void onViewReviewByRatingClicked(TextView view);
 
-        void onPersonalCommentClick();
-
+        void onVendorCommentClick();
     }
 
     interface Presenter extends BasePresenter{

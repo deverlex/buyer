@@ -60,7 +60,7 @@ public class WalletHistoryTransactionViewModel extends BaseObservable implements
     }
 
     @Override
-    public void onPersonalEarnsCoinClick() {
+    public void onViewAboutReceiveCoinClick() {
 
     }
 

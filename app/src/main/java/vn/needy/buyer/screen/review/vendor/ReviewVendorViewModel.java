@@ -26,6 +26,7 @@ public class ReviewVendorViewModel extends BaseObservable implements ReviewVendo
     private boolean reviewPersonal;
     private Context mContext;
     private ReviewVendorContract.Presenter mPresenter;
+
     private boolean reviewAll;
     private boolean review5Star;
     private boolean review4Star;
@@ -91,7 +92,7 @@ public class ReviewVendorViewModel extends BaseObservable implements ReviewVendo
                 reviewTextColor4Star = false;
                 reviewTextColor5Star = false;
 
-                notifyPropertView();
+                notifyPropertyView();
                 break;
             case R.id.review5Star:
                 reviewAll = false;
@@ -108,7 +109,7 @@ public class ReviewVendorViewModel extends BaseObservable implements ReviewVendo
                 reviewTextColor4Star = false;
                 reviewTextColor5Star = true;
 
-                notifyPropertView();
+                notifyPropertyView();
                 break;
             case R.id.review4Star:
                 reviewAll = false;
@@ -125,7 +126,7 @@ public class ReviewVendorViewModel extends BaseObservable implements ReviewVendo
                 reviewTextColor4Star = true;
                 reviewTextColor5Star = false;
 
-                notifyPropertView();
+                notifyPropertyView();
                 break;
             case R.id.review3Star:
                 reviewAll = false;
@@ -142,7 +143,7 @@ public class ReviewVendorViewModel extends BaseObservable implements ReviewVendo
                 reviewTextColor4Star = false;
                 reviewTextColor5Star = false;
 
-                notifyPropertView();
+                notifyPropertyView();
                 break;
             case R.id.review2Star:
                 reviewAll = false;
@@ -159,7 +160,7 @@ public class ReviewVendorViewModel extends BaseObservable implements ReviewVendo
                 reviewTextColor4Star = false;
                 reviewTextColor5Star = false;
 
-                notifyPropertView();
+                notifyPropertyView();
                 break;
             case R.id.review1Star:
                 reviewAll = false;
@@ -176,18 +177,18 @@ public class ReviewVendorViewModel extends BaseObservable implements ReviewVendo
                 reviewTextColor4Star = false;
                 reviewTextColor5Star = false;
 
-                notifyPropertView();
+                notifyPropertyView();
                 break;
         }
     }
 
     @Override
-    public void onPersonalCommentClick() {
+    public void onVendorCommentClick() {
 
         mNavigator.startActivity(ReplyReviewActivity.class);
     }
 
-    private void notifyPropertView(){
+    private void notifyPropertyView(){
         notifyPropertyChanged(BR.reviewAll);
         notifyPropertyChanged(BR.review5Star);
         notifyPropertyChanged(BR.review4Star);

@@ -27,7 +27,7 @@ public class PersonalFragment extends Fragment{
     }
 
     private PersonalContract.ViewModel mViewModel;
-    private PersonalContract.Persenter mPersenter;
+    private PersonalContract.Presenter mPersenter;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

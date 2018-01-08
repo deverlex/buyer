@@ -12,7 +12,7 @@ import vn.needy.buyer.utils.navigator.Navigator;
  * Created by truongpq on 20/12/2017.
  */
 
-public class PersonalViewModel implements PersonalContract.ViewModel{
+public class PersonalViewModel implements PersonalContract.ViewModel {
 
     private Navigator mNavigator;
     private Context mContext;
@@ -33,7 +33,7 @@ public class PersonalViewModel implements PersonalContract.ViewModel{
     }
 
     @Override
-    public void setPresenter(PersonalContract.Persenter presenter) {
+    public void setPresenter(PersonalContract.Presenter presenter) {
 
     }
 
