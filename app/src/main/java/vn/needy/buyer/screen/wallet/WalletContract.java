@@ -7,7 +7,7 @@ import vn.needy.buyer.screen.BaseViewModel;
  * Created by lion on 16/12/2017.
  */
 
-public class WalletContract {
+public interface WalletContract {
 
     interface ViewModel extends BaseViewModel<Presenter>{
 

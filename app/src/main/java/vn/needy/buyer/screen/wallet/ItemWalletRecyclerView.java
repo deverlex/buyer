@@ -10,6 +10,7 @@ import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
  */
 
 public class ItemWalletRecyclerView extends BaseObservable {
+
     private BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> mItemClickListener;
     private WalletActivity.Cargo mCargo;
 

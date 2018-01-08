@@ -74,7 +74,7 @@ public class WalletRecyclerViewAdapter extends BaseRecyclerViewAdapter<WalletRec
         public ItemViewHolder(ItemWalletTransactionBinding binding, BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> itemClickListener) {
             super(binding.getRoot());
             this.mBinding = binding;
-            this.mItemClickListener = mItemClickListener;
+            this.mItemClickListener = itemClickListener;
         }
 
         void bind(WalletActivity.Cargo cargo) {

@@ -47,7 +47,8 @@ public class WalletHistoryPurchaseFragment extends Fragment {
         mViewModel.onStart();;
 
 
-        FragmentWalletHistoryPurchaseBinding binding = DataBindingUtil.inflate(inflater , R.layout.fragment_wallet_history_purchase , container , false);
+        FragmentWalletHistoryPurchaseBinding binding = DataBindingUtil.inflate(inflater , R.layout.fragment_wallet_history_purchase
+                , container , false);
         binding.setViewModel((WalletHistoryPurchaseViewModel) mViewModel);
 
         return binding.getRoot();

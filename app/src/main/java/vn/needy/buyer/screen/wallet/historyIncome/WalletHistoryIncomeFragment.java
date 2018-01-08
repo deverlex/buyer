@@ -34,7 +34,8 @@ public class WalletHistoryIncomeFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        FragmentWalletHistoryIncomeBinding binding = DataBindingUtil.inflate(inflater , R.layout.fragment_wallet_history_income , container , false);
+        FragmentWalletHistoryIncomeBinding binding = DataBindingUtil.inflate(inflater , R.layout.fragment_wallet_history_income
+                , container , false);
 
         mList = new ArrayList<>();
         mAdapter = new WalletRecyclerViewAdapter(getActivity() , mList);

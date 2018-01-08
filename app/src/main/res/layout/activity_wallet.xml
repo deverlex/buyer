@@ -45,14 +45,14 @@
 
             <RelativeLayout
                 android:layout_weight="1"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/dp_0"
                 android:layout_height="match_parent">
 
                 <ImageView
                     android:layout_centerInParent="true"
                     app:srcCompat="@drawable/ic_coin"
                     android:layout_width="@dimen/dp_40"
-                    android:layout_height="@dimen/sp_40" />
+                    android:layout_height="@dimen/dp_40" />
 
             </RelativeLayout>
 
@@ -62,13 +62,13 @@
                 android:orientation="vertical"
                 android:paddingLeft="@dimen/dp_20"
                 android:layout_weight="5"
-                android:layout_width="0dp"
+                android:layout_width="@dimen/dp_0"
                 android:layout_height="wrap_content">
 
                 <LinearLayout
                     android:layout_weight="1"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp">
+                    android:layout_height="@dimen/dp_0">
 
                     <TextView
                         android:hint="0"
@@ -82,7 +82,7 @@
                         android:layout_height="wrap_content" />
 
                     <TextView
-                        android:layout_marginLeft="@dimen/sp_6"
+                        android:layout_marginLeft="@dimen/dp_7"
                         android:paddingTop="@dimen/dp_5"
                         android:fontFamily="@string/font_serif"
                         android:textColor="@color/color_orange"
@@ -103,7 +103,7 @@
                     android:paddingBottom="@dimen/dp_10"
                     android:layout_weight="1"
                     android:layout_width="match_parent"
-                    android:layout_height="0dp">
+                    android:layout_height="@dimen/dp_0">
 
                     <TextView
                         android:hint="0"
@@ -118,7 +118,7 @@
 
                     <TextView
 
-                        android:layout_marginLeft="@dimen/sp_6"
+                        android:layout_marginLeft="@dimen/dp_7"
                         android:fontFamily="@string/font_serif"
                         android:textColor="@color/color_orange"
                         android:text="@string/personal_coin"
