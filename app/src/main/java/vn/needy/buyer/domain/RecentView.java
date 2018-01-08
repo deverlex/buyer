@@ -11,11 +11,14 @@ public class RecentView extends RealmObject {
 
     private long product_id;
     private String name;
-    private Image image;
     private int liked;
     private float rating;
     private int voted;
     private String timeView;
+
+    public RecentView() {
+        super();
+    }
 
     public long getProduct_id() {
         return product_id;
@@ -31,14 +34,6 @@ public class RecentView extends RealmObject {
 
     public void setName(String name) {
         this.name = name;
-    }
-
-    public Image getImage() {
-        return image;
-    }
-
-    public void setImage(Image image) {
-        this.image = image;
     }
 
     public int getLiked() {
