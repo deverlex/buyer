@@ -9,6 +9,8 @@ import java.util.List;
 import vn.needy.buyer.model.Category;
 import vn.needy.buyer.model.Store;
 import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
+import vn.needy.buyer.screen.listProduct.priceNow.ListProductPnActivity;
+import vn.needy.buyer.utils.navigator.Navigator;
 
 
 /**
@@ -22,13 +24,15 @@ public class PriceNowViewModel extends BaseObservable implements PriceNowContrac
     private Context mContext;
     private CategoryAdapter mCategoryAdapter;
     private StoreAdapter mStoreAdapter;
+    private Navigator mNavigator;
 
-    public PriceNowViewModel(Context mContext, CategoryAdapter categoryAdapter, StoreAdapter storeAdapter) {
+    public PriceNowViewModel(Context mContext, CategoryAdapter categoryAdapter, StoreAdapter storeAdapter, Navigator navigator) {
         this.mContext = mContext;
         mCategoryAdapter = categoryAdapter;
         mCategoryAdapter.setmIteClickListener(this);
         mStoreAdapter = storeAdapter;
         mStoreAdapter.setItemClickListener(this);
+        mNavigator = navigator;
     }
 
     @Override
@@ -59,7 +63,9 @@ public class PriceNowViewModel extends BaseObservable implements PriceNowContrac
 
     @Override
     public void onItemRecyclerViewClick(Object item) {
-
+        if (item instanceof Store) {
+            mNavigator.startActivity(ListProductPnActivity.class);
+        }
     }
 
     @Override

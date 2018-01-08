@@ -15,6 +15,7 @@ import vn.needy.buyer.R;
 import vn.needy.buyer.databinding.FragmentPriceLaterBinding;
 import vn.needy.buyer.model.Category;
 import vn.needy.buyer.model.Store;
+import vn.needy.buyer.utils.navigator.Navigator;
 
 /**
  * Created by lion on 16/12/2017.
@@ -31,19 +32,20 @@ public class PriceLaterFragment extends Fragment{
     }
 
     private PriceLaterContract.ViewModel mViewModel;
+    private Navigator mNavigator;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         FragmentPriceLaterBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_price_later, container, false);
-
+        mNavigator = new Navigator(this);
         List<Category> categories = new ArrayList<>();
         CategoryPlAdapter categoryAdapter = new CategoryPlAdapter(getActivity(), categories);
 
         List<Store> stores = new ArrayList<>();
         StorePlAdapter storePlAdapter = new StorePlAdapter(getActivity(), stores);
 
-        mViewModel = new PriceLaterViewModel(getActivity(), categoryAdapter, storePlAdapter);
+        mViewModel = new PriceLaterViewModel(getActivity(), mNavigator, categoryAdapter, storePlAdapter);
         PriceLaterContract.Presenter presenter = new PriceLaterPresenter(mViewModel);
         mViewModel.setPresenter(presenter);
         mViewModel.onStart();

@@ -15,6 +15,7 @@ import vn.needy.buyer.R;
 import vn.needy.buyer.databinding.FragmentPriceNowBinding;
 import vn.needy.buyer.model.Category;
 import vn.needy.buyer.model.Store;
+import vn.needy.buyer.utils.navigator.Navigator;
 
 /**
  * Created by lion on 16/12/2017.
@@ -31,11 +32,14 @@ public class PriceNowFragment extends Fragment{
     }
 
     private PriceNowContract.ViewModel mViewModel;
+    private Navigator mNavigator;
 
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         FragmentPriceNowBinding binding = DataBindingUtil.inflate(inflater, R.layout.fragment_price_now, container, false);
+
+        mNavigator = new Navigator(this);
 
         List<Category> categories = new ArrayList<>();
         CategoryAdapter categoryAdapter = new CategoryAdapter(getActivity(), categories);
@@ -43,7 +47,7 @@ public class PriceNowFragment extends Fragment{
         List<Store> stores = new ArrayList<>();
         StoreAdapter storeAdapter = new StoreAdapter(getActivity(), stores);
 
-        mViewModel = new PriceNowViewModel(getActivity(), categoryAdapter, storeAdapter);
+        mViewModel = new PriceNowViewModel(getActivity(), categoryAdapter, storeAdapter, mNavigator);
         PriceNowContract.Presenter presenter = new PriceNowPresenter(mViewModel);
         mViewModel.setPresenter(presenter);
         mViewModel.onStart();
