@@ -11,6 +11,7 @@ import vn.needy.buyer.screen.BaseViewModel;
  */
 
 public interface ListProductPlContract {
+
     interface ViewModel extends BaseViewModel<Presenter> {
         void onBackPressed();
 

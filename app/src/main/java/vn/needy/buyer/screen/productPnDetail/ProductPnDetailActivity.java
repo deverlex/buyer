@@ -2,7 +2,6 @@ package vn.needy.buyer.screen.productPnDetail;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
-import android.support.design.widget.BottomSheetBehavior;
 
 import vn.needy.buyer.R;
 import vn.needy.buyer.databinding.ActivityProductPnDetailBinding;
@@ -22,7 +21,8 @@ public class ProductPnDetailActivity extends BaseActivity {
         mViewModel = new ProductPnDetailViewModel(this);
         ProductPnDetailContract.Presenter presenter = new ProductPnDetailPresenter(mViewModel);
         mViewModel.setPresenter(presenter);
-        ActivityProductPnDetailBinding binding = DataBindingUtil.setContentView(this, R.layout.activity_product_pn_detail);
+        ActivityProductPnDetailBinding binding =
+                DataBindingUtil.setContentView(this, R.layout.activity_product_pn_detail);
         mViewModel.onStart();
         binding.setViewModel((ProductPnDetailViewModel) mViewModel);
     }

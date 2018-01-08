@@ -13,12 +13,12 @@ import vn.needy.buyer.R;
  * Created by truongpq on 03/01/2018.
  */
 
-public class BottomSheetBuyNow extends BottomSheetDialogFragment {
-    public static BottomSheetBuyNow newInstance() {
-        
+public class BottomSheetBuyNowDialog extends BottomSheetDialogFragment {
+
+    public static BottomSheetBuyNowDialog newInstance() {
         Bundle args = new Bundle();
         
-        BottomSheetBuyNow fragment = new BottomSheetBuyNow();
+        BottomSheetBuyNowDialog fragment = new BottomSheetBuyNowDialog();
         fragment.setArguments(args);
         return fragment;
     }
@@ -26,7 +26,7 @@ public class BottomSheetBuyNow extends BottomSheetDialogFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.bottom_sheet_buy_now, container,
+        View view = inflater.inflate(R.layout.dialog_bottom_sheet_buy_now, container,
                 false);
 
         // get the views and attach the listener

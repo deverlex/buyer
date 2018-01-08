@@ -14,6 +14,7 @@ import vn.needy.buyer.screen.BaseViewModel;
  */
 
 interface ProductPnDetailContract {
+
     interface ViewModel extends BaseViewModel<Presenter> {
         void onBackPressed();
 

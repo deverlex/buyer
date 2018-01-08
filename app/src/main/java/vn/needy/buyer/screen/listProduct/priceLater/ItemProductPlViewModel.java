@@ -10,6 +10,7 @@ import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
  */
 
 public class ItemProductPlViewModel extends BaseObservable {
+
     private ProductPlWrapper mProductPl;
     private BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> mItemClickListener;
 
@@ -17,6 +18,7 @@ public class ItemProductPlViewModel extends BaseObservable {
         this.mProductPl = productPl;
         this.mItemClickListener = itemClickListener;
     }
+
     public void onItemClick() {
         if (mItemClickListener != null) {
             mItemClickListener.onItemRecyclerViewClick(mProductPl);

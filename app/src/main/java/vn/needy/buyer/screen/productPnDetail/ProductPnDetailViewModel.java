@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
-import android.support.design.widget.BottomSheetBehavior;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.animation.Animation;
@@ -67,8 +66,8 @@ public class ProductPnDetailViewModel extends BaseObservable implements ProductP
 
     @Override
     public void buyNow() {
-        BottomSheetBuyNow buyNow = BottomSheetBuyNow.newInstance();
-        buyNow.show(((AppCompatActivity)mContext).getSupportFragmentManager(), BottomSheetBuyNow.class.getName());
+        BottomSheetBuyNowDialog buyNow = BottomSheetBuyNowDialog.newInstance();
+        buyNow.show(((AppCompatActivity)mContext).getSupportFragmentManager(), BottomSheetBuyNowDialog.class.getName());
     }
 
     @Bindable

@@ -13,12 +13,11 @@ import vn.needy.buyer.R;
  * Created by truongpq on 03/01/2018.
  */
 
-public class BottomSheetAddToCart extends BottomSheetDialogFragment {
-    public static BottomSheetAddToCart newInstance() {
-        
+public class BottomSheetAddToCartDialog extends BottomSheetDialogFragment {
+
+    public static BottomSheetAddToCartDialog newInstance() {
         Bundle args = new Bundle();
-        
-        BottomSheetAddToCart fragment = new BottomSheetAddToCart();
+        BottomSheetAddToCartDialog fragment = new BottomSheetAddToCartDialog();
         fragment.setArguments(args);
         return fragment;
     }
@@ -26,7 +25,7 @@ public class BottomSheetAddToCart extends BottomSheetDialogFragment {
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View view = inflater.inflate(R.layout.bottom_sheet_add_to_cart, container,
+        View view = inflater.inflate(R.layout.dialog_bottom_sheet_add_to_cart, container,
                 false);
 
         // get the views and attach the listener
