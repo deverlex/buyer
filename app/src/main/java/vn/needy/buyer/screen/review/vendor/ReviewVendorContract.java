@@ -13,9 +13,9 @@ public interface ReviewVendorContract {
 
     interface ViewModel extends BaseViewModel<Presenter>{
 
-        void onViewReviewByRatingClicked(TextView view);
-
         void onVendorCommentClick();
+
+        void onViewReviewByRatingClicked(int item);
     }
 
     interface Presenter extends BasePresenter{
