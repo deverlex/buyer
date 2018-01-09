@@ -21,6 +21,8 @@ public class PersonalContract {
 
         void onClickHeader();
 
+        void onClickProductFavorite();
+
     }
 
     interface Presenter extends BasePresenter{
