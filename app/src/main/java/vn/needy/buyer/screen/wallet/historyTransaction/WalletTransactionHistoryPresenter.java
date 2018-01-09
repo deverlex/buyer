@@ -38,6 +38,6 @@ public class WalletTransactionHistoryPresenter implements WalletTransactionHisto
 
         mList = new ArrayList<>();
 
-        mViewModel.getCargoList(mList);
+        mViewModel.getOrderWalletList(mList);
     }
 }

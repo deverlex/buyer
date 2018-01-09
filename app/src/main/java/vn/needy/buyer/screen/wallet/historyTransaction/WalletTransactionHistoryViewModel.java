@@ -54,8 +54,8 @@ public class WalletTransactionHistoryViewModel extends BaseObservable implements
     }
 
     @Override
-    public void getCargoList(List<OrderWallet> cargos) {
-        mList = cargos;
+    public void getOrderWalletList(List<OrderWallet> orderWallets) {
+        mList = orderWallets;
         mVisibilityRecyclerView = mList.size() == 0 ? false : true;
     }
 

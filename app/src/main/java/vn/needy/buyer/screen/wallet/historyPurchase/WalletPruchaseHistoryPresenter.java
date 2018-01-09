@@ -55,6 +55,6 @@ public class WalletPruchaseHistoryPresenter implements WalletPurchaseHistoryCont
         mList.add(orderWallet);
         mList.add(orderWallet);
 
-        mViewModel.getCargoList(mList);
+        mViewModel.getOrderWalletList(mList);
     }
 }

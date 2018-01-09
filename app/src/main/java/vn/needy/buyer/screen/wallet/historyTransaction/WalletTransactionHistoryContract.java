@@ -15,7 +15,7 @@ interface WalletTransactionHistoryContract {
 
     interface ViewModel extends BaseViewModel<Presenter> {
 
-        void getCargoList(List<OrderWallet> cargos);
+        void getOrderWalletList(List<OrderWallet> orderWallets);
 
         void onViewAboutReceiveCoinClick();
 

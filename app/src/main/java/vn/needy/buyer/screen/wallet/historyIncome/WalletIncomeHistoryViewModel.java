@@ -57,9 +57,9 @@ public class WalletIncomeHistoryViewModel extends BaseObservable implements Wall
     }
 
     @Override
-    public void getProductList(List<OrderWallet> cargos) {
-        mAdapter.updateData(cargos);
-        mVisibilityRecyclerView = cargos.size() == 0 ? false : true;
+    public void getOrderWalletList(List<OrderWallet> orderWallets) {
+        mAdapter.updateData(orderWallets);
+        mVisibilityRecyclerView = orderWallets.size() == 0 ? false : true;
     }
 
     @Override

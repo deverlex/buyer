@@ -55,6 +55,6 @@ public class WalletIncomeHistoryPresenter implements WalletIncomeHistoryContract
         mList.add(orderWallet);
         mList.add(orderWallet);
 
-        mViewModel.getProductList(mList);
+        mViewModel.getOrderWalletList(mList);
     }
 }
