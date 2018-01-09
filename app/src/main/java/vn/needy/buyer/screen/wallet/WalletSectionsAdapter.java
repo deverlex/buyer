@@ -16,11 +16,11 @@ import vn.needy.buyer.screen.wallet.historyTransaction.WalletTransactionHistoryF
 
 public class WalletSectionsAdapter extends FragmentPagerAdapter{
 
-        private static final int mPersonalHistoryIncome = 0;
-        private static final int mPersonalHistoryPurchase = 1;
-        private static final int mPersonalHistoryTransaction = 2;
+        private static final int mIncomeHistory = 0;
+        private static final int mPurchaseHistory = 1;
+        private static final int mTransactionHistory = 2;
 
-        private final int[] TABS = new int[]{mPersonalHistoryIncome, mPersonalHistoryPurchase, mPersonalHistoryTransaction};
+        private final int[] TABS = new int[]{mIncomeHistory, mPurchaseHistory, mTransactionHistory};
 
         private Context mContext;
 
@@ -33,11 +33,11 @@ public class WalletSectionsAdapter extends FragmentPagerAdapter{
         public Fragment getItem(int position) {
             switch (TABS[position]) {
 
-                case mPersonalHistoryIncome:
+                case mIncomeHistory:
                     return WalletIncomeHistoryFragment.getInstance();
-                case mPersonalHistoryPurchase:
+                case mPurchaseHistory:
                     return WalletPurchaseHistoryFragment.getInstance();
-                case mPersonalHistoryTransaction:
+                case mTransactionHistory:
                     return WalletTransactionHistoryFragment.getInstance();
             }
             return null;
@@ -51,11 +51,11 @@ public class WalletSectionsAdapter extends FragmentPagerAdapter{
         @Override
         public CharSequence getPageTitle(int position) {
             switch (TABS[position]) {
-                case mPersonalHistoryIncome:
+                case mIncomeHistory:
                     return mContext.getResources().getString(R.string.personal_history_income);
-                case mPersonalHistoryPurchase:
+                case mPurchaseHistory:
                     return mContext.getResources().getString(R.string.personal_history_Purchase);
-                case mPersonalHistoryTransaction:
+                case mTransactionHistory:
                     return mContext.getResources().getString(R.string.personal_history_Transaction);
             }
             return null;
