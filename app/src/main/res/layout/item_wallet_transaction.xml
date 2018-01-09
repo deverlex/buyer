@@ -47,7 +47,7 @@
                     android:layout_height="wrap_content"
                     android:fontFamily="@string/font_serif"
                     android:paddingTop="@dimen/dp_10"
-                    android:text="@{viewModel.cargo.cargoName}"
+                    android:text="@{viewModel.orderWallet.title}"
                     android:textSize="@dimen/sp_13"
                     />
 
@@ -56,7 +56,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:paddingTop="@dimen/dp_5"
-                    android:text="@{viewModel.cargo.cargoStatus}"
+                    android:text="@{viewModel.state}"
                     android:textSize="@dimen/sp_12" />
 
                 <TextView
@@ -65,7 +65,7 @@
                     android:layout_height="wrap_content"
                     android:paddingBottom="@dimen/dp_5"
                     android:paddingTop="@dimen/dp_5"
-                    android:text="@{viewModel.cargo.cargoDate}"
+                    android:text="@{viewModel.time}"
                     android:textSize="@dimen/sp_12" />
 
             </LinearLayout>
@@ -79,7 +79,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerInParent="true"
-                    android:text="@{viewModel.cargo.cargoNumber}"
+                    android:text="@{viewModel.cointChange}"
                     android:textColor="@color/color_orange"
                     android:textStyle="bold" />
             </RelativeLayout>

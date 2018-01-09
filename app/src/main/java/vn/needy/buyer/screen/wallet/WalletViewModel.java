@@ -5,13 +5,15 @@ import android.content.Context;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 
+import vn.needy.buyer.domain.OrderWallet;
+
 /**
  * Created by lion on 16/12/2017.
  */
 
 public class WalletViewModel extends BaseObservable implements WalletContract.ViewModel {
 
-    private WalletActivity.Cargo mListCargo;
+    private OrderWallet mListOrderWallet;
     private WalletContract.Presenter mPresenter;
     private WalletSectionsAdapter mWalletSectionsAdapter;
     private String mCoin;

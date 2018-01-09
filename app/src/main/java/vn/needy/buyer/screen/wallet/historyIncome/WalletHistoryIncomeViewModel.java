@@ -6,6 +6,7 @@ import android.databinding.Bindable;
 
 import java.util.List;
 
+import vn.needy.buyer.domain.OrderWallet;
 import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 import vn.needy.buyer.screen.wallet.WalletActivity;
 import vn.needy.buyer.screen.wallet.WalletRecyclerViewAdapter;
@@ -57,7 +58,7 @@ public class WalletHistoryIncomeViewModel extends BaseObservable implements Wall
     }
 
     @Override
-    public void getProductList(List<WalletActivity.Cargo> cargos) {
+    public void getProductList(List<OrderWallet> cargos) {
         mAdapter.updateData(cargos);
         mVisibilityRecyclerView = cargos.size() == 0 ? false : true;
     }

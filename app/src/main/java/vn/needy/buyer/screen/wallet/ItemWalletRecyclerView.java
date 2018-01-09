@@ -3,6 +3,7 @@ package vn.needy.buyer.screen.wallet;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
 
+import vn.needy.buyer.domain.OrderWallet;
 import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 
 /**
@@ -12,19 +13,31 @@ import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 public class ItemWalletRecyclerView extends BaseObservable {
 
     private BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> mItemClickListener;
-    private WalletActivity.Cargo mCargo;
+    private OrderWallet mOrderWallet;
 
-    public ItemWalletRecyclerView(WalletActivity.Cargo mCargo, BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> mItemClickListener) {
+    public ItemWalletRecyclerView(OrderWallet orderWallet, BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> mItemClickListener) {
         this.mItemClickListener = mItemClickListener;
-        this.mCargo = mCargo;
+        this.mOrderWallet = orderWallet;
     }
 
     public void onProductCLick(){
 
     }
+//time cointChange  state
+    public String getTime(){
+        return mOrderWallet.getTime() + "";
+    }
+
+    public String getCointChange(){
+        return "+" + mOrderWallet.getCointChange();
+    }
+
+    public String getState(){
+        return mOrderWallet.getState() + "";
+    }
 
     @Bindable
-    public WalletActivity.Cargo getCargo() {
-        return mCargo;
+    public OrderWallet getOrderWallet() {
+        return mOrderWallet;
     }
 }

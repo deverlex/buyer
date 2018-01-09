@@ -5,6 +5,7 @@ import android.content.Context;
 import java.util.ArrayList;
 import java.util.List;
 
+import vn.needy.buyer.domain.OrderWallet;
 import vn.needy.buyer.screen.wallet.WalletActivity;
 
 /**
@@ -33,18 +34,10 @@ public class WalletHistoryTransactionPresenter implements WalletHistoryTransacti
 
     @Override
     public void getListProduct(){
-        List<WalletActivity.Cargo> mList;
-        WalletActivity.Cargo cargo = new WalletActivity.Cargo("Set 10 đôi tất Uni cổ thấp loại đẹp"
-                , "Đã hoàn thành" ,"30-12-2018 14:02"
-                ,  "+11");
+        List<OrderWallet> mList;
+        OrderWallet orderWallet = new OrderWallet();
 
         mList = new ArrayList<>();
-       /* mList.add(cargo);
-        mList.add(cargo);
-        mList.add(cargo);
-        mList.add(cargo);
-        mList.add(cargo);
-        mList.add(cargo);*/
 
         mViewModel.getCargoList(mList);
     }

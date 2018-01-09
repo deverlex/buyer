@@ -2,6 +2,7 @@ package vn.needy.buyer.screen.wallet.historyPurchase;
 
 import java.util.List;
 
+import vn.needy.buyer.domain.OrderWallet;
 import vn.needy.buyer.screen.BasePresenter;
 import vn.needy.buyer.screen.BaseViewModel;
 import vn.needy.buyer.screen.wallet.WalletActivity;
@@ -14,7 +15,7 @@ interface WalletHistoryPurchaseContract {
 
     interface ViewModel extends BaseViewModel<Presenter>{
 
-        void getCargoList(List<WalletActivity.Cargo> cargos);
+        void getCargoList(List<OrderWallet> cargos);
 
         void onViewAboutReceiveCoinClick();
 

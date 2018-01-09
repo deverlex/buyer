@@ -13,6 +13,7 @@ import java.util.List;
 
 import vn.needy.buyer.R;
 import vn.needy.buyer.databinding.FragmentWalletHistoryTransactionBinding;
+import vn.needy.buyer.domain.OrderWallet;
 import vn.needy.buyer.screen.wallet.WalletActivity;
 import vn.needy.buyer.screen.wallet.WalletRecyclerViewAdapter;
 
@@ -31,7 +32,7 @@ public class WalletHistoryTransactionFragment extends Fragment {
     private WalletHistoryTransactionContract.ViewModel mViewModel;
     private WalletHistoryTransactionContract.Presenter mPresenter;
     private WalletRecyclerViewAdapter mAdapter;
-    private List<WalletActivity.Cargo> mList;
+    private List<OrderWallet> mList;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {

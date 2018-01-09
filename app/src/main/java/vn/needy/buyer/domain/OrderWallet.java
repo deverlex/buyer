@@ -10,6 +10,7 @@ import io.realm.RealmObject;
 
 public class OrderWallet extends RealmObject {
 
+    
     private long productId;
     private String title;
     private int state;

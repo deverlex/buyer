@@ -11,6 +11,7 @@ import java.util.List;
 
 import vn.needy.buyer.R;
 import vn.needy.buyer.databinding.ItemWalletTransactionBinding;
+import vn.needy.buyer.domain.OrderWallet;
 import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 
 /**
@@ -19,11 +20,11 @@ import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 
 public class WalletRecyclerViewAdapter extends BaseRecyclerViewAdapter<WalletRecyclerViewAdapter.ItemViewHolder> {
 
-    private List<WalletActivity.Cargo> mList;
+    private List<OrderWallet> mList;
     private Context mContext;
     private BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> mItemClickListener;
 
-    public WalletRecyclerViewAdapter(@NonNull Context context, List<WalletActivity.Cargo> mList) {
+    public WalletRecyclerViewAdapter(@NonNull Context context, List<OrderWallet> mList) {
         super(context);
         this.mList = mList;
     }
@@ -45,7 +46,7 @@ public class WalletRecyclerViewAdapter extends BaseRecyclerViewAdapter<WalletRec
         mItemClickListener = itemClickListener;
     }
 
-    public void updateData(List<WalletActivity.Cargo> list) {
+    public void updateData(List<OrderWallet> list) {
         if (list == null) {
             return;
         }
@@ -54,7 +55,7 @@ public class WalletRecyclerViewAdapter extends BaseRecyclerViewAdapter<WalletRec
         notifyDataSetChanged();
     }
 
-    public int getPosition(WalletActivity.Cargo list){
+    public int getPosition(OrderWallet list){
         return mList.indexOf(list);
     }
 
@@ -77,8 +78,8 @@ public class WalletRecyclerViewAdapter extends BaseRecyclerViewAdapter<WalletRec
             this.mItemClickListener = itemClickListener;
         }
 
-        void bind(WalletActivity.Cargo cargo) {
-            mBinding.setViewModel(new ItemWalletRecyclerView(cargo, mItemClickListener));
+        void bind(OrderWallet orderWallet) {
+            mBinding.setViewModel(new ItemWalletRecyclerView(orderWallet, mItemClickListener));
             mBinding.executePendingBindings();
         }
 

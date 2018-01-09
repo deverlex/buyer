@@ -6,6 +6,7 @@ import android.databinding.Bindable;
 
 import java.util.List;
 
+import vn.needy.buyer.domain.OrderWallet;
 import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 import vn.needy.buyer.screen.wallet.WalletActivity;
 import vn.needy.buyer.screen.wallet.WalletRecyclerViewAdapter;
@@ -17,7 +18,7 @@ import vn.needy.buyer.screen.wallet.WalletRecyclerViewAdapter;
 public class WalletHistoryTransactionViewModel extends BaseObservable implements WalletHistoryTransactionContract.ViewModel,
         BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object>{
 
-    private List<WalletActivity.Cargo> mList;
+    private List<OrderWallet> mList;
     private Context mContext;
     private boolean mVisibilityRecyclerView;
     private  BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object>
@@ -54,7 +55,7 @@ public class WalletHistoryTransactionViewModel extends BaseObservable implements
     }
 
     @Override
-    public void getCargoList(List<WalletActivity.Cargo> cargos) {
+    public void getCargoList(List<OrderWallet> cargos) {
         mList = cargos;
         mVisibilityRecyclerView = mList.size() == 0 ? false : true;
     }

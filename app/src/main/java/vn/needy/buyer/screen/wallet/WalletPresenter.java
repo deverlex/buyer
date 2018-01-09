@@ -4,13 +4,15 @@ import android.content.Context;
 
 import java.util.List;
 
+import vn.needy.buyer.domain.OrderWallet;
+
 /**
  * Created by lion on 16/12/2017.
  */
 
 public class WalletPresenter implements WalletContract.Presenter{
 
-    private List<WalletActivity.Cargo> mList;
+    private List<OrderWallet> mList;
     private WalletContract.ViewModel mViewModel;
     private Context mContext;
 

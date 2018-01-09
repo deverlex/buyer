@@ -3,8 +3,11 @@ package vn.needy.buyer.screen.wallet.historyIncome;
 import android.content.Context;
 
 import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
 import java.util.List;
 
+import vn.needy.buyer.domain.OrderWallet;
 import vn.needy.buyer.screen.wallet.WalletActivity;
 
 /**
@@ -34,18 +37,24 @@ public class WalletHistoryIncomePresenter implements WalletHistoryIncomeContract
     @Override
     public void getListProduct(){
 
-        List<WalletActivity.Cargo> mList;
-        WalletActivity.Cargo cargo = new WalletActivity.Cargo("Set 10 đôi tất Uni cổ thấp loại đẹp"
-                , "Đã hoàn thành" ,"30-12-2018 14:02"
-                ,  "+11");
+        List<OrderWallet> mList;
+        OrderWallet orderWallet = new OrderWallet();
 
+        orderWallet.setTitle("Set 10  tất Uni cổ thấp loại đẹp");
+        orderWallet.setCointChange(11);
+
+        Date currentTime = Calendar.getInstance().getTime();
+        
+        orderWallet.setTime(currentTime);
+        orderWallet.setState(123);
+        
         mList = new ArrayList<>();
-        mList.add(cargo);
-        mList.add(cargo);
-        mList.add(cargo);
-        mList.add(cargo);
-        mList.add(cargo);
-        mList.add(cargo);
+        mList.add(orderWallet);
+        mList.add(orderWallet);
+        mList.add(orderWallet);
+        mList.add(orderWallet);
+        mList.add(orderWallet);
+        mList.add(orderWallet);
 
         mViewModel.getProductList(mList);
     }
