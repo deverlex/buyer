@@ -1,4 +1,4 @@
-package vn.needy.buyer.screen.wallet.historyIncome;
+package vn.needy.buyer.screen.wallet.historyPurchase;
 
 import java.util.List;
 
@@ -11,11 +11,11 @@ import vn.needy.buyer.screen.wallet.WalletActivity;
  * Created by lion on 02/01/2018.
  */
 
-public interface WalletHistoryIncomeContract {
+interface WalletPurchaseHistoryContract {
 
-    interface ViewModel extends BaseViewModel<Presenter> {
+    interface ViewModel extends BaseViewModel<Presenter>{
 
-        void getProductList(List<OrderWallet> cargos);
+        void getCargoList(List<OrderWallet> cargos);
 
         void onViewAboutReceiveCoinClick();
 
@@ -24,5 +24,6 @@ public interface WalletHistoryIncomeContract {
     interface Presenter extends BasePresenter{
 
         void getListProduct();
+
     }
 }

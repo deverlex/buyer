@@ -1,4 +1,4 @@
-package vn.needy.buyer.screen.wallet.historyIncome;
+package vn.needy.buyer.screen.wallet.historyPurchase;
 
 import android.content.Context;
 
@@ -8,20 +8,19 @@ import java.util.Date;
 import java.util.List;
 
 import vn.needy.buyer.domain.OrderWallet;
-import vn.needy.buyer.screen.wallet.WalletActivity;
 
 /**
  * Created by minh_dai on 02/01/2018.
  */
 
-public class WalletHistoryIncomePresenter implements WalletHistoryIncomeContract.Presenter {
+public class WalletPruchaseHistoryPresenter implements WalletPurchaseHistoryContract.Presenter {
 
     private Context mContext;
-    private WalletHistoryIncomeContract.ViewModel mViewModel;
+    private WalletPurchaseHistoryContract.ViewModel mViewModel;
 
-    public WalletHistoryIncomePresenter(Context mContext, WalletHistoryIncomeContract.ViewModel mViewModel) {
+    public WalletPruchaseHistoryPresenter(Context mContext, WalletPurchaseHistoryContract.ViewModel viewModel) {
         this.mContext = mContext;
-        this.mViewModel = mViewModel;
+        this.mViewModel = viewModel;
     }
 
     @Override
@@ -36,18 +35,18 @@ public class WalletHistoryIncomePresenter implements WalletHistoryIncomeContract
 
     @Override
     public void getListProduct(){
-
         List<OrderWallet> mList;
+        
         OrderWallet orderWallet = new OrderWallet();
 
         orderWallet.setTitle("Set 10  tất Uni cổ thấp loại đẹp");
         orderWallet.setCointChange(11);
 
         Date currentTime = Calendar.getInstance().getTime();
-        
+
         orderWallet.setTime(currentTime);
         orderWallet.setState(123);
-        
+
         mList = new ArrayList<>();
         mList.add(orderWallet);
         mList.add(orderWallet);
@@ -56,6 +55,6 @@ public class WalletHistoryIncomePresenter implements WalletHistoryIncomeContract
         mList.add(orderWallet);
         mList.add(orderWallet);
 
-        mViewModel.getProductList(mList);
+        mViewModel.getCargoList(mList);
     }
 }

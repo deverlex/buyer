@@ -6,9 +6,9 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentPagerAdapter;
 
 import vn.needy.buyer.R;
-import vn.needy.buyer.screen.wallet.historyIncome.WalletHistoryIncomeFragment;
-import vn.needy.buyer.screen.wallet.historyPurchase.WalletHistoryPurchaseFragment;
-import vn.needy.buyer.screen.wallet.historyTransaction.WalletHistoryTransactionFragment;
+import vn.needy.buyer.screen.wallet.historyIncome.WalletIncomeHistoryFragment;
+import vn.needy.buyer.screen.wallet.historyPurchase.WalletPurchaseHistoryFragment;
+import vn.needy.buyer.screen.wallet.historyTransaction.WalletTransactionHistoryFragment;
 
 /**
  * Created by minh_dai on 02/01/2018.
@@ -34,11 +34,11 @@ public class WalletSectionsAdapter extends FragmentPagerAdapter{
             switch (TABS[position]) {
 
                 case mPersonalHistoryIncome:
-                    return WalletHistoryIncomeFragment.getInstance();
+                    return WalletIncomeHistoryFragment.getInstance();
                 case mPersonalHistoryPurchase:
-                    return WalletHistoryPurchaseFragment.getInstance();
+                    return WalletPurchaseHistoryFragment.getInstance();
                 case mPersonalHistoryTransaction:
-                    return WalletHistoryTransactionFragment.getInstance();
+                    return WalletTransactionHistoryFragment.getInstance();
             }
             return null;
         }

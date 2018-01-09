@@ -1,4 +1,4 @@
-package vn.needy.buyer.screen.wallet.historyTransaction;
+package vn.needy.buyer.screen.wallet.historyIncome;
 
 import android.content.Context;
 import android.databinding.BaseObservable;
@@ -8,26 +8,23 @@ import java.util.List;
 
 import vn.needy.buyer.domain.OrderWallet;
 import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
-import vn.needy.buyer.screen.wallet.WalletActivity;
 import vn.needy.buyer.screen.wallet.WalletRecyclerViewAdapter;
 
 /**
  * Created by minh_dai on 02/01/2018.
  */
 
-public class WalletHistoryTransactionViewModel extends BaseObservable implements WalletHistoryTransactionContract.ViewModel,
+public class WalletIncomeHistoryViewModel extends BaseObservable implements WalletIncomeHistoryContract.ViewModel,
         BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object>{
 
-    private List<OrderWallet> mList;
     private Context mContext;
+    private WalletRecyclerViewAdapter mAdapter;
     private boolean mVisibilityRecyclerView;
     private  BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object>
             mItemClickListener;
-    private WalletRecyclerViewAdapter mAdapter;
-    private WalletHistoryTransactionContract.Presenter mPresenter;
+    private WalletIncomeHistoryContract.Presenter mPresenter;
 
-
-    public WalletHistoryTransactionViewModel(Context mContext, WalletRecyclerViewAdapter adapter) {
+    public WalletIncomeHistoryViewModel(Context mContext, WalletRecyclerViewAdapter adapter) {
         this.mContext = mContext;
         mAdapter = adapter;
         mVisibilityRecyclerView = false;
@@ -37,6 +34,7 @@ public class WalletHistoryTransactionViewModel extends BaseObservable implements
     @Override
     public void onStart() {
         mPresenter.getListProduct();
+
     }
 
     @Override
@@ -45,8 +43,12 @@ public class WalletHistoryTransactionViewModel extends BaseObservable implements
     }
 
     @Override
-    public void setPresenter(WalletHistoryTransactionContract.Presenter presenter) {
+    public void setPresenter(WalletIncomeHistoryContract.Presenter presenter) {
         mPresenter = presenter;
+    }
+
+    public WalletRecyclerViewAdapter getAdapter() {
+        return mAdapter;
     }
 
     @Override
@@ -55,18 +57,14 @@ public class WalletHistoryTransactionViewModel extends BaseObservable implements
     }
 
     @Override
-    public void getCargoList(List<OrderWallet> cargos) {
-        mList = cargos;
-        mVisibilityRecyclerView = mList.size() == 0 ? false : true;
+    public void getProductList(List<OrderWallet> cargos) {
+        mAdapter.updateData(cargos);
+        mVisibilityRecyclerView = cargos.size() == 0 ? false : true;
     }
 
     @Override
     public void onViewAboutReceiveCoinClick() {
 
-    }
-
-    public WalletRecyclerViewAdapter getAdapter() {
-        return mAdapter;
     }
 
     @Bindable

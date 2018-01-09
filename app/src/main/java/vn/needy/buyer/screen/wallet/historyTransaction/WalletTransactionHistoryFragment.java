@@ -1,4 +1,4 @@
-package vn.needy.buyer.screen.wallet.historyPurchase;
+package vn.needy.buyer.screen.wallet.historyTransaction;
 
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
@@ -12,25 +12,24 @@ import java.util.ArrayList;
 import java.util.List;
 
 import vn.needy.buyer.R;
-import vn.needy.buyer.databinding.FragmentWalletHistoryPurchaseBinding;
+import vn.needy.buyer.databinding.FragmentWalletHistoryTransactionBinding;
 import vn.needy.buyer.domain.OrderWallet;
-import vn.needy.buyer.screen.wallet.WalletActivity;
 import vn.needy.buyer.screen.wallet.WalletRecyclerViewAdapter;
 
 /**
  * Created by lion on 02/01/2018.
  */
 
-public class WalletHistoryPurchaseFragment extends Fragment {
+public class WalletTransactionHistoryFragment extends Fragment {
 
 
-    public static WalletHistoryPurchaseFragment getInstance()
+    public static WalletTransactionHistoryFragment getInstance()
     {
-        return new WalletHistoryPurchaseFragment();
+        return new WalletTransactionHistoryFragment();
     }
 
-    private WalletHistoryPurchaseContract.ViewModel mViewModel;
-    private WalletHistoryPurchaseContract.Presenter mPresenter;
+    private WalletTransactionHistoryContract.ViewModel mViewModel;
+    private WalletTransactionHistoryContract.Presenter mPresenter;
     private WalletRecyclerViewAdapter mAdapter;
     private List<OrderWallet> mList;
 
@@ -38,19 +37,17 @@ public class WalletHistoryPurchaseFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         mList = new ArrayList<>();
-
         mAdapter = new WalletRecyclerViewAdapter(getActivity() , mList);
-        mViewModel = new WalletHistoryPurchaseViewModel(getActivity() , mAdapter);
+        mViewModel = new WalletTransactionHistoryViewModel(getActivity() , mAdapter);
 
-        mPresenter = new WalletHistoryPruchasePresenter(getActivity() , mViewModel);
+        mPresenter = new WalletTransactionHistoryPresenter(getActivity() , mViewModel);
 
         mViewModel.setPresenter(mPresenter);
-        mViewModel.onStart();;
+        mViewModel.onStart();
 
-
-        FragmentWalletHistoryPurchaseBinding binding = DataBindingUtil.inflate(inflater , R.layout.fragment_wallet_history_purchase
+        FragmentWalletHistoryTransactionBinding binding = DataBindingUtil.inflate(inflater , R.layout.fragment_wallet_history_transaction
                 , container , false);
-        binding.setViewModel((WalletHistoryPurchaseViewModel) mViewModel);
+        binding.setViewModel((WalletTransactionHistoryViewModel) mViewModel);
 
         return binding.getRoot();
     }

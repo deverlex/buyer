@@ -6,18 +6,17 @@ import java.util.ArrayList;
 import java.util.List;
 
 import vn.needy.buyer.domain.OrderWallet;
-import vn.needy.buyer.screen.wallet.WalletActivity;
 
 /**
  * Created by minh_dai on 02/01/2018.
  */
 
-public class WalletHistoryTransactionPresenter implements WalletHistoryTransactionContract.Presenter {
+public class WalletTransactionHistoryPresenter implements WalletTransactionHistoryContract.Presenter {
 
     private Context mContext;
-    private WalletHistoryTransactionContract.ViewModel mViewModel;
+    private WalletTransactionHistoryContract.ViewModel mViewModel;
 
-    public WalletHistoryTransactionPresenter(Context mContext, WalletHistoryTransactionContract.ViewModel mViewModel) {
+    public WalletTransactionHistoryPresenter(Context mContext, WalletTransactionHistoryContract.ViewModel mViewModel) {
         this.mContext = mContext;
         this.mViewModel = mViewModel;
     }

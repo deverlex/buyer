@@ -8,14 +8,13 @@ import java.util.List;
 
 import vn.needy.buyer.domain.OrderWallet;
 import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
-import vn.needy.buyer.screen.wallet.WalletActivity;
 import vn.needy.buyer.screen.wallet.WalletRecyclerViewAdapter;
 
 /**
  * Created by minh_dai on 02/01/2018.
  */
 
-public class WalletHistoryPurchaseViewModel extends BaseObservable implements WalletHistoryPurchaseContract.ViewModel,
+public class WalletPurchaseHistoryViewModel extends BaseObservable implements WalletPurchaseHistoryContract.ViewModel,
         BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object>{
 
     private Context mContext;
@@ -23,9 +22,9 @@ public class WalletHistoryPurchaseViewModel extends BaseObservable implements Wa
     private  BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object>
             mItemClickListener;
     private WalletRecyclerViewAdapter mAdapter;
-    private WalletHistoryPurchaseContract.Presenter mPresenter;
+    private WalletPurchaseHistoryContract.Presenter mPresenter;
 
-    public WalletHistoryPurchaseViewModel(Context mContext, WalletRecyclerViewAdapter adapter) {
+    public WalletPurchaseHistoryViewModel(Context mContext, WalletRecyclerViewAdapter adapter) {
         this.mContext = mContext;
         mAdapter = adapter;
         mVisibilityRecyclerView = false;
@@ -43,7 +42,7 @@ public class WalletHistoryPurchaseViewModel extends BaseObservable implements Wa
     }
 
     @Override
-    public void setPresenter(WalletHistoryPurchaseContract.Presenter presenter) {
+    public void setPresenter(WalletPurchaseHistoryContract.Presenter presenter) {
         mPresenter = presenter;
     }
 

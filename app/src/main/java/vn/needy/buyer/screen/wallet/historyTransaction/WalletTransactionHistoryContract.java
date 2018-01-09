@@ -11,7 +11,7 @@ import vn.needy.buyer.screen.wallet.WalletActivity;
  * Created by lion on 02/01/2018.
  */
 
-interface WalletHistoryTransactionContract {
+interface WalletTransactionHistoryContract {
 
     interface ViewModel extends BaseViewModel<Presenter> {
 

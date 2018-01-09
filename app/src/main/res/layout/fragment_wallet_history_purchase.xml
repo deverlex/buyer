@@ -4,7 +4,7 @@
     <data>
         <variable
             name="viewModel"
-            type="vn.needy.buyer.screen.wallet.historyPurchase.WalletHistoryPurchaseViewModel"/>
+            type="vn.needy.buyer.screen.wallet.historyPurchase.WalletPurchaseHistoryViewModel"/>
         <import type="android.view.View"/>
     </data>
     <LinearLayout
