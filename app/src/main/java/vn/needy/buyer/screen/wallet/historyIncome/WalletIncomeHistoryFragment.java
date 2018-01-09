@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import vn.needy.buyer.R;
-import vn.needy.buyer.databinding.FragmentWalletHistoryIncomeBinding;
+import vn.needy.buyer.databinding.FragmentWalletIncomeHistoryBinding;
 import vn.needy.buyer.domain.OrderWallet;
 import vn.needy.buyer.screen.wallet.WalletRecyclerViewAdapter;
 
@@ -34,7 +34,7 @@ public class WalletIncomeHistoryFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        FragmentWalletHistoryIncomeBinding binding = DataBindingUtil.inflate(inflater , R.layout.fragment_wallet_history_income
+        FragmentWalletIncomeHistoryBinding binding = DataBindingUtil.inflate(inflater , R.layout.fragment_wallet_income_history
                 , container , false);
 
         mList = new ArrayList<>();

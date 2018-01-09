@@ -12,7 +12,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import vn.needy.buyer.R;
-import vn.needy.buyer.databinding.FragmentWalletHistoryTransactionBinding;
+import vn.needy.buyer.databinding.FragmentWalletTransactionHistoryBinding;
 import vn.needy.buyer.domain.OrderWallet;
 import vn.needy.buyer.screen.wallet.WalletRecyclerViewAdapter;
 
@@ -45,7 +45,7 @@ public class WalletTransactionHistoryFragment extends Fragment {
         mViewModel.setPresenter(mPresenter);
         mViewModel.onStart();
 
-        FragmentWalletHistoryTransactionBinding binding = DataBindingUtil.inflate(inflater , R.layout.fragment_wallet_history_transaction
+        FragmentWalletTransactionHistoryBinding binding = DataBindingUtil.inflate(inflater , R.layout.fragment_wallet_transaction_history
                 , container , false);
         binding.setViewModel((WalletTransactionHistoryViewModel) mViewModel);
 
