@@ -69,6 +69,12 @@
             android:windowSoftInputMode="stateHidden"
             />
 
+        <activity android:name=".screen.recentView.RecentViewActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="stateHidden"
+            />
+
         <activity android:name=".screen.listProduct.priceNow.ListProductPnActivity"
             android:screenOrientation="portrait"
             android:theme="@style/AppTheme"

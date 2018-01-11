@@ -21,6 +21,7 @@ public class PersonalContract {
 
         void onClickHeader();
 
+        void onClickRecentViewActivity();
     }
 
     interface Presenter extends BasePresenter{

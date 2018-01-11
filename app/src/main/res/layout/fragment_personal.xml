@@ -387,6 +387,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:onClick="@{() -> viewModel.onClickRecentViewActivity()}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_1"
@@ -395,9 +396,9 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:drawableLeft="@{@drawable/ic_readed}"
+                        android:drawableLeft="@{@drawable/ic_read}"
                         android:drawablePadding="@dimen/dp_10"
-                        android:drawableStart="@{@drawable/ic_readed}"
+                        android:drawableStart="@{@drawable/ic_read}"
                         android:fontFamily="@string/font_serif"
                         android:gravity="center_vertical"
                         android:padding="@dimen/dp_10"
