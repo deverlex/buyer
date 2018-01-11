@@ -11,7 +11,7 @@ public interface PersonalContract {
 
     interface ViewModel extends BaseViewModel<Presenter>{
 
-        void onCLickRecentViewActivity();
+        void onClickRecentViewActivity();
 
     }
 

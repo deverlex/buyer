@@ -4,7 +4,6 @@ import android.app.Activity;
 import android.content.Context;
 import android.databinding.BaseObservable;
 import android.databinding.Bindable;
-import android.databinding.BindingBuildInfo;
 
 import java.util.List;
 
@@ -19,7 +18,7 @@ public class RecentViewViewModel extends BaseObservable implements RecentViewCon
         BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> {
 
     private RecentViewAdapter mAdapter;
-    private RecentViewContract.Prsenter mPrsenter;
+    private RecentViewContract.Presenter mPrsenter;
     private Context mContext;
 
     public RecentViewViewModel(RecentViewAdapter mAdapter, Context mContext) {
@@ -40,7 +39,7 @@ public class RecentViewViewModel extends BaseObservable implements RecentViewCon
     }
 
     @Override
-    public void setPresenter(RecentViewContract.Prsenter presenter) {
+    public void setPresenter(RecentViewContract.Presenter presenter) {
         mPrsenter = presenter;
     }
 

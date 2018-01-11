@@ -9,7 +9,7 @@ import vn.needy.buyer.domain.RecentView;
  * Created by lion on 08/01/2018.
  */
 
-public class RecentViewPresenter implements RecentViewContract.Prsenter{
+public class RecentViewPresenter implements RecentViewContract.Presenter {
 
     private List<RecentView> mList;
     private RecentViewContract.ViewModel mViewModel;

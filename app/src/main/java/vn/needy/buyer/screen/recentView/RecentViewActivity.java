@@ -18,7 +18,7 @@ import vn.needy.buyer.screen.BaseActivity;
 public class RecentViewActivity extends BaseActivity{
 
     private RecentViewContract.ViewModel mViewModel;
-    private RecentViewContract.Prsenter mPrsenter;
+    private RecentViewContract.Presenter mPrsenter;
     private RecentViewAdapter mAdapter;
     private List<RecentView> mList;
 

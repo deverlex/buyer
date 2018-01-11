@@ -37,7 +37,7 @@ public class PersonalViewModel extends BaseObservable implements PersonalContrac
     }
 
     @Override
-    public void onCLickRecentViewActivity() {
+    public void onClickRecentViewActivity() {
         mNavigator.startActivity(RecentViewActivity.class);
     }
 }

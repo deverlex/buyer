@@ -12,14 +12,14 @@ import vn.needy.buyer.screen.BaseViewModel;
 
 public interface RecentViewContract {
 
-    interface ViewModel extends BaseViewModel<Prsenter>{
+    interface ViewModel extends BaseViewModel<Presenter>{
 
         void onBackPressed();
 
         void setListRecentView(List<RecentView> list);
     }
 
-    interface Prsenter extends BasePresenter{
+    interface Presenter extends BasePresenter{
 
         void getListRecentView();
 
