@@ -22,23 +22,22 @@ import vn.needy.buyer.screen.wallet.WalletRecyclerViewAdapter;
 
 public class WalletIncomeHistoryFragment extends Fragment {
 
-    public static WalletIncomeHistoryFragment getInstance()
-    {
+    public static WalletIncomeHistoryFragment getInstance() {
         return new WalletIncomeHistoryFragment();
     }
 
     private WalletIncomeHistoryContract.Presenter mPresenter;
     private WalletIncomeHistoryContract.ViewModel mViewModel;
     private WalletRecyclerViewAdapter mAdapter;
-    private List<OrderWallet> mList;
+    private List<OrderWallet> mOrderWallets;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         FragmentWalletIncomeHistoryBinding binding = DataBindingUtil.inflate(inflater , R.layout.fragment_wallet_income_history
                 , container , false);
 
-        mList = new ArrayList<>();
-        mAdapter = new WalletRecyclerViewAdapter(getActivity() , mList);
+        mOrderWallets = new ArrayList<>();
+        mAdapter = new WalletRecyclerViewAdapter(getActivity() , mOrderWallets);
         mViewModel = new WalletIncomeHistoryViewModel(getActivity() , mAdapter);
         mPresenter = new WalletIncomeHistoryPresenter(getActivity() , mViewModel);
 

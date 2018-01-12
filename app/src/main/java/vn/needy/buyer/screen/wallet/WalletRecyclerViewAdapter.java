@@ -59,7 +59,6 @@ public class WalletRecyclerViewAdapter extends BaseRecyclerViewAdapter<WalletRec
         return mList.indexOf(list);
     }
 
-
     @Override
     public int getItemCount() {
         return mList.size();
@@ -71,7 +70,6 @@ public class WalletRecyclerViewAdapter extends BaseRecyclerViewAdapter<WalletRec
                 mItemClickListener;
         private ItemWalletTransactionBinding mBinding;
 
-
         public ItemViewHolder(ItemWalletTransactionBinding binding, BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> itemClickListener) {
             super(binding.getRoot());
             this.mBinding = binding;
@@ -82,6 +80,5 @@ public class WalletRecyclerViewAdapter extends BaseRecyclerViewAdapter<WalletRec
             mBinding.setViewModel(new ItemWalletRecyclerView(orderWallet, mItemClickListener));
             mBinding.executePendingBindings();
         }
-
     }
 }

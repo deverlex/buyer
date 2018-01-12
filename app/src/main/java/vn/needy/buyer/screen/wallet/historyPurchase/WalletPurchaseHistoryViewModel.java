@@ -52,7 +52,7 @@ public class WalletPurchaseHistoryViewModel extends BaseObservable implements Wa
     }
 
     @Override
-    public void getOrderWalletList(List<OrderWallet> orderWallets) {
+    public void setOrderWalletList(List<OrderWallet> orderWallets) {
         mAdapter.updateData(orderWallets);
         mVisibilityRecyclerView = orderWallets.size() == 0 ? false : true;
     }

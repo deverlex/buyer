@@ -17,11 +17,9 @@ import vn.needy.buyer.screen.wallet.WalletRecyclerViewAdapter;
 public class WalletTransactionHistoryViewModel extends BaseObservable implements WalletTransactionHistoryContract.ViewModel,
         BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object>{
 
-    private List<OrderWallet> mList;
     private Context mContext;
     private boolean mVisibilityRecyclerView;
-    private  BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object>
-            mItemClickListener;
+    private BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> mItemClickListener;
     private WalletRecyclerViewAdapter mAdapter;
     private WalletTransactionHistoryContract.Presenter mPresenter;
 
@@ -54,9 +52,9 @@ public class WalletTransactionHistoryViewModel extends BaseObservable implements
     }
 
     @Override
-    public void getOrderWalletList(List<OrderWallet> orderWallets) {
-        mList = orderWallets;
-        mVisibilityRecyclerView = mList.size() == 0 ? false : true;
+    public void setOrderWalletList(List<OrderWallet> orderWallets) {
+        mVisibilityRecyclerView = orderWallets.size() == 0 ? false : true;
+        mAdapter.updateData(orderWallets);
     }
 
     @Override

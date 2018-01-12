@@ -33,11 +33,7 @@ public class WalletTransactionHistoryPresenter implements WalletTransactionHisto
 
     @Override
     public void getListProduct(){
-        List<OrderWallet> mList;
-        OrderWallet orderWallet = new OrderWallet();
-
-        mList = new ArrayList<>();
-
-        mViewModel.getOrderWalletList(mList);
+        List<OrderWallet> listDemo = new ArrayList<>();
+        mViewModel.setOrderWalletList(listDemo);
     }
 }

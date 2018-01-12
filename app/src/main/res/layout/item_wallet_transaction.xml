@@ -3,7 +3,6 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <data>
-
         <variable
             name="viewModel"
             type="vn.needy.buyer.screen.wallet.ItemWalletRecyclerView" />
@@ -11,85 +10,64 @@
         <import type="android.view.View" />
     </data>
 
-    <LinearLayout
+    <RelativeLayout
         android:onClick="@{() -> viewModel.onProductCLick()}"
-        android:orientation="vertical"
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
+        <ImageView
+            android:id="@+id/order_image"
+            android:layout_width="@dimen/dp_40"
+            android:layout_height="@dimen/dp_40"
+            android:layout_alignParentLeft="true"
+            android:layout_margin="@dimen/dp_10"
+            app:srcCompat="@drawable/ic_help_circle" />
+
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:weightSum="5">
+            android:layout_toRightOf="@+id/order_image"
+            android:layout_toLeftOf="@+id/change"
+            android:orientation="vertical">
 
-            <RelativeLayout
-                android:layout_width="@dimen/dp_0"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-                <ImageView
-                    android:layout_width="@dimen/dp_40"
-                    android:layout_height="@dimen/dp_40"
-                    android:layout_centerInParent="true"
-                    app:srcCompat="@drawable/ic_help_circle" />
-
-            </RelativeLayout>
-
-            <LinearLayout
-                android:layout_width="@dimen/dp_0"
+            <TextView
+                android:textColor="@color/color_black_transparent_mos"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:orientation="vertical">
+                android:fontFamily="@string/font_serif"
+                android:paddingTop="@dimen/dp_10"
+                android:text="@{viewModel.orderWallet.title}"
+                android:textSize="@dimen/sp_13"
+                />
 
-                <TextView
-                    android:textColor="@color/color_black_transparent_mos"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@string/font_serif"
-                    android:paddingTop="@dimen/dp_10"
-                    android:text="@{viewModel.orderWallet.title}"
-                    android:textSize="@dimen/sp_13"
-                    />
+            <TextView
+                android:textColor="@color/color_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="@dimen/dp_5"
+                android:text="@{viewModel.titleState}"
+                android:textSize="@dimen/sp_12" />
 
-                <TextView
-                    android:textColor="@color/color_gray"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingTop="@dimen/dp_5"
-                    android:text="@{viewModel.state}"
-                    android:textSize="@dimen/sp_12" />
-
-                <TextView
-                    android:textColor="@color/color_gray"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:paddingBottom="@dimen/dp_5"
-                    android:paddingTop="@dimen/dp_5"
-                    android:text="@{viewModel.time}"
-                    android:textSize="@dimen/sp_12" />
-
-            </LinearLayout>
-
-            <RelativeLayout
-                android:layout_width="@dimen/dp_0"
-                android:layout_height="match_parent"
-                android:layout_weight="1">
-
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_centerInParent="true"
-                    android:text="@{viewModel.cointChange}"
-                    android:textColor="@color/color_orange"
-                    android:textStyle="bold" />
-            </RelativeLayout>
-
+            <TextView
+                android:textColor="@color/color_gray"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/dp_5"
+                android:paddingTop="@dimen/dp_5"
+                android:text="@{viewModel.orderWallet.transactionTime}"
+                android:textSize="@dimen/sp_12" />
         </LinearLayout>
 
-        <View
-            android:layout_width="match_parent"
-            android:layout_height="@dimen/dp_1"
-            android:background="@color/color_gray_white" />
-    </LinearLayout>
+        <TextView
+            android:id="@+id/change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/dp_8"
+            android:text="@{viewModel.orderWallet.coinChange}"
+            android:textColor="@color/color_orange_mos"
+            android:textSize="@dimen/sp_18"/>
 
+    </RelativeLayout>
 </layout>

@@ -20,8 +20,7 @@ public class WalletIncomeHistoryViewModel extends BaseObservable implements Wall
     private Context mContext;
     private WalletRecyclerViewAdapter mAdapter;
     private boolean mVisibilityRecyclerView;
-    private  BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object>
-            mItemClickListener;
+    private  BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> mItemClickListener;
     private WalletIncomeHistoryContract.Presenter mPresenter;
 
     public WalletIncomeHistoryViewModel(Context mContext, WalletRecyclerViewAdapter adapter) {
@@ -57,7 +56,7 @@ public class WalletIncomeHistoryViewModel extends BaseObservable implements Wall
     }
 
     @Override
-    public void getOrderWalletList(List<OrderWallet> orderWallets) {
+    public void setOrderWalletList(List<OrderWallet> orderWallets) {
         mAdapter.updateData(orderWallets);
         mVisibilityRecyclerView = orderWallets.size() == 0 ? false : true;
     }

@@ -15,10 +15,9 @@ interface WalletPurchaseHistoryContract {
 
     interface ViewModel extends BaseViewModel<Presenter>{
 
-        void getOrderWalletList(List<OrderWallet> orderWallets);
+        void setOrderWalletList(List<OrderWallet> orderWallets);
 
         void onViewAboutReceiveCoinClick();
-
     }
 
     interface Presenter extends BasePresenter{

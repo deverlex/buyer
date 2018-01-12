@@ -41,7 +41,7 @@ public class WalletPurchaseHistoryFragment extends Fragment {
         mAdapter = new WalletRecyclerViewAdapter(getActivity() , mList);
         mViewModel = new WalletPurchaseHistoryViewModel(getActivity() , mAdapter);
 
-        mPresenter = new WalletPruchaseHistoryPresenter(getActivity() , mViewModel);
+        mPresenter = new WalletPurchaseHistoryPresenter(getActivity() , mViewModel);
 
         mViewModel.setPresenter(mPresenter);
         mViewModel.onStart();;

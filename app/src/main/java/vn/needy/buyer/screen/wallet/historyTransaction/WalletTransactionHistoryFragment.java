@@ -23,21 +23,20 @@ import vn.needy.buyer.screen.wallet.WalletRecyclerViewAdapter;
 public class WalletTransactionHistoryFragment extends Fragment {
 
 
-    public static WalletTransactionHistoryFragment getInstance()
-    {
+    public static WalletTransactionHistoryFragment getInstance() {
         return new WalletTransactionHistoryFragment();
     }
 
     private WalletTransactionHistoryContract.ViewModel mViewModel;
     private WalletTransactionHistoryContract.Presenter mPresenter;
     private WalletRecyclerViewAdapter mAdapter;
-    private List<OrderWallet> mList;
+    private List<OrderWallet> mOrderWallets;
 
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
-        mList = new ArrayList<>();
-        mAdapter = new WalletRecyclerViewAdapter(getActivity() , mList);
+        mOrderWallets = new ArrayList<>();
+        mAdapter = new WalletRecyclerViewAdapter(getActivity() , mOrderWallets);
         mViewModel = new WalletTransactionHistoryViewModel(getActivity() , mAdapter);
 
         mPresenter = new WalletTransactionHistoryPresenter(getActivity() , mViewModel);

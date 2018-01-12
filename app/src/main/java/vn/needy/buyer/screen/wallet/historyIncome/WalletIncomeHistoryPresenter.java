@@ -3,8 +3,6 @@ package vn.needy.buyer.screen.wallet.historyIncome;
 import android.content.Context;
 
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
 import java.util.List;
 
 import vn.needy.buyer.domain.OrderWallet;
@@ -40,11 +38,9 @@ public class WalletIncomeHistoryPresenter implements WalletIncomeHistoryContract
         OrderWallet orderWallet = new OrderWallet();
 
         orderWallet.setTitle("Set 10  tất Uni cổ thấp loại đẹp");
-        orderWallet.setCointChange(11);
+        orderWallet.setCoinChange("+11");
 
-        Date currentTime = Calendar.getInstance().getTime();
-        
-        orderWallet.setTime(currentTime);
+        orderWallet.setTransactionTime("11:30 21/12/2018");
         orderWallet.setState(123);
         
         mList = new ArrayList<>();
@@ -55,6 +51,6 @@ public class WalletIncomeHistoryPresenter implements WalletIncomeHistoryContract
         mList.add(orderWallet);
         mList.add(orderWallet);
 
-        mViewModel.getOrderWalletList(mList);
+        mViewModel.setOrderWalletList(mList);
     }
 }

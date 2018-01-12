@@ -13,12 +13,12 @@ import vn.needy.buyer.domain.OrderWallet;
  * Created by minh_dai on 02/01/2018.
  */
 
-public class WalletPruchaseHistoryPresenter implements WalletPurchaseHistoryContract.Presenter {
+public class WalletPurchaseHistoryPresenter implements WalletPurchaseHistoryContract.Presenter {
 
     private Context mContext;
     private WalletPurchaseHistoryContract.ViewModel mViewModel;
 
-    public WalletPruchaseHistoryPresenter(Context mContext, WalletPurchaseHistoryContract.ViewModel viewModel) {
+    public WalletPurchaseHistoryPresenter(Context mContext, WalletPurchaseHistoryContract.ViewModel viewModel) {
         this.mContext = mContext;
         this.mViewModel = viewModel;
     }
@@ -40,11 +40,11 @@ public class WalletPruchaseHistoryPresenter implements WalletPurchaseHistoryCont
         OrderWallet orderWallet = new OrderWallet();
 
         orderWallet.setTitle("Set 10  tất Uni cổ thấp loại đẹp");
-        orderWallet.setCointChange(11);
+        orderWallet.setCoinChange("-11");
 
         Date currentTime = Calendar.getInstance().getTime();
 
-        orderWallet.setTime(currentTime);
+        orderWallet.setTransactionTime(String.valueOf(currentTime));
         orderWallet.setState(123);
 
         mList = new ArrayList<>();
@@ -55,6 +55,6 @@ public class WalletPruchaseHistoryPresenter implements WalletPurchaseHistoryCont
         mList.add(orderWallet);
         mList.add(orderWallet);
 
-        mViewModel.getOrderWalletList(mList);
+        mViewModel.setOrderWalletList(mList);
     }
 }

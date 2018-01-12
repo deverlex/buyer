@@ -10,50 +10,49 @@ import io.realm.RealmObject;
 
 public class OrderWallet extends RealmObject {
 
-    
-    private long productId;
-    private String title;
-    private int state;
-    private Date time;
-    private int cointChange;
+    private long mProductId;
+    private String mTitle;
+    private int mState;
+    private String mTransactionTime;
+    private String mCoinChange;
 
     public long getProductId() {
-        return productId;
+        return mProductId;
     }
 
     public void setProductId(long productId) {
-        this.productId = productId;
+        mProductId = productId;
     }
 
     public String getTitle() {
-        return title;
+        return mTitle;
     }
 
     public void setTitle(String title) {
-        this.title = title;
+        mTitle = title;
     }
 
     public int getState() {
-        return state;
+        return mState;
     }
 
     public void setState(int state) {
-        this.state = state;
+        mState = state;
     }
 
-    public Date getTime() {
-        return time;
+    public String getTransactionTime() {
+        return mTransactionTime;
     }
 
-    public void setTime(Date time) {
-        this.time = time;
+    public void setTransactionTime(String transactionTime) {
+        mTransactionTime = transactionTime;
     }
 
-    public int getCointChange() {
-        return cointChange;
+    public String getCoinChange() {
+        return mCoinChange;
     }
 
-    public void setCointChange(int cointChange) {
-        this.cointChange = cointChange;
+    public void setCoinChange(String coinChange) {
+        mCoinChange = coinChange;
     }
 }

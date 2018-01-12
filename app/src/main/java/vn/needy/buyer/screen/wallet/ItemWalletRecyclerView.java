@@ -23,17 +23,10 @@ public class ItemWalletRecyclerView extends BaseObservable {
     public void onProductCLick(){
 
     }
-//time cointChange  state
-    public String getTime(){
-        return mOrderWallet.getTime() + "";
-    }
 
-    public String getCointChange(){
-        return "+" + mOrderWallet.getCointChange();
-    }
-
-    public String getState(){
-        return mOrderWallet.getState() + "";
+    @Bindable
+    public String getTitleState() {
+        return "Đã hoàn thành";
     }
 
     @Bindable
