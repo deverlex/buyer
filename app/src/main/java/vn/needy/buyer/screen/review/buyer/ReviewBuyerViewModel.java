@@ -16,7 +16,7 @@ public class ReviewBuyerViewModel extends BaseObservable implements ReviewBuyerC
 
     private static final String TAG = ReviewBuyerViewModel.class.getName();
 
-    private boolean hasReview;
+    private boolean mHasReview;
     private Context mContext;
     private ReviewBuyerContract.Presenter mPresenter;
 
@@ -24,7 +24,7 @@ public class ReviewBuyerViewModel extends BaseObservable implements ReviewBuyerC
 
     public ReviewBuyerViewModel(Context mContext) {
         this.mContext = mContext;
-        hasReview = true;
+        mHasReview = true;
 
         mItemFocus = 0;
     }
@@ -46,7 +46,7 @@ public class ReviewBuyerViewModel extends BaseObservable implements ReviewBuyerC
 
     @Bindable
     public boolean isHasReview() {
-        return hasReview;
+        return mHasReview;
     }
 
     @Override
