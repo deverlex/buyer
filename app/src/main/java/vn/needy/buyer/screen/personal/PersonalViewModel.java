@@ -5,6 +5,7 @@ import android.databinding.BaseObservable;
 
 import vn.needy.buyer.screen.account.AccountActivity;
 import vn.needy.buyer.screen.recentView.RecentViewActivity;
+import vn.needy.buyer.screen.productFavorite.ProductFavoriteActivity;
 import vn.needy.buyer.utils.navigator.Navigator;
 
 /**
@@ -46,6 +47,10 @@ public class PersonalViewModel extends BaseObservable implements PersonalContrac
         mNavigator.startActivity(RecentViewActivity.class);
     }
 
+    @Override
+    public void onClickProductFavorite(){
+        mNavigator.startActivity(ProductFavoriteActivity.class);
+    }
     @Override
     public void onViewOrderHistoryClicked() {
 
