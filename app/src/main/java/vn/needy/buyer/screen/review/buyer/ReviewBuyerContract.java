@@ -1,7 +1,5 @@
 package vn.needy.buyer.screen.review.buyer;
 
-import android.widget.TextView;
-
 import vn.needy.buyer.screen.BasePresenter;
 import vn.needy.buyer.screen.BaseViewModel;
 

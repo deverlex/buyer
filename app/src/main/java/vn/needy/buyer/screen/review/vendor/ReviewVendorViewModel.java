@@ -23,7 +23,6 @@ public class ReviewVendorViewModel extends BaseObservable implements ReviewVendo
         BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object>{
 
     private Navigator mNavigator;
-    private boolean reviewPersonal;
     private Context mContext;
     private ReviewVendorContract.Presenter mPresenter;
 
@@ -52,11 +51,6 @@ public class ReviewVendorViewModel extends BaseObservable implements ReviewVendo
     @Override
     public void setPresenter(ReviewVendorContract.Presenter presenter) {
         mPresenter = presenter;
-    }
-
-    @Bindable
-    public boolean isReviewPersonal() {
-        return reviewPersonal;
     }
 
     @Bindable
