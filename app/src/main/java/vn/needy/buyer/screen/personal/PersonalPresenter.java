@@ -6,6 +6,7 @@ package vn.needy.buyer.screen.personal;
  */
 
 public class PersonalPresenter implements PersonalContract.Presenter {
+
     @Override
     public void onStart() {
 

@@ -314,6 +314,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:onClick="@{() -> viewModel.onClickViewBudget()}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_1"
@@ -351,6 +352,7 @@
                 </RelativeLayout>
 
                 <RelativeLayout
+                    android:onClick="@{() -> viewModel.onReviewActivityClick()}"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_1"

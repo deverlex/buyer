@@ -6,6 +6,8 @@ import android.databinding.BaseObservable;
 import vn.needy.buyer.screen.account.AccountActivity;
 import vn.needy.buyer.screen.recentView.RecentViewActivity;
 import vn.needy.buyer.screen.productFavorite.ProductFavoriteActivity;
+import vn.needy.buyer.screen.review.ReviewActivity;
+import vn.needy.buyer.screen.wallet.WalletActivity;
 import vn.needy.buyer.utils.navigator.Navigator;
 
 /**
@@ -51,13 +53,19 @@ public class PersonalViewModel extends BaseObservable implements PersonalContrac
     public void onClickProductFavorite(){
         mNavigator.startActivity(ProductFavoriteActivity.class);
     }
-    @Override
-    public void onViewOrderHistoryClicked() {
 
+    @Override
+    public void onClickViewBudget() {
+        mNavigator.startActivity(WalletActivity.class);
     }
 
     @Override
-    public void onViewBudgetClicked() {
+    public void onReviewActivityClick() {
+        mNavigator.startActivity(ReviewActivity.class);
+    }
+
+    @Override
+    public void onViewOrderHistoryClicked() {
 
     }
 
@@ -70,4 +78,6 @@ public class PersonalViewModel extends BaseObservable implements PersonalContrac
     public void onClickHeader() {
 
     }
+
+
 }

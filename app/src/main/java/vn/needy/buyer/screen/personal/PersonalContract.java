@@ -15,15 +15,17 @@ public class PersonalContract {
 
         void onViewOrderHistoryClicked();
 
-        void onViewBudgetClicked();
-
         void onViewSupportClicked();
 
         void onClickHeader();
 
         void onClickRecentViewActivity();
+
         void onClickProductFavorite();
 
+        void onClickViewBudget();
+
+        void onReviewActivityClick();
     }
 
     interface Presenter extends BasePresenter{

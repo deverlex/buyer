@@ -17,10 +17,9 @@ import vn.needy.buyer.utils.navigator.Navigator;
  */
 
 public class PersonalFragment extends Fragment{
+
     public static PersonalFragment newInstance() {
-
         Bundle args = new Bundle();
-
         PersonalFragment fragment = new PersonalFragment();
         fragment.setArguments(args);
         return fragment;
@@ -30,18 +29,14 @@ public class PersonalFragment extends Fragment{
     private PersonalContract.ViewModel mViewModel;
     private Navigator mNavigator;
 
-    @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         FragmentPersonalBinding binding = DataBindingUtil.inflate(inflater,
                 R.layout.fragment_personal, container, false);
-
         mNavigator = new Navigator(this);
-
         mPersenter = new PersonalPresenter();
         mViewModel = new PersonalViewModel(mNavigator , getActivity());
         binding.setViewModel((PersonalViewModel) mViewModel);
-
         return binding.getRoot();
     }
 }
