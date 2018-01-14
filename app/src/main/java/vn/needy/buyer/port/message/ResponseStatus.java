@@ -6,8 +6,8 @@ import android.support.annotation.StringDef;
  * Created by lion on 16/12/2017.
  */
 
-@StringDef({BaseStatus.OK, BaseStatus.ERROR})
-public @interface BaseStatus {
+@StringDef({ResponseStatus.OK, ResponseStatus.ERROR})
+public @interface ResponseStatus {
     String OK = "ok";
     String ERROR = "error";
 }

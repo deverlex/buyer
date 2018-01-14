@@ -3,11 +3,13 @@ package vn.needy.buyer.repository.remote.user.request;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import vn.needy.buyer.port.message.DataMessage;
+
 /**
  * Created by lion on 14/10/2017.
  */
 
-public class RegisterRequest {
+public class RegisterRequest extends DataMessage {
 
     @Expose
     @SerializedName("firebaseUid")

@@ -9,7 +9,7 @@ import vn.needy.buyer.model.BaseModel;
  * Created by lion on 16/12/2017.
  */
 
-public class RequestWrapper<T> extends BaseModel {
+public class RequestWrapper<T extends DataMessage> extends BaseModel {
     @Expose
     @SerializedName("data")
     private T data;

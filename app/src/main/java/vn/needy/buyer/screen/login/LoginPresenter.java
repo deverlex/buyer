@@ -13,7 +13,7 @@ import vn.needy.buyer.database.sharedprf.SharedPrefsImpl;
 import vn.needy.buyer.domain.User;
 import vn.needy.buyer.port.error.BaseException;
 import vn.needy.buyer.port.error.SafetyError;
-import vn.needy.buyer.port.message.BaseStatus;
+import vn.needy.buyer.port.message.ResponseStatus;
 import vn.needy.buyer.port.message.ResponseWrapper;
 import vn.needy.buyer.port.service.BuyerServiceClient;
 import vn.needy.buyer.repository.UserRepository;
@@ -96,7 +96,7 @@ public class LoginPresenter implements LoginContract.Presenter {
                 public void accept(ResponseWrapper<LoginResponse> resp) throws Exception {
                     mViewModel.onHideProgressBar();
                     Log.d(TAG, resp.getStatus());
-                    if (resp.getStatus().equals(BaseStatus.ERROR)) {
+                    if (resp.getStatus().equals(ResponseStatus.ERROR)) {
                         mViewModel.onLoginError(resp.getMessage());
                     }  else {
                         mViewModel.onLoginSuccess();

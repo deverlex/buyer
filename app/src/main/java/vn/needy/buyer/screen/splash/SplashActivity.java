@@ -6,18 +6,11 @@ import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
 
-import io.reactivex.android.schedulers.AndroidSchedulers;
-import io.reactivex.functions.Consumer;
-import io.reactivex.functions.Function;
-import io.reactivex.schedulers.Schedulers;
 import vn.needy.buyer.R;
 import vn.needy.buyer.database.sharedprf.SharedPrefsApi;
 import vn.needy.buyer.database.sharedprf.SharedPrefsImpl;
 import vn.needy.buyer.database.sharedprf.SharedPrefsKey;
 import vn.needy.buyer.port.api.BuyerApi;
-import vn.needy.buyer.port.error.BaseException;
-import vn.needy.buyer.port.error.SafetyError;
-import vn.needy.buyer.port.message.BaseStatus;
 import vn.needy.buyer.port.service.BuyerServiceClient;
 import vn.needy.buyer.repository.UserRepository;
 import vn.needy.buyer.repository.local.UserDataLocal;

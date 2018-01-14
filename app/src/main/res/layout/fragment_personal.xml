@@ -54,28 +54,24 @@
 
                 <ImageView
                     android:id="@+id/cart"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/dp_36"
+                    android:layout_height="@dimen/dp_36"
                     android:layout_margin="@dimen/dp_8"
                     android:layout_toLeftOf="@+id/message"
                     android:layout_toStartOf="@+id/message"
                     android:background="@drawable/circle_background"
-                    android:padding="@dimen/dp_8"
+                    android:padding="@dimen/dp_10"
                     app:srcCompat="@drawable/ic_white_cart" />
 
                 <ImageView
                     android:id="@+id/message"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_width="@dimen/dp_36"
+                    android:layout_height="@dimen/dp_36"
                     android:layout_alignParentEnd="true"
                     android:layout_alignParentRight="true"
                     android:layout_margin="@dimen/dp_8"
                     android:background="@drawable/circle_background"
-                    android:paddingBottom="@dimen/dp_8"
-                    android:paddingEnd="@dimen/dp_8"
-                    android:paddingLeft="@dimen/dp_8"
-                    android:paddingStart="@dimen/dp_8"
-                    android:paddingTop="@dimen/dp_8"
+                    android:padding="@dimen/dp_10"
                     app:srcCompat="@drawable/ic_white_message" />
             </RelativeLayout>
 

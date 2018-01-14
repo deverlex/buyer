@@ -3,6 +3,7 @@ package vn.needy.buyer.repository.remote.user.respone;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
+import vn.needy.buyer.port.message.DataMessage;
 import vn.needy.buyer.repository.remote.user.context.UserContext;
 
 
@@ -10,7 +11,7 @@ import vn.needy.buyer.repository.remote.user.context.UserContext;
  * Created by lion on 11/12/2017.
  */
 
-public class LoginResponse {
+public class LoginResponse extends DataMessage {
 
     @Expose
     @SerializedName("user")
