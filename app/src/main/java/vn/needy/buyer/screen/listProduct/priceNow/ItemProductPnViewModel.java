@@ -2,7 +2,7 @@ package vn.needy.buyer.screen.listProduct.priceNow;
 
 import android.databinding.BaseObservable;
 
-import vn.needy.buyer.port.wrapper.ProductPnWrapper;
+import vn.needy.buyer.repository.remote.product.context.ProductPnContext;
 import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 
 /**
@@ -10,10 +10,10 @@ import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
  */
 
 public class ItemProductPnViewModel extends BaseObservable{
-    private ProductPnWrapper mProductPn;
+    private ProductPnContext mProductPn;
     private BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> mItemClickListener;
 
-    public ItemProductPnViewModel(ProductPnWrapper productPn, BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> itemClickListener) {
+    public ItemProductPnViewModel(ProductPnContext productPn, BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> itemClickListener) {
         this.mProductPn = productPn;
         this.mItemClickListener = itemClickListener;
     }

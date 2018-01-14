@@ -2,7 +2,7 @@ package vn.needy.buyer.screen.listProduct.priceLater;
 
 import android.databinding.BaseObservable;
 
-import vn.needy.buyer.port.wrapper.ProductPlWrapper;
+import vn.needy.buyer.repository.remote.product.context.ProductPlContext;
 import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 
 /**
@@ -11,10 +11,10 @@ import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 
 public class ItemProductPlViewModel extends BaseObservable {
 
-    private ProductPlWrapper mProductPl;
+    private ProductPlContext mProductPl;
     private BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> mItemClickListener;
 
-    public ItemProductPlViewModel(ProductPlWrapper productPl, BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> itemClickListener) {
+    public ItemProductPlViewModel(ProductPlContext productPl, BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> itemClickListener) {
         this.mProductPl = productPl;
         this.mItemClickListener = itemClickListener;
     }

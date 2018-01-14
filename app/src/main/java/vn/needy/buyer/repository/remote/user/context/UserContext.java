@@ -1,4 +1,4 @@
-package vn.needy.buyer.port.wrapper;
+package vn.needy.buyer.repository.remote.user.context;
 
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
@@ -7,7 +7,7 @@ import com.google.gson.annotations.SerializedName;
  * Created by lion on 16/12/2017.
  */
 
-public class UserWrapper {
+public class UserContext {
 
     @SerializedName("id")
     @Expose

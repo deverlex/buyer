@@ -7,7 +7,7 @@ import android.databinding.Bindable;
 
 import java.util.List;
 
-import vn.needy.buyer.port.wrapper.ProductPnWrapper;
+import vn.needy.buyer.repository.remote.product.context.ProductPnContext;
 import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 import vn.needy.buyer.screen.productPnDetail.ProductPnDetailActivity;
 import vn.needy.buyer.utils.navigator.Navigator;
@@ -53,8 +53,8 @@ public class ListProductPnViewModel extends BaseObservable implements ListProduc
     }
 
     @Override
-    public void updateProducts(List<ProductPnWrapper> productPnWrappers) {
-        mProductPnAdapter.setData(productPnWrappers);
+    public void updateProducts(List<ProductPnContext> productPnContexts) {
+        mProductPnAdapter.setData(productPnContexts);
     }
 
     @Bindable
@@ -64,7 +64,7 @@ public class ListProductPnViewModel extends BaseObservable implements ListProduc
 
     @Override
     public void onItemRecyclerViewClick(Object item) {
-        if (item instanceof ProductPnWrapper) {
+        if (item instanceof ProductPnContext) {
             // show product pn detail
             mNavigator.startActivity(ProductPnDetailActivity.class);
         }

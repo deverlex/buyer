@@ -2,7 +2,7 @@ package vn.needy.buyer.domain;
 
 import io.realm.RealmObject;
 import io.realm.annotations.PrimaryKey;
-import vn.needy.buyer.port.wrapper.UserWrapper;
+import vn.needy.buyer.repository.remote.user.context.UserContext;
 
 /**
  * Created by lion on 16/12/2017.
@@ -28,19 +28,19 @@ public class User extends RealmObject {
         super();
     }
 
-    public User(UserWrapper userWrapper) {
-        mId = userWrapper.getId();
-        mState = userWrapper.getState();
-        mFullName = userWrapper.getFullName();
-        mGender = userWrapper.getGender();
-        mAddress = userWrapper.getAddress();
-        mEmail = userWrapper.getEmail();
-        mBirthday = userWrapper.getBirthday();
-        mLat = userWrapper.getLat();
-        mLng = userWrapper.getLng();
-        mCreatedTime = userWrapper.getCreatedTime();
-        mLastUpdatedTime = userWrapper.getLastUpdatedTime();
-        mLastResetPassword = userWrapper.getLastResetPassword();
+    public User(UserContext userContext) {
+        mId = userContext.getId();
+        mState = userContext.getState();
+        mFullName = userContext.getFullName();
+        mGender = userContext.getGender();
+        mAddress = userContext.getAddress();
+        mEmail = userContext.getEmail();
+        mBirthday = userContext.getBirthday();
+        mLat = userContext.getLat();
+        mLng = userContext.getLng();
+        mCreatedTime = userContext.getCreatedTime();
+        mLastUpdatedTime = userContext.getLastUpdatedTime();
+        mLastResetPassword = userContext.getLastResetPassword();
     }
 
     public String getId() {

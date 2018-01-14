@@ -3,7 +3,7 @@ package vn.needy.buyer.repository.remote.user.respone;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
-import vn.needy.buyer.port.wrapper.UserWrapper;
+import vn.needy.buyer.repository.remote.user.context.UserContext;
 
 
 /**
@@ -14,16 +14,16 @@ public class LoginResponse {
 
     @Expose
     @SerializedName("user")
-    private UserWrapper mUser;
+    private UserContext mUser;
     @Expose
     @SerializedName("token")
     private String mToken;
 
-    public UserWrapper getUser() {
+    public UserContext getUser() {
         return mUser;
     }
 
-    public void setUser(UserWrapper user) {
+    public void setUser(UserContext user) {
         mUser = user;
     }
 

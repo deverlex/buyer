@@ -7,7 +7,7 @@ import android.databinding.Bindable;
 
 import java.util.List;
 
-import vn.needy.buyer.port.wrapper.ProductPlWrapper;
+import vn.needy.buyer.repository.remote.product.context.ProductPlContext;
 
 /**
  * Created by truongpq on 03/01/2018.
@@ -45,8 +45,8 @@ public class ListProductPlViewModel extends BaseObservable implements ListProduc
     }
 
     @Override
-    public void updateProducts(List<ProductPlWrapper> productPlWrappers) {
-        mProductPlAdapter.setData(productPlWrappers);
+    public void updateProducts(List<ProductPlContext> productPlContexts) {
+        mProductPlAdapter.setData(productPlContexts);
     }
 
     @Bindable

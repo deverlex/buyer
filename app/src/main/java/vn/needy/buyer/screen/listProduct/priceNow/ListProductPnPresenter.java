@@ -3,7 +3,7 @@ package vn.needy.buyer.screen.listProduct.priceNow;
 import java.util.ArrayList;
 import java.util.List;
 
-import vn.needy.buyer.port.wrapper.ProductPnWrapper;
+import vn.needy.buyer.repository.remote.product.context.ProductPnContext;
 
 /**
  * Created by truongpq on 03/01/2018.
@@ -28,11 +28,11 @@ public class ListProductPnPresenter implements ListProductPnContract.Presenter {
 
     @Override
     public void getProductsOfStore(String category) {
-        List<ProductPnWrapper> productPnWrappers = new ArrayList<>();
+        List<ProductPnContext> productPnContexts = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            productPnWrappers.add(new ProductPnWrapper());
+            productPnContexts.add(new ProductPnContext());
         }
 
-        mViewModel.updateProducts(productPnWrappers);
+        mViewModel.updateProducts(productPnContexts);
     }
 }

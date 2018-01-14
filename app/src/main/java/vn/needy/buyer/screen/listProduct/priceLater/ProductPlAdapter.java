@@ -11,7 +11,7 @@ import java.util.List;
 
 import vn.needy.buyer.R;
 import vn.needy.buyer.databinding.ItemProductPlBinding;
-import vn.needy.buyer.port.wrapper.ProductPlWrapper;
+import vn.needy.buyer.repository.remote.product.context.ProductPlContext;
 import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 
 /**
@@ -21,11 +21,11 @@ import vn.needy.buyer.screen.BaseRecyclerViewAdapter;
 public class ProductPlAdapter extends BaseRecyclerViewAdapter<ProductPlAdapter.ItemViewHolder>{
 
     private BaseRecyclerViewAdapter.OnRecyclerViewItemClickListener<Object> mItemClickListener;
-    private List<ProductPlWrapper> mProductPl;
+    private List<ProductPlContext> mProductPl;
 
-    protected ProductPlAdapter(@NonNull Context context, List<ProductPlWrapper> productPlWrappers) {
+    protected ProductPlAdapter(@NonNull Context context, List<ProductPlContext> productPlContexts) {
         super(context);
-        this.mProductPl = productPlWrappers;
+        this.mProductPl = productPlContexts;
     }
 
     @Override
@@ -49,7 +49,7 @@ public class ProductPlAdapter extends BaseRecyclerViewAdapter<ProductPlAdapter.I
         this.mItemClickListener = itemClickListener;
     }
 
-    public void setData(List<ProductPlWrapper> productPlWrappers) {
+    public void setData(List<ProductPlContext> productPlWrappers) {
         mProductPl.clear();
         mProductPl.addAll(productPlWrappers);
         notifyDataSetChanged();
@@ -66,7 +66,7 @@ public class ProductPlAdapter extends BaseRecyclerViewAdapter<ProductPlAdapter.I
             this.mItemClickListener = itemClickListener;
         }
 
-        void bind(ProductPlWrapper productPlWrapper) {
+        void bind(ProductPlContext productPlWrapper) {
             mBinding.setViewModel(new ItemProductPlViewModel(productPlWrapper, mItemClickListener));
             mBinding.executePendingBindings();
         }

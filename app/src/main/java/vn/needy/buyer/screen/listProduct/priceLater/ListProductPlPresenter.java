@@ -3,7 +3,7 @@ package vn.needy.buyer.screen.listProduct.priceLater;
 import java.util.ArrayList;
 import java.util.List;
 
-import vn.needy.buyer.port.wrapper.ProductPlWrapper;
+import vn.needy.buyer.repository.remote.product.context.ProductPlContext;
 
 /**
  * Created by truongpq on 03/01/2018.
@@ -28,11 +28,11 @@ public class ListProductPlPresenter implements ListProductPlContract.Presenter {
 
     @Override
     public void getProductsOfStore(String category) {
-        List<ProductPlWrapper> productPlWrappers = new ArrayList<>();
+        List<ProductPlContext> productPlContexts = new ArrayList<>();
         for (int i = 0; i < 10; i++) {
-            productPlWrappers.add(new ProductPlWrapper());
+            productPlContexts.add(new ProductPlContext());
         }
 
-        mViewModel.updateProducts(productPlWrappers);
+        mViewModel.updateProducts(productPlContexts);
     }
 }

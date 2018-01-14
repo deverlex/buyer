@@ -8,7 +8,7 @@ import java.util.List;
 
 import vn.needy.buyer.R;
 import vn.needy.buyer.databinding.ActivityListProductPnBinding;
-import vn.needy.buyer.port.wrapper.ProductPnWrapper;
+import vn.needy.buyer.repository.remote.product.context.ProductPnContext;
 import vn.needy.buyer.screen.BaseActivity;
 import vn.needy.buyer.utils.navigator.Navigator;
 
@@ -26,8 +26,8 @@ public class ListProductPnActivity extends BaseActivity {
         super.onCreateActivity(savedInstanceState);
 
         mNavigator = new Navigator(this);
-        List<ProductPnWrapper> productPnWrappers = new ArrayList<>();
-        ProductPnAdapter productPnAdapter = new ProductPnAdapter(this, productPnWrappers);
+        List<ProductPnContext> productPnContexts = new ArrayList<>();
+        ProductPnAdapter productPnAdapter = new ProductPnAdapter(this, productPnContexts);
 
         mViewModel = new ListProductPnViewModel(this, mNavigator, productPnAdapter);
         ListProductPnContract.Presenter presenter = new ListProductPnPresenter(mViewModel);

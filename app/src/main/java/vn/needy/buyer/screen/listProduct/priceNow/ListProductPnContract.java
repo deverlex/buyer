@@ -2,7 +2,7 @@ package vn.needy.buyer.screen.listProduct.priceNow;
 
 import java.util.List;
 
-import vn.needy.buyer.port.wrapper.ProductPnWrapper;
+import vn.needy.buyer.repository.remote.product.context.ProductPnContext;
 import vn.needy.buyer.screen.BasePresenter;
 import vn.needy.buyer.screen.BaseViewModel;
 
@@ -14,7 +14,7 @@ public interface ListProductPnContract {
     interface ViewModel extends BaseViewModel<Presenter> {
         void onBackPressed();
 
-        void updateProducts(List<ProductPnWrapper> productPnWrappers);
+        void updateProducts(List<ProductPnContext> productPnContexts);
     }
 
     interface Presenter extends BasePresenter {
