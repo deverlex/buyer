@@ -10,7 +10,6 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
-import android.text.InputType;
 import android.text.TextUtils;
 import android.text.method.TransformationMethod;
 import android.widget.EditText;
@@ -28,8 +27,6 @@ import ss.com.bannerslider.banners.Banner;
 import ss.com.bannerslider.views.BannerSlider;
 import vn.needy.buyer.database.sharedprf.SharedPrefsImpl;
 import vn.needy.buyer.database.sharedprf.SharedPrefsKey;
-import vn.needy.buyer.screen.main.MainActivity;
-import vn.needy.buyer.screen.wallet.WalletActivity;
 import vn.needy.buyer.utils.ViewUtil;
 import vn.needy.buyer.utils.image.CompressImage;
 
@@ -105,7 +102,7 @@ public class BindingAdapters {
         // check image load from server
         if (url.contains("http")) {
             String token = SharedPrefsImpl.getInstance()
-                    .get(SharedPrefsKey.TOKEN_KEY, String.class);
+                    .get(SharedPrefsKey.ACCESS_TOKEN, String.class);
 
             GlideUrl gUri = new GlideUrl(url, new LazyHeaders.Builder()
                     .setHeader("Authorization", token).build());

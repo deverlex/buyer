@@ -88,6 +88,6 @@ public class SplashActivity extends AppCompatActivity {
 
     // We will getAsync it and refresh, if fail -> re-login
     private String getToken(SharedPrefsApi prefsApi) {
-        return prefsApi.get(SharedPrefsKey.TOKEN_KEY, String.class);
+        return prefsApi.get(SharedPrefsKey.ACCESS_TOKEN, String.class);
     }
 }

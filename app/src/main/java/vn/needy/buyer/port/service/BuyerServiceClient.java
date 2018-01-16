@@ -22,7 +22,7 @@ public class BuyerServiceClient extends ServiceClient {
 
     public static BuyerApi initialize(@NonNull Application application) {
         SharedPrefsApi prefsApi = SharedPrefsImpl.getInstance();
-        String token = prefsApi.get(SharedPrefsKey.TOKEN_KEY, String.class);
+        String token = prefsApi.get(SharedPrefsKey.ACCESS_TOKEN, String.class);
         RetrofitInterceptor interceptor = null;
         if (!TextUtils.isEmpty(token)) {
             interceptor = new RetrofitInterceptor(token);
