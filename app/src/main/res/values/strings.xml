@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">Buyer</string>
+    <string name="app_version">Buyer v0.0.9</string>
 
     <string name="error_gif">x or y bound size should be at least %1$dpx and file size should be no more than %2$sM</string>
     <string name="font_serif">serif</string>
@@ -10,4 +11,159 @@
     <string name="OK">Đồng ý</string>
     <string name="please_wait">Vui lòng chờ..</string>
     <string name="done">Hoàn tất</string>
+
+    <!--For activity_login-->
+    <string name="phone_number">Số điện thoại</string>
+    <string name="password">Mật khẩu</string>
+    <string name="forgot_password"><u>Quên mật khẩu?</u></string>
+    <string name="login">Đăng nhập</string>
+    <string name="register_account"><u>Đăng ký</u></string>
+    <string name="error_service">Lỗi kết nối dịch vụ</string>
+    <string name="error_credential">Số điện thoại hoặc mật khẩu không chính xác</string>
+
+    <string name="validate_phone">XÁC MINH SỐ ĐIỆN THOẠI</string>
+    <string name="intro_validate_phone">Vui lòng nhập vào số điện thoại và mật khẩu.</string>
+    <string name="intro_validate_opt">Vui lòng nhập vào mã xác minh và nhấn <b>hoàn tất</b></string>
+    <string name="otp_code">Mã xác minh</string>
+    <string name="otp_code_invalid">Mã xác minh không đúng</string>
+    <string name="otp_code_empty">Mã xác minh trống</string>
+    <string name="resend_over_limit">Vượt quá số lần yêu cầu, xin chờ.</string>
+    <string name="validation_error">Có lỗi xảy ra, thử lại.</string>
+    <string name="waiting_otp">Chờ %1$s giây để yêu cầu gửi lại mã xác minh.</string>
+    <string name="error_connection">Vui lòng bật kết nối internet để đăng ký</string>
+    <string name="phone_number_empty">Số điện thoại rỗng</string>
+    <string name="is_not_phone_number">Không đúng định dạng</string>
+    <string name="password_empty">Mật khẩu rỗng</string>
+    <string name="password_over_limit">Tối đa 32 ký tự</string>
+    <string name="password_miss_length">Mật khẩu cần ít nhất 8 ký tự</string>
+
+    <!--For activity_register_user -->
+    <string name="get_new_otp"><u>Cấp lại mã xác minh</u></string>
+    <string name="get_new_password">LẤY MẬT KHẨU MỚI</string>
+    <string name="new_password">Mật khẩu mới</string>
+    <string name="not_have_account">Chưa đăng ký tài khoản?</string>
+    <string name="reset_password">Đặt lại mật khẩu</string>
+    <string name="intro_get_new_password">Vui lòng nhập số điện thoại đã đăng ký để thiết lập mật khẩu mới</string>
+    <string name="intro_reset_password">Vui lòng nhập mật khẩu mới và nhấn nút hoàn tất</string>
+    <string name="find_user_exist_error">Số điện thoại chưa đăng ký</string>
+
+    <string name="price_now">Giá trước</string>
+    <string name="price_later">Giá sau</string>
+    <string name="notification">Thông báo</string>
+    <string name="personal">Tôi</string>
+
+    <string name="update_order">Cập nhật đơn hàng</string>
+    <string name="read_all">Đọc tất cả</string>
+
+    <string name="account">Tài khoản</string>
+    <string name="account_setting">Thiết lập tài khoản</string>
+
+    <string name="bank_account">Tài khoản / Thẻ Ngân hàng</string>
+    <string name="setting">Cài đặt</string>
+    <string name="setting_notifications">Cài đặt thông báo</string>
+    <string name="setting_private">Cài đặt riêng tư</string>
+    <string name="block_user">Người dùng bị chặn</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="tips_and_tricks">Mẹo và thủ thuật</string>
+    <string name="community_standards">Tiêu chuẩn cộng đồng</string>
+    <string name="needy_rules">Điều khoản Needy</string>
+    <string name="vote_needy_app">Đánh giá dịch vụ Needy</string>
+    <string name="clear_cache">Xóa bộ nhớ đệm</string>
+    <string name="delete_account">Xóa tài khoản</string>
+    <string name="logout">Đăng xuất</string>
+
+    <string name="support_center">Trung tâm trợ giúp</string>
+
+    <string name="personal_setting_email">Ẩn email của tôi</string>
+    <string name="hint_note_mail">Người khác sẽ không thể thấy email của bạn trong hồ sơ nếu kích hoạt</string>
+    <string name="personal_setting_birthday">Ẩn ngày sinh của tôi</string>
+    <string name="hint_note_birthday">Người khác sẽ không thể thấy ngày sinh của bạn trong hồ sơ nếu kích hoạt</string>
+    <string name="personal_setting_sex">Ẩn giới tính của tôi</string>
+    <string name="hint_note_sex">Người khác sẽ không thể thấy giới tính của bạn trong hồ sơ nếu kích hoạt</string>
+    <string name="dialog_personal_email">Những người theo dõi bạn sẽ có thể thấy email của bạn </string>
+    <string name="dialog_personal_birthday">Những người theo dõi bạn sẽ có thể thấy ngày sinh của bạn </string>
+    <string name="dialog_personal_sex">Những người theo dõi bạn sẽ có thể thấy giới tính của bạn </string>
+
+    <string name="select_languge">Chọn ngôn ngữ</string>
+    <string name="languge_vietnam">Tiếng Việt</string>
+    <string name="languge_thai">ประเทศไทย</string>
+    <string name="languge_english">English</string>
+    <string name="languge_china">中国</string>
+
+    <string name="notification_setting_group">Bật để nhận được thông báo theo nhóm , mỗi hai giờ từ 08:00-22:00. Đề xuất
+    cho người bán hàng lớn</string>
+    <string name="notification_setting_group_name">Thông báo theo nhóm</string>
+    <string name="notification_setting_chat">Chat</string>
+    <string name="notification_setting_follow">Theo dõi và Bình luận</string>
+    <string name="notification_setting_product_end">Sản phẩm hết hàng</string>
+    <string name="notification_setting_update">Cập nhật app</string>
+    <string name="notification_email">Email Thông báo</string>
+    <string name="notification_email_order">Email nhận đơn</string>
+    <string name="notification_email_update_product">Thông tin đơn hàng</string>
+    <string name="notification_email_product_detail">Thông báo khi có cập nhật về đơn hàng , bao gồm cập nhật về thanh toán</string>
+    <string name="notification_email_app">Thông tin công ty/cửa hàng</string>
+    <string name="notification_email_app_detail">Thông tin của công ty hoặc cửa hàng</string>
+    <string name="notification_email_news">Bản tin</string>
+    <string name="notification_email_news_detail">Gửi cho tôi cập nhật về những thông báo, xu hướng và giảm giá mới nhất</string>
+    <string name="notification_email_personal">Nội dung Cá nhân</string>
+    <string name="notification_email_personal_detail">Gửi thông báo cá nhân cho tôi(VD: quá sinh nhật)</string>
+
+    <string name="text_block">Người dùng đã bị chặn sẽ không thể gọi hoặc gửi tin nhắn cho bạn.</string>
+    <string name="unblock">BỎ CHẶN</string>
+    <string name="personal_block">Chưa có ai bị chặn</string>
+    <string name="dialog_block">Bỏ chặn ? \n"Bỏ chặn sẽ chấp nhận để chat , bình luận và mua sản phẩm của bạn.\n"Bạn có muốn bỏ chặn không ?\</string>
+
+    <string name="button_ok">OK</string>
+    <string name="button_cancel" >Cancel</string>
+
+
+    <string name="profile_personal">Hồ sơ cá nhân</string>
+
+    <string name="support">Trợ giúp</string>
+
+    <string name="notification_tab">Thông báo</string>
+    <string name="product_promotion">Khuyến mại</string>
+
+
+    <string name="all_category">Tất cả danh mục</string>
+
+
+    <string name="recent_view">Mới xem</string>
+
+    <string name="product_favorite">Không có sản phẩm nào khác</string>
+    
+    <string name="personal_budget">Needy xu</string>
+    <string name="personal_coin">Needy Xu hết hạn vào ngày 30-03-2018</string>
+    <string name="personal_note_coin">Xu đang có</string>
+
+    <string name="personal_history_income">Tất cả lịch sử</string>
+    <string name="personal_history_Purchase">Đã nhận</string>
+    <string name="personal_history_Transaction">Đã dùng</string>
+
+    <string name="personal_earns">Làm sao để săn Deedy Xu</string>
+    <string name="personal_not_coin">Bạn chưa có Needy Xu. Bạn chỉ nhận được \n Needy Xu khi đơn hàng đã hoàn thành (sau khi \nbạn ấn Đã nhận được hàng).</string>
+
+    <string name="review_buyer">Đánh giá Buyer</string>
+    <string name="review_vendor">Đánh giá Vendor</string>
+    <string name="review">Đánh giá của tôi</string>
+    
+    <string name="attitude">Thái độ</string>
+    <string name="value">Giá trị</string>
+    <string name="quality">Chất lượng</string>
+
+    <string name="review_all">Tất cả (0)</string>
+    <string name="review_5star">5 sao (0)</string>
+    <string name="review_4star">4 sao (0)</string>
+    <string name="review_3star">3 sao (0)</string>
+    <string name="review_2star">2 sao (0)</string>
+    <string name="review_1star">1 sao (0)</string>
+
+    <string name="personal_comment">Bình luận</string>
+    <string name="review_personal">Chưa có đánh giá nào từ Người bán hàng dành cho \nbạn</string>
+    <string name="shops_thanks">Cảm ơn bạn đã ủng hộ ạ!</string>
+    <string name="reviews_cargo">Không tìm thấy đánh giá nào</string>
+    
+    <string name="personal_feedback">Phản Hồi Của Bạn</string>
+    <string name="personal_note_feedback">Bạn chỉ có thể phản hồi 1 lần</string>
+
 </resources>

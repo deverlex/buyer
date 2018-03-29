@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="viewModel"
+            type="vn.needy.buyer.screen.productFavorite.ProductFavoriteViewModel"/>
+        <import type="android.view.View"/>
+    </data>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <android.support.v7.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/colorPrimary"
+            app:contentInsetLeft="0dp"
+            app:contentInsetStart="0dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageButton
+                    android:onClick="@{() -> viewModel.onBackPressed()}"
+                    android:id="@+id/back"
+                    android:layout_width="?attr/actionBarSize"
+                    android:layout_height="?attr/actionBarSize"
+                    android:background="@color/transparent"
+                    app:srcCompat="@drawable/ic_back_left" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/back"
+                    android:text="@string/account_setting"
+                    android:textColor="@color/color_white"
+                    android:textSize="@dimen/sp_18" />
+            </RelativeLayout>
+        </android.support.v7.widget.Toolbar>
+
+        <LinearLayout
+
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="@dimen/dp_1"
+                android:background="@color/color_gray_white"
+                app:layoutManager="GridLayoutManager"
+                app:recyclerAdapter="@{viewModel.adapter}"
+                app:spanCount="2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </android.support.v7.widget.RecyclerView>
+
+            <TextView
+                android:textColor="@color/color_gray"
+                android:layout_marginTop="@dimen/dp_10"
+                android:gravity="center"
+                android:text="@string/product_favorite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+
+    </LinearLayout>
+</layout>

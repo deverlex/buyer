@@ -5,9 +5,11 @@ import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Build;
 import android.support.annotation.DrawableRes;
+import android.support.design.widget.TabLayout;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
-import android.text.InputType;
 import android.text.TextUtils;
 import android.text.method.TransformationMethod;
 import android.widget.EditText;
@@ -73,6 +75,16 @@ public class BindingAdapters {
         view.setImageResource(drawable);
     }
 
+    @BindingAdapter("srcDrawableRight")
+    public static void setDrawableRightTextView(TextView view, int drawable) {
+        view.setCompoundDrawablesWithIntrinsicBounds(0, 0, drawable, 0);
+    }
+
+    @BindingAdapter("srcDrawableLeft")
+    public static void setDrawableLeftTextView(TextView view, int drawable) {
+        view.setCompoundDrawablesWithIntrinsicBounds(drawable, 0, 0, 0);
+    }
+
 
     // for load image from path in device's storage
 //    @BindingAdapter("srcPath")
@@ -90,7 +102,7 @@ public class BindingAdapters {
         // check image load from server
         if (url.contains("http")) {
             String token = SharedPrefsImpl.getInstance()
-                    .get(SharedPrefsKey.TOKEN_KEY, String.class);
+                    .get(SharedPrefsKey.ACCESS_TOKEN, String.class);
 
             GlideUrl gUri = new GlideUrl(url, new LazyHeaders.Builder()
                     .setHeader("Authorization", token).build());
@@ -131,4 +143,15 @@ public class BindingAdapters {
 //            editText.setInputType(InputType.TYPE_CLASS_TEXT);
 //        }
 //    }
+
+    @BindingAdapter({"viewPagerAdater"})
+    public static void setAdapterForViewPager(final ViewPager view, FragmentPagerAdapter pagerAdapter) {
+       // final Wallet adapter = new MainActionsAdapter(view.getContext(), activity.getSupportFragmentManager());
+        view.setAdapter(pagerAdapter);
+    }
+
+    @BindingAdapter("viewPager")
+    public static void setViewPagerForTablayout(TabLayout tablayout , ViewPager viewPager){
+        tablayout.setupWithViewPager(viewPager);
+    }
 }

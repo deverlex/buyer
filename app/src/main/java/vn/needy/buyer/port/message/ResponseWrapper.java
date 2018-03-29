@@ -11,7 +11,7 @@ import vn.needy.buyer.model.BaseModel;
  * Created by lion on 16/12/2017.
  */
 
-public class ResponseWrapper<T> extends BaseModel {
+public class ResponseWrapper<T extends DataMessage> extends BaseModel {
     @Expose
     @SerializedName("status")
     private String mStatus;
